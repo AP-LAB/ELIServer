@@ -23,6 +23,11 @@ namespace ELIServer
         public MainWindow()
         {
             InitializeComponent();
+
+            //ServerSocket serverSocket = new ServerSocket();
+
+            DatabaseManager databaseManager = new DatabaseManager();
+
         }
     }
 }
