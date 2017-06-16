@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Label Content="Number of connected clients:" HorizontalAlignment="Left" Margin="80,116,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="connectedClientsLabel" Content="" HorizontalAlignment="Left" Margin="259,116,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="connectedCallsLabel" Content="" HorizontalAlignment="Left" Margin="259,165,0,0" VerticalAlignment="Top"/>
+        <Label Content="Number of active calls:" HorizontalAlignment="Left" Margin="80,165,0,0" VerticalAlignment="Top"/>
+        <Label Content="Number of pending calls:" HorizontalAlignment="Left" Margin="80,208,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="pendingCallsLabel" Content="" HorizontalAlignment="Left" Margin="259,208,0,0" VerticalAlignment="Top"/>
+
+
     </Grid>
 </Window>
