@@ -1,0 +1,190 @@
+\hypertarget{class_e_l_i_server_1_1_message_socket_manager}{}\section{E\+L\+I\+Server.\+Message\+Socket\+Manager Class Reference}
+\label{class_e_l_i_server_1_1_message_socket_manager}\index{E\+L\+I\+Server.\+Message\+Socket\+Manager@{E\+L\+I\+Server.\+Message\+Socket\+Manager}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_l_i_server_1_1_message_socket_manager_a28b6d0e215aa417970fc82b9239bebbb}{Message\+Socket\+Manager} (\hyperlink{class_e_l_i_server_1_1_main_window}{Main\+Window} \+\_\+main\+Window)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_e_l_i_server_1_1_message_socket_manager_a921b68b4622c90628ae7b179bccdb10c}{Remove\+Client\+From\+Connected\+Sockets} (\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client)
+\item 
+static \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} \hyperlink{class_e_l_i_server_1_1_message_socket_manager_aa93a10042f33c7fe76d611346eb80ea0}{Get\+Client\+Message\+Socket\+By\+Id} (String client\+ID)
+\begin{DoxyCompactList}\small\item\em Searches a socket with the given ID in the connected\+Sockets list. \end{DoxyCompactList}\item 
+static void \hyperlink{class_e_l_i_server_1_1_message_socket_manager_acf805bfb3292019f77e637135009ee78}{Add\+Call\+Connection} (\hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} call\+Connection)
+\item 
+static void \hyperlink{class_e_l_i_server_1_1_message_socket_manager_af591d88e97afd289dfd4f2d89713f5b2}{Remove\+Call\+Connection} (\hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} call\+Connection)
+\item 
+static \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} \hyperlink{class_e_l_i_server_1_1_message_socket_manager_a6988d1ee0c08ded66a3d428f04585716}{Get\+Random\+Pending\+Connection} ()
+\item 
+static void \hyperlink{class_e_l_i_server_1_1_message_socket_manager_aeceb2994f44b015e0663d266b2ed11a6}{Add\+Pending\+Call\+Client} (\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_e_l_i_server_1_1_message_socket_manager_ab5d2f61a349046960ae63303ff1c2130}{Start\+Listening} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} \hyperlink{class_e_l_i_server_1_1_message_socket_manager_aa9a1bde31e6bb4d0ef01f974a5784d08}{Get\+Call\+Connection\+With\+Cient} (\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Tcp\+Listener \hyperlink{class_e_l_i_server_1_1_message_socket_manager_a0c3b11ce72614567322dc025fd40c1c5}{listener} = null
+\item 
+int \hyperlink{class_e_l_i_server_1_1_message_socket_manager_af344f11a273d91f2d2c520583f105b95}{port} = 30000
+\item 
+string \hyperlink{class_e_l_i_server_1_1_message_socket_manager_afe7ddcd6b733f389617621037d713db4}{hostname} = \char`\"{}127.\+0.\+0.\+1\char`\"{}
+\item 
+bool \hyperlink{class_e_l_i_server_1_1_message_socket_manager_ae7079918e3fb3c205ee8831f800cd4d9}{running} = false
+\item 
+Thread \hyperlink{class_e_l_i_server_1_1_message_socket_manager_a2c6114a87afeb4ecb1cbf42daea68df0}{thread}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} $>$ \hyperlink{class_e_l_i_server_1_1_message_socket_manager_a042e9dc087484feacc3128eb3f7ac2f4}{connected\+Sockets} = new List$<$\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}$>$()
+\item 
+static List$<$ \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} $>$ \hyperlink{class_e_l_i_server_1_1_message_socket_manager_a1f25b676369fa4e59beca49d3ecf294a}{call\+Connections} = new List$<$\hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection}$>$()
+\item 
+static List$<$ \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} $>$ \hyperlink{class_e_l_i_server_1_1_message_socket_manager_ad34ae3d8801eea0c2fd2305c5b05e692}{pending\+Call\+Connections} = new List$<$\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}$>$()
+\item 
+static \hyperlink{class_e_l_i_server_1_1_main_window}{Main\+Window} \hyperlink{class_e_l_i_server_1_1_message_socket_manager_a937d0802b2bb8f1e173a17ee27e3b8cc}{main\+Window}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_a28b6d0e215aa417970fc82b9239bebbb}\label{class_e_l_i_server_1_1_message_socket_manager_a28b6d0e215aa417970fc82b9239bebbb}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!Message\+Socket\+Manager@{Message\+Socket\+Manager}}
+\index{Message\+Socket\+Manager@{Message\+Socket\+Manager}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{Message\+Socket\+Manager()}{MessageSocketManager()}}
+{\footnotesize\ttfamily E\+L\+I\+Server.\+Message\+Socket\+Manager.\+Message\+Socket\+Manager (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_main_window}{Main\+Window}}]{\+\_\+main\+Window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_acf805bfb3292019f77e637135009ee78}\label{class_e_l_i_server_1_1_message_socket_manager_acf805bfb3292019f77e637135009ee78}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!Add\+Call\+Connection@{Add\+Call\+Connection}}
+\index{Add\+Call\+Connection@{Add\+Call\+Connection}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{Add\+Call\+Connection()}{AddCallConnection()}}
+{\footnotesize\ttfamily static void E\+L\+I\+Server.\+Message\+Socket\+Manager.\+Add\+Call\+Connection (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection}}]{call\+Connection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_aeceb2994f44b015e0663d266b2ed11a6}\label{class_e_l_i_server_1_1_message_socket_manager_aeceb2994f44b015e0663d266b2ed11a6}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!Add\+Pending\+Call\+Client@{Add\+Pending\+Call\+Client}}
+\index{Add\+Pending\+Call\+Client@{Add\+Pending\+Call\+Client}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{Add\+Pending\+Call\+Client()}{AddPendingCallClient()}}
+{\footnotesize\ttfamily static void E\+L\+I\+Server.\+Message\+Socket\+Manager.\+Add\+Pending\+Call\+Client (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_aa9a1bde31e6bb4d0ef01f974a5784d08}\label{class_e_l_i_server_1_1_message_socket_manager_aa9a1bde31e6bb4d0ef01f974a5784d08}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!Get\+Call\+Connection\+With\+Cient@{Get\+Call\+Connection\+With\+Cient}}
+\index{Get\+Call\+Connection\+With\+Cient@{Get\+Call\+Connection\+With\+Cient}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Call\+Connection\+With\+Cient()}{GetCallConnectionWithCient()}}
+{\footnotesize\ttfamily static \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} E\+L\+I\+Server.\+Message\+Socket\+Manager.\+Get\+Call\+Connection\+With\+Cient (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_aa93a10042f33c7fe76d611346eb80ea0}\label{class_e_l_i_server_1_1_message_socket_manager_aa93a10042f33c7fe76d611346eb80ea0}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!Get\+Client\+Message\+Socket\+By\+Id@{Get\+Client\+Message\+Socket\+By\+Id}}
+\index{Get\+Client\+Message\+Socket\+By\+Id@{Get\+Client\+Message\+Socket\+By\+Id}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Client\+Message\+Socket\+By\+Id()}{GetClientMessageSocketById()}}
+{\footnotesize\ttfamily static \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} E\+L\+I\+Server.\+Message\+Socket\+Manager.\+Get\+Client\+Message\+Socket\+By\+Id (\begin{DoxyParamCaption}\item[{String}]{client\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Searches a socket with the given ID in the connected\+Sockets list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+ID} & The ID to search for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The found Client\+Message\+Socket
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_a6988d1ee0c08ded66a3d428f04585716}\label{class_e_l_i_server_1_1_message_socket_manager_a6988d1ee0c08ded66a3d428f04585716}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!Get\+Random\+Pending\+Connection@{Get\+Random\+Pending\+Connection}}
+\index{Get\+Random\+Pending\+Connection@{Get\+Random\+Pending\+Connection}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Random\+Pending\+Connection()}{GetRandomPendingConnection()}}
+{\footnotesize\ttfamily static \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} E\+L\+I\+Server.\+Message\+Socket\+Manager.\+Get\+Random\+Pending\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_af591d88e97afd289dfd4f2d89713f5b2}\label{class_e_l_i_server_1_1_message_socket_manager_af591d88e97afd289dfd4f2d89713f5b2}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!Remove\+Call\+Connection@{Remove\+Call\+Connection}}
+\index{Remove\+Call\+Connection@{Remove\+Call\+Connection}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{Remove\+Call\+Connection()}{RemoveCallConnection()}}
+{\footnotesize\ttfamily static void E\+L\+I\+Server.\+Message\+Socket\+Manager.\+Remove\+Call\+Connection (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection}}]{call\+Connection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_a921b68b4622c90628ae7b179bccdb10c}\label{class_e_l_i_server_1_1_message_socket_manager_a921b68b4622c90628ae7b179bccdb10c}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!Remove\+Client\+From\+Connected\+Sockets@{Remove\+Client\+From\+Connected\+Sockets}}
+\index{Remove\+Client\+From\+Connected\+Sockets@{Remove\+Client\+From\+Connected\+Sockets}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{Remove\+Client\+From\+Connected\+Sockets()}{RemoveClientFromConnectedSockets()}}
+{\footnotesize\ttfamily static void E\+L\+I\+Server.\+Message\+Socket\+Manager.\+Remove\+Client\+From\+Connected\+Sockets (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_ab5d2f61a349046960ae63303ff1c2130}\label{class_e_l_i_server_1_1_message_socket_manager_ab5d2f61a349046960ae63303ff1c2130}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!Start\+Listening@{Start\+Listening}}
+\index{Start\+Listening@{Start\+Listening}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{Start\+Listening()}{StartListening()}}
+{\footnotesize\ttfamily void E\+L\+I\+Server.\+Message\+Socket\+Manager.\+Start\+Listening (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_a1f25b676369fa4e59beca49d3ecf294a}\label{class_e_l_i_server_1_1_message_socket_manager_a1f25b676369fa4e59beca49d3ecf294a}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!call\+Connections@{call\+Connections}}
+\index{call\+Connections@{call\+Connections}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{call\+Connections}{callConnections}}
+{\footnotesize\ttfamily List$<$\hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection}$>$ E\+L\+I\+Server.\+Message\+Socket\+Manager.\+call\+Connections = new List$<$\hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection}$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_a042e9dc087484feacc3128eb3f7ac2f4}\label{class_e_l_i_server_1_1_message_socket_manager_a042e9dc087484feacc3128eb3f7ac2f4}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!connected\+Sockets@{connected\+Sockets}}
+\index{connected\+Sockets@{connected\+Sockets}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{connected\+Sockets}{connectedSockets}}
+{\footnotesize\ttfamily List$<$\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}$>$ E\+L\+I\+Server.\+Message\+Socket\+Manager.\+connected\+Sockets = new List$<$\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_afe7ddcd6b733f389617621037d713db4}\label{class_e_l_i_server_1_1_message_socket_manager_afe7ddcd6b733f389617621037d713db4}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!hostname@{hostname}}
+\index{hostname@{hostname}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{hostname}{hostname}}
+{\footnotesize\ttfamily string E\+L\+I\+Server.\+Message\+Socket\+Manager.\+hostname = \char`\"{}127.\+0.\+0.\+1\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_a0c3b11ce72614567322dc025fd40c1c5}\label{class_e_l_i_server_1_1_message_socket_manager_a0c3b11ce72614567322dc025fd40c1c5}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!listener@{listener}}
+\index{listener@{listener}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{listener}{listener}}
+{\footnotesize\ttfamily Tcp\+Listener E\+L\+I\+Server.\+Message\+Socket\+Manager.\+listener = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_a937d0802b2bb8f1e173a17ee27e3b8cc}\label{class_e_l_i_server_1_1_message_socket_manager_a937d0802b2bb8f1e173a17ee27e3b8cc}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!main\+Window@{main\+Window}}
+\index{main\+Window@{main\+Window}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{main\+Window}{mainWindow}}
+{\footnotesize\ttfamily \hyperlink{class_e_l_i_server_1_1_main_window}{Main\+Window} E\+L\+I\+Server.\+Message\+Socket\+Manager.\+main\+Window\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_ad34ae3d8801eea0c2fd2305c5b05e692}\label{class_e_l_i_server_1_1_message_socket_manager_ad34ae3d8801eea0c2fd2305c5b05e692}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!pending\+Call\+Connections@{pending\+Call\+Connections}}
+\index{pending\+Call\+Connections@{pending\+Call\+Connections}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{pending\+Call\+Connections}{pendingCallConnections}}
+{\footnotesize\ttfamily List$<$\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}$>$ E\+L\+I\+Server.\+Message\+Socket\+Manager.\+pending\+Call\+Connections = new List$<$\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_af344f11a273d91f2d2c520583f105b95}\label{class_e_l_i_server_1_1_message_socket_manager_af344f11a273d91f2d2c520583f105b95}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!port@{port}}
+\index{port@{port}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily int E\+L\+I\+Server.\+Message\+Socket\+Manager.\+port = 30000\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_ae7079918e3fb3c205ee8831f800cd4d9}\label{class_e_l_i_server_1_1_message_socket_manager_ae7079918e3fb3c205ee8831f800cd4d9}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!running@{running}}
+\index{running@{running}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{running}{running}}
+{\footnotesize\ttfamily bool E\+L\+I\+Server.\+Message\+Socket\+Manager.\+running = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_a2c6114a87afeb4ecb1cbf42daea68df0}\label{class_e_l_i_server_1_1_message_socket_manager_a2c6114a87afeb4ecb1cbf42daea68df0}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!thread@{thread}}
+\index{thread@{thread}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{thread}{thread}}
+{\footnotesize\ttfamily Thread E\+L\+I\+Server.\+Message\+Socket\+Manager.\+thread\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+L\+I\+Server/\+Messaging/\hyperlink{_message_socket_manager_8cs}{Message\+Socket\+Manager.\+cs}\end{DoxyCompactItemize}

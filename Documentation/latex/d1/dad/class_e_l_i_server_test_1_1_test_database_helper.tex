@@ -1,0 +1,178 @@
+\hypertarget{class_e_l_i_server_test_1_1_test_database_helper}{}\section{E\+L\+I\+Server\+Test.\+Test\+Database\+Helper Class Reference}
+\label{class_e_l_i_server_test_1_1_test_database_helper}\index{E\+L\+I\+Server\+Test.\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test.\+Test\+Database\+Helper}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_l_i_server_test_1_1_test_database_helper_a155438b527497514f6e5fcb8c691b865}{Test\+Database\+Helper} ()
+\item 
+void \hyperlink{class_e_l_i_server_test_1_1_test_database_helper_a612fe6345fb2c6d90f03f1c2be6c0901}{Insert\+User} (String id, String first\+Name, String last\+Name, String user\+Name, String password)
+\item 
+void \hyperlink{class_e_l_i_server_test_1_1_test_database_helper_a21316fbecb748d3f5d9446387951c870}{Remove\+User} (String id)
+\item 
+Fb\+Data\+Reader \hyperlink{class_e_l_i_server_test_1_1_test_database_helper_a82181a75035efca85bacd09a8cf8aec9}{Get\+Reader\+For\+User} (String ID)
+\item 
+void \hyperlink{class_e_l_i_server_test_1_1_test_database_helper_acce24ced899bd0c952ac41a1a2657491}{Insert\+Table} (String table\+Number, String hotel\+Id)
+\item 
+void \hyperlink{class_e_l_i_server_test_1_1_test_database_helper_ae1410bc73e460822726be9e02a46fd3c}{Delete\+Table} (String table\+Number, String hotel\+Id)
+\item 
+Fb\+Data\+Reader \hyperlink{class_e_l_i_server_test_1_1_test_database_helper_a1e968d24b2cf40006b6740905f408b1c}{Get\+Call\+Connection} (String table\+Number1, String table\+Number2)
+\begin{DoxyCompactList}\small\item\em Gets a call connection from the database. Warning\+: this method does not close the connection to the database. You need to close it using \hyperlink{class_e_l_i_server_test_1_1_test_database_helper_ae1ec2aaa4d83ed9f63a02844ec32600e}{Close\+Connection()} on this object. \end{DoxyCompactList}\item 
+void \hyperlink{class_e_l_i_server_test_1_1_test_database_helper_ae1ec2aaa4d83ed9f63a02844ec32600e}{Close\+Connection} ()
+\item 
+void \hyperlink{class_e_l_i_server_test_1_1_test_database_helper_a06e042831161a455831dc8148fa4a70d}{Remove\+Call\+Connection} (String table\+Number1, String table\+Number2)
+\item 
+Fb\+Data\+Reader \hyperlink{class_e_l_i_server_test_1_1_test_database_helper_a3b612109e388d96caf2444552db9d0e3}{Get\+Guests\+Tables\+Connection} (String table\+Number, String guest\+Id)
+\begin{DoxyCompactList}\small\item\em Get the connection between a guest and a table. Warning\+: this method does not close the connection to the database. You need to close it using \hyperlink{class_e_l_i_server_test_1_1_test_database_helper_ae1ec2aaa4d83ed9f63a02844ec32600e}{Close\+Connection()} on this object. \end{DoxyCompactList}\item 
+Fb\+Data\+Reader \hyperlink{class_e_l_i_server_test_1_1_test_database_helper_aed83bc14862f6b5b0ecc61ffb9ad89bd}{Get\+Guest\+To\+Table\+Connection} (String table\+Number, String guest\+Id)
+\begin{DoxyCompactList}\small\item\em Get the connection between a guest and a table. Warning\+: this method does not close the connection to the database. You need to close it using \hyperlink{class_e_l_i_server_test_1_1_test_database_helper_ae1ec2aaa4d83ed9f63a02844ec32600e}{Close\+Connection()} on this object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_e_l_i_server_test_1_1_test_database_helper_a68c640584a57eaf87cf2c29950a2e19a}{connection\+String}
+\item 
+Fb\+Connection \hyperlink{class_e_l_i_server_test_1_1_test_database_helper_a4f6ef15321f9ce2e1ad311df36dd84d4}{connection}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_e_l_i_server_test_1_1_test_database_helper_a155438b527497514f6e5fcb8c691b865}\label{class_e_l_i_server_test_1_1_test_database_helper_a155438b527497514f6e5fcb8c691b865}} 
+\index{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}!Test\+Database\+Helper@{Test\+Database\+Helper}}
+\index{Test\+Database\+Helper@{Test\+Database\+Helper}!E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}}
+\subsubsection{\texorpdfstring{Test\+Database\+Helper()}{TestDatabaseHelper()}}
+{\footnotesize\ttfamily E\+L\+I\+Server\+Test.\+Test\+Database\+Helper.\+Test\+Database\+Helper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_l_i_server_test_1_1_test_database_helper_ae1ec2aaa4d83ed9f63a02844ec32600e}\label{class_e_l_i_server_test_1_1_test_database_helper_ae1ec2aaa4d83ed9f63a02844ec32600e}} 
+\index{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}!Close\+Connection@{Close\+Connection}}
+\index{Close\+Connection@{Close\+Connection}!E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}}
+\subsubsection{\texorpdfstring{Close\+Connection()}{CloseConnection()}}
+{\footnotesize\ttfamily void E\+L\+I\+Server\+Test.\+Test\+Database\+Helper.\+Close\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_test_1_1_test_database_helper_ae1410bc73e460822726be9e02a46fd3c}\label{class_e_l_i_server_test_1_1_test_database_helper_ae1410bc73e460822726be9e02a46fd3c}} 
+\index{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}!Delete\+Table@{Delete\+Table}}
+\index{Delete\+Table@{Delete\+Table}!E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}}
+\subsubsection{\texorpdfstring{Delete\+Table()}{DeleteTable()}}
+{\footnotesize\ttfamily void E\+L\+I\+Server\+Test.\+Test\+Database\+Helper.\+Delete\+Table (\begin{DoxyParamCaption}\item[{String}]{table\+Number,  }\item[{String}]{hotel\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_test_1_1_test_database_helper_a1e968d24b2cf40006b6740905f408b1c}\label{class_e_l_i_server_test_1_1_test_database_helper_a1e968d24b2cf40006b6740905f408b1c}} 
+\index{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}!Get\+Call\+Connection@{Get\+Call\+Connection}}
+\index{Get\+Call\+Connection@{Get\+Call\+Connection}!E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}}
+\subsubsection{\texorpdfstring{Get\+Call\+Connection()}{GetCallConnection()}}
+{\footnotesize\ttfamily Fb\+Data\+Reader E\+L\+I\+Server\+Test.\+Test\+Database\+Helper.\+Get\+Call\+Connection (\begin{DoxyParamCaption}\item[{String}]{table\+Number1,  }\item[{String}]{table\+Number2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a call connection from the database. Warning\+: this method does not close the connection to the database. You need to close it using \hyperlink{class_e_l_i_server_test_1_1_test_database_helper_ae1ec2aaa4d83ed9f63a02844ec32600e}{Close\+Connection()} on this object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Number1} & Table number 1\\
+\hline
+{\em table\+Number2} & Table number 2\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reader with the retreived rows. This reader should return only 1 row.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_l_i_server_test_1_1_test_database_helper_a3b612109e388d96caf2444552db9d0e3}\label{class_e_l_i_server_test_1_1_test_database_helper_a3b612109e388d96caf2444552db9d0e3}} 
+\index{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}!Get\+Guests\+Tables\+Connection@{Get\+Guests\+Tables\+Connection}}
+\index{Get\+Guests\+Tables\+Connection@{Get\+Guests\+Tables\+Connection}!E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}}
+\subsubsection{\texorpdfstring{Get\+Guests\+Tables\+Connection()}{GetGuestsTablesConnection()}}
+{\footnotesize\ttfamily Fb\+Data\+Reader E\+L\+I\+Server\+Test.\+Test\+Database\+Helper.\+Get\+Guests\+Tables\+Connection (\begin{DoxyParamCaption}\item[{String}]{table\+Number,  }\item[{String}]{guest\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the connection between a guest and a table. Warning\+: this method does not close the connection to the database. You need to close it using \hyperlink{class_e_l_i_server_test_1_1_test_database_helper_ae1ec2aaa4d83ed9f63a02844ec32600e}{Close\+Connection()} on this object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Number} & The table number\\
+\hline
+{\em guest\+Id} & The id of the guest\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reader with the retreived rows. This reader should return only 1 row.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_l_i_server_test_1_1_test_database_helper_aed83bc14862f6b5b0ecc61ffb9ad89bd}\label{class_e_l_i_server_test_1_1_test_database_helper_aed83bc14862f6b5b0ecc61ffb9ad89bd}} 
+\index{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}!Get\+Guest\+To\+Table\+Connection@{Get\+Guest\+To\+Table\+Connection}}
+\index{Get\+Guest\+To\+Table\+Connection@{Get\+Guest\+To\+Table\+Connection}!E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}}
+\subsubsection{\texorpdfstring{Get\+Guest\+To\+Table\+Connection()}{GetGuestToTableConnection()}}
+{\footnotesize\ttfamily Fb\+Data\+Reader E\+L\+I\+Server\+Test.\+Test\+Database\+Helper.\+Get\+Guest\+To\+Table\+Connection (\begin{DoxyParamCaption}\item[{String}]{table\+Number,  }\item[{String}]{guest\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the connection between a guest and a table. Warning\+: this method does not close the connection to the database. You need to close it using \hyperlink{class_e_l_i_server_test_1_1_test_database_helper_ae1ec2aaa4d83ed9f63a02844ec32600e}{Close\+Connection()} on this object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Number} & The table number\\
+\hline
+{\em guest\+Id} & The id of the guest\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reader with the retreived rows. This reader should return only 1 row.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_l_i_server_test_1_1_test_database_helper_a82181a75035efca85bacd09a8cf8aec9}\label{class_e_l_i_server_test_1_1_test_database_helper_a82181a75035efca85bacd09a8cf8aec9}} 
+\index{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}!Get\+Reader\+For\+User@{Get\+Reader\+For\+User}}
+\index{Get\+Reader\+For\+User@{Get\+Reader\+For\+User}!E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}}
+\subsubsection{\texorpdfstring{Get\+Reader\+For\+User()}{GetReaderForUser()}}
+{\footnotesize\ttfamily Fb\+Data\+Reader E\+L\+I\+Server\+Test.\+Test\+Database\+Helper.\+Get\+Reader\+For\+User (\begin{DoxyParamCaption}\item[{String}]{ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_test_1_1_test_database_helper_acce24ced899bd0c952ac41a1a2657491}\label{class_e_l_i_server_test_1_1_test_database_helper_acce24ced899bd0c952ac41a1a2657491}} 
+\index{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}!Insert\+Table@{Insert\+Table}}
+\index{Insert\+Table@{Insert\+Table}!E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}}
+\subsubsection{\texorpdfstring{Insert\+Table()}{InsertTable()}}
+{\footnotesize\ttfamily void E\+L\+I\+Server\+Test.\+Test\+Database\+Helper.\+Insert\+Table (\begin{DoxyParamCaption}\item[{String}]{table\+Number,  }\item[{String}]{hotel\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_test_1_1_test_database_helper_a612fe6345fb2c6d90f03f1c2be6c0901}\label{class_e_l_i_server_test_1_1_test_database_helper_a612fe6345fb2c6d90f03f1c2be6c0901}} 
+\index{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}!Insert\+User@{Insert\+User}}
+\index{Insert\+User@{Insert\+User}!E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}}
+\subsubsection{\texorpdfstring{Insert\+User()}{InsertUser()}}
+{\footnotesize\ttfamily void E\+L\+I\+Server\+Test.\+Test\+Database\+Helper.\+Insert\+User (\begin{DoxyParamCaption}\item[{String}]{id,  }\item[{String}]{first\+Name,  }\item[{String}]{last\+Name,  }\item[{String}]{user\+Name,  }\item[{String}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_test_1_1_test_database_helper_a06e042831161a455831dc8148fa4a70d}\label{class_e_l_i_server_test_1_1_test_database_helper_a06e042831161a455831dc8148fa4a70d}} 
+\index{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}!Remove\+Call\+Connection@{Remove\+Call\+Connection}}
+\index{Remove\+Call\+Connection@{Remove\+Call\+Connection}!E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}}
+\subsubsection{\texorpdfstring{Remove\+Call\+Connection()}{RemoveCallConnection()}}
+{\footnotesize\ttfamily void E\+L\+I\+Server\+Test.\+Test\+Database\+Helper.\+Remove\+Call\+Connection (\begin{DoxyParamCaption}\item[{String}]{table\+Number1,  }\item[{String}]{table\+Number2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_test_1_1_test_database_helper_a21316fbecb748d3f5d9446387951c870}\label{class_e_l_i_server_test_1_1_test_database_helper_a21316fbecb748d3f5d9446387951c870}} 
+\index{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}!Remove\+User@{Remove\+User}}
+\index{Remove\+User@{Remove\+User}!E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}}
+\subsubsection{\texorpdfstring{Remove\+User()}{RemoveUser()}}
+{\footnotesize\ttfamily void E\+L\+I\+Server\+Test.\+Test\+Database\+Helper.\+Remove\+User (\begin{DoxyParamCaption}\item[{String}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_e_l_i_server_test_1_1_test_database_helper_a4f6ef15321f9ce2e1ad311df36dd84d4}\label{class_e_l_i_server_test_1_1_test_database_helper_a4f6ef15321f9ce2e1ad311df36dd84d4}} 
+\index{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}!connection@{connection}}
+\index{connection@{connection}!E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}}
+\subsubsection{\texorpdfstring{connection}{connection}}
+{\footnotesize\ttfamily Fb\+Connection E\+L\+I\+Server\+Test.\+Test\+Database\+Helper.\+connection\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_test_1_1_test_database_helper_a68c640584a57eaf87cf2c29950a2e19a}\label{class_e_l_i_server_test_1_1_test_database_helper_a68c640584a57eaf87cf2c29950a2e19a}} 
+\index{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}!connection\+String@{connection\+String}}
+\index{connection\+String@{connection\+String}!E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper@{E\+L\+I\+Server\+Test\+::\+Test\+Database\+Helper}}
+\subsubsection{\texorpdfstring{connection\+String}{connectionString}}
+{\footnotesize\ttfamily string E\+L\+I\+Server\+Test.\+Test\+Database\+Helper.\+connection\+String\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+                \textcolor{stringliteral}{"User=SYSDBA;"} +
+                \textcolor{stringliteral}{"Password=ELI;"} +
+                \textcolor{stringliteral}{"Database='C:/Users/0891435/DATA/ELI\_CLIENT\_DATABASE.FDB';"} +
+                \textcolor{stringliteral}{"DataSource=145.24.222.19;"} +
+                \textcolor{stringliteral}{"Port=8001;"} +
+                \textcolor{stringliteral}{"Dialect=3"}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+L\+I\+Server\+Test/\hyperlink{_test_database_helper_8cs}{Test\+Database\+Helper.\+cs}\end{DoxyCompactItemize}

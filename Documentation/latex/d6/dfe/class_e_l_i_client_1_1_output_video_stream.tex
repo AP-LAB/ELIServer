@@ -1,0 +1,162 @@
+\hypertarget{class_e_l_i_client_1_1_output_video_stream}{}\section{E\+L\+I\+Client.\+Output\+Video\+Stream Class Reference}
+\label{class_e_l_i_client_1_1_output_video_stream}\index{E\+L\+I\+Client.\+Output\+Video\+Stream@{E\+L\+I\+Client.\+Output\+Video\+Stream}}
+Inheritance diagram for E\+L\+I\+Client.\+Output\+Video\+Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d6/dfe/class_e_l_i_client_1_1_output_video_stream}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_l_i_client_1_1_output_video_stream_ae53199f9aa8b56940a0d89b0de41b993}{Output\+Video\+Stream} (\hyperlink{class_e_l_i_client_1_1_streamer}{Streamer} streamer)
+\item 
+I\+Input\+Stream \hyperlink{class_e_l_i_client_1_1_output_video_stream_acaa44180e28619cb0a44a6c9d3caaca7}{Get\+Input\+Stream\+At} (ulong position)
+\item 
+I\+Output\+Stream \hyperlink{class_e_l_i_client_1_1_output_video_stream_ac9c25492413eb9187e11f45ac8652efe}{Get\+Output\+Stream\+At} (ulong position)
+\item 
+void \hyperlink{class_e_l_i_client_1_1_output_video_stream_a0c808f0f0fa8388008e25cb54f174cc6}{Seek} (ulong position)
+\item 
+I\+Random\+Access\+Stream \hyperlink{class_e_l_i_client_1_1_output_video_stream_a544fbf37edb556ccfef29090878c270b}{Clone\+Stream} ()
+\item 
+I\+Async\+Operation\+With\+Progress$<$ I\+Buffer, uint $>$ \hyperlink{class_e_l_i_client_1_1_output_video_stream_aa42ec5fa6c418ad002df0b937a3b8144}{Read\+Async} (I\+Buffer buffer, uint count, Input\+Stream\+Options options)
+\item 
+I\+Async\+Operation\+With\+Progress$<$ uint, uint $>$ \hyperlink{class_e_l_i_client_1_1_output_video_stream_a0345385c6f8607b3a84120c6d714adbc}{Write\+Async} (I\+Buffer buffer)
+\item 
+I\+Async\+Operation$<$ bool $>$ \hyperlink{class_e_l_i_client_1_1_output_video_stream_a350e9d190aa34a202f13c2260f2a7412}{Flush\+Async} ()
+\item 
+void \hyperlink{class_e_l_i_client_1_1_output_video_stream_aadc11fccbe0f1e962a50fa406b750935}{Dispose} ()
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_e_l_i_client_1_1_output_video_stream_a1883b47d619f458147eff35edae0804f}{Can\+Read}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \hyperlink{class_e_l_i_client_1_1_output_video_stream_a1951c63319d5d5b92f99f33e099458b0}{Can\+Write}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+ulong \hyperlink{class_e_l_i_client_1_1_output_video_stream_a456f195f5c5aa6908b4ece4eaa26706f}{Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+ulong \hyperlink{class_e_l_i_client_1_1_output_video_stream_a1ccae6fdd1b9fddeba94de627d136ba4}{Size}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_l_i_client_1_1_streamer}{Streamer} \hyperlink{class_e_l_i_client_1_1_output_video_stream_a8918d79717e23adce1a256845b9d61f3}{output\+Streamer}
+\item 
+ulong \hyperlink{class_e_l_i_client_1_1_output_video_stream_a62d450a2ca8641fd9ed775ce3309f04b}{my\+Position}
+\item 
+ulong \hyperlink{class_e_l_i_client_1_1_output_video_stream_a9262fa2c4cacb0e214b3bdc682c9a5c1}{my\+Size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_e_l_i_client_1_1_output_video_stream_ae53199f9aa8b56940a0d89b0de41b993}\label{class_e_l_i_client_1_1_output_video_stream_ae53199f9aa8b56940a0d89b0de41b993}} 
+\index{E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}!Output\+Video\+Stream@{Output\+Video\+Stream}}
+\index{Output\+Video\+Stream@{Output\+Video\+Stream}!E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Output\+Video\+Stream()}{OutputVideoStream()}}
+{\footnotesize\ttfamily E\+L\+I\+Client.\+Output\+Video\+Stream.\+Output\+Video\+Stream (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_client_1_1_streamer}{Streamer}}]{streamer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_l_i_client_1_1_output_video_stream_a544fbf37edb556ccfef29090878c270b}\label{class_e_l_i_client_1_1_output_video_stream_a544fbf37edb556ccfef29090878c270b}} 
+\index{E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}!Clone\+Stream@{Clone\+Stream}}
+\index{Clone\+Stream@{Clone\+Stream}!E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Clone\+Stream()}{CloneStream()}}
+{\footnotesize\ttfamily I\+Random\+Access\+Stream E\+L\+I\+Client.\+Output\+Video\+Stream.\+Clone\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_output_video_stream_aadc11fccbe0f1e962a50fa406b750935}\label{class_e_l_i_client_1_1_output_video_stream_aadc11fccbe0f1e962a50fa406b750935}} 
+\index{E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily void E\+L\+I\+Client.\+Output\+Video\+Stream.\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_output_video_stream_a350e9d190aa34a202f13c2260f2a7412}\label{class_e_l_i_client_1_1_output_video_stream_a350e9d190aa34a202f13c2260f2a7412}} 
+\index{E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}!Flush\+Async@{Flush\+Async}}
+\index{Flush\+Async@{Flush\+Async}!E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Flush\+Async()}{FlushAsync()}}
+{\footnotesize\ttfamily I\+Async\+Operation$<$bool$>$ E\+L\+I\+Client.\+Output\+Video\+Stream.\+Flush\+Async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_output_video_stream_acaa44180e28619cb0a44a6c9d3caaca7}\label{class_e_l_i_client_1_1_output_video_stream_acaa44180e28619cb0a44a6c9d3caaca7}} 
+\index{E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}!Get\+Input\+Stream\+At@{Get\+Input\+Stream\+At}}
+\index{Get\+Input\+Stream\+At@{Get\+Input\+Stream\+At}!E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Get\+Input\+Stream\+At()}{GetInputStreamAt()}}
+{\footnotesize\ttfamily I\+Input\+Stream E\+L\+I\+Client.\+Output\+Video\+Stream.\+Get\+Input\+Stream\+At (\begin{DoxyParamCaption}\item[{ulong}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_output_video_stream_ac9c25492413eb9187e11f45ac8652efe}\label{class_e_l_i_client_1_1_output_video_stream_ac9c25492413eb9187e11f45ac8652efe}} 
+\index{E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}!Get\+Output\+Stream\+At@{Get\+Output\+Stream\+At}}
+\index{Get\+Output\+Stream\+At@{Get\+Output\+Stream\+At}!E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Get\+Output\+Stream\+At()}{GetOutputStreamAt()}}
+{\footnotesize\ttfamily I\+Output\+Stream E\+L\+I\+Client.\+Output\+Video\+Stream.\+Get\+Output\+Stream\+At (\begin{DoxyParamCaption}\item[{ulong}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_output_video_stream_aa42ec5fa6c418ad002df0b937a3b8144}\label{class_e_l_i_client_1_1_output_video_stream_aa42ec5fa6c418ad002df0b937a3b8144}} 
+\index{E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}!Read\+Async@{Read\+Async}}
+\index{Read\+Async@{Read\+Async}!E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Read\+Async()}{ReadAsync()}}
+{\footnotesize\ttfamily I\+Async\+Operation\+With\+Progress$<$I\+Buffer, uint$>$ E\+L\+I\+Client.\+Output\+Video\+Stream.\+Read\+Async (\begin{DoxyParamCaption}\item[{I\+Buffer}]{buffer,  }\item[{uint}]{count,  }\item[{Input\+Stream\+Options}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_output_video_stream_a0c808f0f0fa8388008e25cb54f174cc6}\label{class_e_l_i_client_1_1_output_video_stream_a0c808f0f0fa8388008e25cb54f174cc6}} 
+\index{E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}!Seek@{Seek}}
+\index{Seek@{Seek}!E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Seek()}{Seek()}}
+{\footnotesize\ttfamily void E\+L\+I\+Client.\+Output\+Video\+Stream.\+Seek (\begin{DoxyParamCaption}\item[{ulong}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_output_video_stream_a0345385c6f8607b3a84120c6d714adbc}\label{class_e_l_i_client_1_1_output_video_stream_a0345385c6f8607b3a84120c6d714adbc}} 
+\index{E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}!Write\+Async@{Write\+Async}}
+\index{Write\+Async@{Write\+Async}!E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Write\+Async()}{WriteAsync()}}
+{\footnotesize\ttfamily I\+Async\+Operation\+With\+Progress$<$uint, uint$>$ E\+L\+I\+Client.\+Output\+Video\+Stream.\+Write\+Async (\begin{DoxyParamCaption}\item[{I\+Buffer}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_e_l_i_client_1_1_output_video_stream_a62d450a2ca8641fd9ed775ce3309f04b}\label{class_e_l_i_client_1_1_output_video_stream_a62d450a2ca8641fd9ed775ce3309f04b}} 
+\index{E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}!my\+Position@{my\+Position}}
+\index{my\+Position@{my\+Position}!E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}}
+\subsubsection{\texorpdfstring{my\+Position}{myPosition}}
+{\footnotesize\ttfamily ulong E\+L\+I\+Client.\+Output\+Video\+Stream.\+my\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_output_video_stream_a9262fa2c4cacb0e214b3bdc682c9a5c1}\label{class_e_l_i_client_1_1_output_video_stream_a9262fa2c4cacb0e214b3bdc682c9a5c1}} 
+\index{E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}!my\+Size@{my\+Size}}
+\index{my\+Size@{my\+Size}!E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}}
+\subsubsection{\texorpdfstring{my\+Size}{mySize}}
+{\footnotesize\ttfamily ulong E\+L\+I\+Client.\+Output\+Video\+Stream.\+my\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_output_video_stream_a8918d79717e23adce1a256845b9d61f3}\label{class_e_l_i_client_1_1_output_video_stream_a8918d79717e23adce1a256845b9d61f3}} 
+\index{E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}!output\+Streamer@{output\+Streamer}}
+\index{output\+Streamer@{output\+Streamer}!E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}}
+\subsubsection{\texorpdfstring{output\+Streamer}{outputStreamer}}
+{\footnotesize\ttfamily \hyperlink{class_e_l_i_client_1_1_streamer}{Streamer} E\+L\+I\+Client.\+Output\+Video\+Stream.\+output\+Streamer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_e_l_i_client_1_1_output_video_stream_a1883b47d619f458147eff35edae0804f}\label{class_e_l_i_client_1_1_output_video_stream_a1883b47d619f458147eff35edae0804f}} 
+\index{E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}!Can\+Read@{Can\+Read}}
+\index{Can\+Read@{Can\+Read}!E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Can\+Read}{CanRead}}
+{\footnotesize\ttfamily bool E\+L\+I\+Client.\+Output\+Video\+Stream.\+Can\+Read\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_output_video_stream_a1951c63319d5d5b92f99f33e099458b0}\label{class_e_l_i_client_1_1_output_video_stream_a1951c63319d5d5b92f99f33e099458b0}} 
+\index{E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}!Can\+Write@{Can\+Write}}
+\index{Can\+Write@{Can\+Write}!E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Can\+Write}{CanWrite}}
+{\footnotesize\ttfamily bool E\+L\+I\+Client.\+Output\+Video\+Stream.\+Can\+Write\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_output_video_stream_a456f195f5c5aa6908b4ece4eaa26706f}\label{class_e_l_i_client_1_1_output_video_stream_a456f195f5c5aa6908b4ece4eaa26706f}} 
+\index{E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}!Position@{Position}}
+\index{Position@{Position}!E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily ulong E\+L\+I\+Client.\+Output\+Video\+Stream.\+Position\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_output_video_stream_a1ccae6fdd1b9fddeba94de627d136ba4}\label{class_e_l_i_client_1_1_output_video_stream_a1ccae6fdd1b9fddeba94de627d136ba4}} 
+\index{E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}!Size@{Size}}
+\index{Size@{Size}!E\+L\+I\+Client\+::\+Output\+Video\+Stream@{E\+L\+I\+Client\+::\+Output\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Size}{Size}}
+{\footnotesize\ttfamily ulong E\+L\+I\+Client.\+Output\+Video\+Stream.\+Size\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Documents/\+H\+B\+O/3/\+Periode 4/\+H\+P-\/\+Lab/\+Development/\+E\+L\+I\+Client/\+E\+L\+I\+Client/\+Capture/\hyperlink{_output_video_stream_8cs}{Output\+Video\+Stream.\+cs}\end{DoxyCompactItemize}

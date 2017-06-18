@@ -1,0 +1,146 @@
+\hypertarget{class_e_l_i_server_1_1_call_connection}{}\section{E\+L\+I\+Server.\+Call\+Connection Class Reference}
+\label{class_e_l_i_server_1_1_call_connection}\index{E\+L\+I\+Server.\+Call\+Connection@{E\+L\+I\+Server.\+Call\+Connection}}
+
+
+ 
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_l_i_server_1_1_call_connection_ad0182673abc1aaffa6f4f539a727f782}{Call\+Connection} (\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} \+\_\+client1, \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} \+\_\+client2)
+\item 
+void \hyperlink{class_e_l_i_server_1_1_call_connection_ac9a3d9918d1739e322cc9a4a6fdcbeeb}{Set\+Threads} ()
+\end{DoxyCompactItemize}
+\subsection*{Package Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} \hyperlink{class_e_l_i_server_1_1_call_connection_ae65d1e69b626abc7d354ca87ab800b12}{Get\+Client1} ()
+\begin{DoxyCompactList}\small\item\em Get the first client of the connection. This client is of the Client\+Message\+Socket class. \end{DoxyCompactList}\item 
+\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} \hyperlink{class_e_l_i_server_1_1_call_connection_ad424584ee59e02e9a3ac7b1993694683}{Get\+Client2} ()
+\begin{DoxyCompactList}\small\item\em Get the second client of the connection. This client is of the Client\+Message\+Socket class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async void \hyperlink{class_e_l_i_server_1_1_call_connection_a01514395594e70da5e9acb48d908a238}{Stream\+To} (Network\+Stream in\+Stream, Network\+Stream out\+Stream)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} \hyperlink{class_e_l_i_server_1_1_call_connection_adfdb5fc52756028eeac454f6e61e9de6}{client1}
+\item 
+\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} \hyperlink{class_e_l_i_server_1_1_call_connection_af687483721642ebfcb3eaf00e586c7a1}{client2}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+This class represents a video call connection.
+
+The class contains two Client\+Message\+Socket instances, client1 and client2. A connection is established between those clients. When an instance is created, the clients will immediately start streaming to eachother. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_call_connection_ad0182673abc1aaffa6f4f539a727f782}\label{class_e_l_i_server_1_1_call_connection_ad0182673abc1aaffa6f4f539a727f782}} 
+\index{E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}!Call\+Connection@{Call\+Connection}}
+\index{Call\+Connection@{Call\+Connection}!E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}}
+\subsubsection{\texorpdfstring{Call\+Connection()}{CallConnection()}}
+{\footnotesize\ttfamily E\+L\+I\+Server.\+Call\+Connection.\+Call\+Connection (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{\+\_\+client1,  }\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{\+\_\+client2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+Create a new instance of \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection}.
+
+When the instance is created, the database will be updated accordingly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+client1} & An object of the Client\+Message\+Socket class.\\
+\hline
+{\em \+\_\+client2} & An object of the Client\+Message\+Socket class.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_call_connection_ae65d1e69b626abc7d354ca87ab800b12}\label{class_e_l_i_server_1_1_call_connection_ae65d1e69b626abc7d354ca87ab800b12}} 
+\index{E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}!Get\+Client1@{Get\+Client1}}
+\index{Get\+Client1@{Get\+Client1}!E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}}
+\subsubsection{\texorpdfstring{Get\+Client1()}{GetClient1()}}
+{\footnotesize\ttfamily \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} E\+L\+I\+Server.\+Call\+Connection.\+Get\+Client1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [package]}}
+
+
+
+Get the first client of the connection. This client is of the Client\+Message\+Socket class. 
+
+\begin{DoxyReturn}{Returns}
+An object of the class Client\+Message\+Socket
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_call_connection_ad424584ee59e02e9a3ac7b1993694683}\label{class_e_l_i_server_1_1_call_connection_ad424584ee59e02e9a3ac7b1993694683}} 
+\index{E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}!Get\+Client2@{Get\+Client2}}
+\index{Get\+Client2@{Get\+Client2}!E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}}
+\subsubsection{\texorpdfstring{Get\+Client2()}{GetClient2()}}
+{\footnotesize\ttfamily \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} E\+L\+I\+Server.\+Call\+Connection.\+Get\+Client2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [package]}}
+
+
+
+Get the second client of the connection. This client is of the Client\+Message\+Socket class. 
+
+\begin{DoxyReturn}{Returns}
+An object of the class Client\+Message\+Socket
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_call_connection_ac9a3d9918d1739e322cc9a4a6fdcbeeb}\label{class_e_l_i_server_1_1_call_connection_ac9a3d9918d1739e322cc9a4a6fdcbeeb}} 
+\index{E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}!Set\+Threads@{Set\+Threads}}
+\index{Set\+Threads@{Set\+Threads}!E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}}
+\subsubsection{\texorpdfstring{Set\+Threads()}{SetThreads()}}
+{\footnotesize\ttfamily void E\+L\+I\+Server.\+Call\+Connection.\+Set\+Threads (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+Extract the streams from the clients and start streaming to both clients.
+
+The streaming is done on two seperate threads. The streaming itself is done using the \hyperlink{class_e_l_i_server_1_1_call_connection_a01514395594e70da5e9acb48d908a238}{Stream\+To()} method. \mbox{\Hypertarget{class_e_l_i_server_1_1_call_connection_a01514395594e70da5e9acb48d908a238}\label{class_e_l_i_server_1_1_call_connection_a01514395594e70da5e9acb48d908a238}} 
+\index{E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}!Stream\+To@{Stream\+To}}
+\index{Stream\+To@{Stream\+To}!E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}}
+\subsubsection{\texorpdfstring{Stream\+To()}{StreamTo()}}
+{\footnotesize\ttfamily async void E\+L\+I\+Server.\+Call\+Connection.\+Stream\+To (\begin{DoxyParamCaption}\item[{Network\+Stream}]{in\+Stream,  }\item[{Network\+Stream}]{out\+Stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+
+
+Start streaming from one stream to another.
+
+This is repeated as long as both clients are connected. When the connection on one of the clients is closed, the \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} is removed from the call\+Connections list in \hyperlink{class_e_l_i_server_1_1_message_socket_manager}{Message\+Socket\+Manager}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+Stream} & The input stream to get data from.\\
+\hline
+{\em out\+Stream} & The output stream to pass data to.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_call_connection_adfdb5fc52756028eeac454f6e61e9de6}\label{class_e_l_i_server_1_1_call_connection_adfdb5fc52756028eeac454f6e61e9de6}} 
+\index{E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}!client1@{client1}}
+\index{client1@{client1}!E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}}
+\subsubsection{\texorpdfstring{client1}{client1}}
+{\footnotesize\ttfamily \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} E\+L\+I\+Server.\+Call\+Connection.\+client1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_call_connection_af687483721642ebfcb3eaf00e586c7a1}\label{class_e_l_i_server_1_1_call_connection_af687483721642ebfcb3eaf00e586c7a1}} 
+\index{E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}!client2@{client2}}
+\index{client2@{client2}!E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}}
+\subsubsection{\texorpdfstring{client2}{client2}}
+{\footnotesize\ttfamily \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} E\+L\+I\+Server.\+Call\+Connection.\+client2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+L\+I\+Server/\+Client\+Socket/\hyperlink{_call_connection_8cs}{Call\+Connection.\+cs}\end{DoxyCompactItemize}

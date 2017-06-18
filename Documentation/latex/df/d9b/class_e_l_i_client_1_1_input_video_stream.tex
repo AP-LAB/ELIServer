@@ -1,0 +1,194 @@
+\hypertarget{class_e_l_i_client_1_1_input_video_stream}{}\section{E\+L\+I\+Client.\+Input\+Video\+Stream Class Reference}
+\label{class_e_l_i_client_1_1_input_video_stream}\index{E\+L\+I\+Client.\+Input\+Video\+Stream@{E\+L\+I\+Client.\+Input\+Video\+Stream}}
+Inheritance diagram for E\+L\+I\+Client.\+Input\+Video\+Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{df/d9b/class_e_l_i_client_1_1_input_video_stream}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_l_i_client_1_1_input_video_stream_aeb09c4dec65a8619e609b66dc27e7b0c}{Input\+Video\+Stream} (string server\+Address, string \+\_\+server\+Port)
+\item 
+I\+Input\+Stream \hyperlink{class_e_l_i_client_1_1_input_video_stream_afc0e6cd66887bc975d7d188676616715}{Get\+Input\+Stream\+At} (ulong \hyperlink{class_e_l_i_client_1_1_input_video_stream_afa8afb29384563f3abc625defc4847a4}{position})
+\item 
+I\+Output\+Stream \hyperlink{class_e_l_i_client_1_1_input_video_stream_a03a67d8daf2056898db1f3d5a5cb24ae}{Get\+Output\+Stream\+At} (ulong \hyperlink{class_e_l_i_client_1_1_input_video_stream_afa8afb29384563f3abc625defc4847a4}{position})
+\item 
+void \hyperlink{class_e_l_i_client_1_1_input_video_stream_af6ad40c0bd8e0da1c0d185160e1f7067}{Seek} (ulong \+\_\+position)
+\item 
+I\+Random\+Access\+Stream \hyperlink{class_e_l_i_client_1_1_input_video_stream_aa61efafce04f69a274a8fa268b6bc80f}{Clone\+Stream} ()
+\item 
+I\+Async\+Operation\+With\+Progress$<$ I\+Buffer, uint $>$ \hyperlink{class_e_l_i_client_1_1_input_video_stream_a340ba3e2d2df24bcc4881af011c1a556}{Read\+Async} (I\+Buffer buffer, uint count, Input\+Stream\+Options options)
+\item 
+I\+Async\+Operation\+With\+Progress$<$ uint, uint $>$ \hyperlink{class_e_l_i_client_1_1_input_video_stream_a16dd12ce8ad7d0805b484ec11c646b3e}{Write\+Async} (I\+Buffer buffer)
+\item 
+I\+Async\+Operation$<$ bool $>$ \hyperlink{class_e_l_i_client_1_1_input_video_stream_adca4012402bc11d8608c7db75e805d02}{Flush\+Async} ()
+\item 
+void \hyperlink{class_e_l_i_client_1_1_input_video_stream_abd17d210dacc53836bb8f3de41483ae9}{Dispose} ()
+\item 
+async Task \hyperlink{class_e_l_i_client_1_1_input_video_stream_ad67ec2d0d414888dd58ac0adbd174645}{Connect} ()
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_e_l_i_client_1_1_input_video_stream_a2d698a07eac376481d0ed20dfb664c0a}{Can\+Read}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \hyperlink{class_e_l_i_client_1_1_input_video_stream_aaa9a5b3b5591f4faa479ca63b702ef54}{Can\+Write}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+ulong \hyperlink{class_e_l_i_client_1_1_input_video_stream_ad7aa08dea5beb6c2cdd356f6b8f2afbc}{Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+ulong \hyperlink{class_e_l_i_client_1_1_input_video_stream_a720f0a6225a45adda7e48fe6e388c645}{Size}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ulong \hyperlink{class_e_l_i_client_1_1_input_video_stream_afa8afb29384563f3abc625defc4847a4}{position}
+\item 
+ulong \hyperlink{class_e_l_i_client_1_1_input_video_stream_afd80ab457d638f2d783dc8c403566290}{size} = ulong.\+Max\+Value
+\item 
+Stream\+Socket \hyperlink{class_e_l_i_client_1_1_input_video_stream_ad4a616700059844fb7035fc366e0abc5}{socket}
+\item 
+Host\+Name \hyperlink{class_e_l_i_client_1_1_input_video_stream_ae3dd99393a07776d217543c63d745880}{server\+Host}
+\item 
+string \hyperlink{class_e_l_i_client_1_1_input_video_stream_aa8980ab6e2baf1ca3035472d7e7fb10a}{server\+Port}
+\item 
+bool \hyperlink{class_e_l_i_client_1_1_input_video_stream_a4b9b5dfb4effc20c16c1b8713fb6b2d2}{connected} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_aeb09c4dec65a8619e609b66dc27e7b0c}\label{class_e_l_i_client_1_1_input_video_stream_aeb09c4dec65a8619e609b66dc27e7b0c}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!Input\+Video\+Stream@{Input\+Video\+Stream}}
+\index{Input\+Video\+Stream@{Input\+Video\+Stream}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Input\+Video\+Stream()}{InputVideoStream()}}
+{\footnotesize\ttfamily E\+L\+I\+Client.\+Input\+Video\+Stream.\+Input\+Video\+Stream (\begin{DoxyParamCaption}\item[{string}]{server\+Address,  }\item[{string}]{\+\_\+server\+Port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_aa61efafce04f69a274a8fa268b6bc80f}\label{class_e_l_i_client_1_1_input_video_stream_aa61efafce04f69a274a8fa268b6bc80f}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!Clone\+Stream@{Clone\+Stream}}
+\index{Clone\+Stream@{Clone\+Stream}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Clone\+Stream()}{CloneStream()}}
+{\footnotesize\ttfamily I\+Random\+Access\+Stream E\+L\+I\+Client.\+Input\+Video\+Stream.\+Clone\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_ad67ec2d0d414888dd58ac0adbd174645}\label{class_e_l_i_client_1_1_input_video_stream_ad67ec2d0d414888dd58ac0adbd174645}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!Connect@{Connect}}
+\index{Connect@{Connect}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Connect()}{Connect()}}
+{\footnotesize\ttfamily async Task E\+L\+I\+Client.\+Input\+Video\+Stream.\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_abd17d210dacc53836bb8f3de41483ae9}\label{class_e_l_i_client_1_1_input_video_stream_abd17d210dacc53836bb8f3de41483ae9}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily void E\+L\+I\+Client.\+Input\+Video\+Stream.\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_adca4012402bc11d8608c7db75e805d02}\label{class_e_l_i_client_1_1_input_video_stream_adca4012402bc11d8608c7db75e805d02}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!Flush\+Async@{Flush\+Async}}
+\index{Flush\+Async@{Flush\+Async}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Flush\+Async()}{FlushAsync()}}
+{\footnotesize\ttfamily I\+Async\+Operation$<$bool$>$ E\+L\+I\+Client.\+Input\+Video\+Stream.\+Flush\+Async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_afc0e6cd66887bc975d7d188676616715}\label{class_e_l_i_client_1_1_input_video_stream_afc0e6cd66887bc975d7d188676616715}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!Get\+Input\+Stream\+At@{Get\+Input\+Stream\+At}}
+\index{Get\+Input\+Stream\+At@{Get\+Input\+Stream\+At}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Get\+Input\+Stream\+At()}{GetInputStreamAt()}}
+{\footnotesize\ttfamily I\+Input\+Stream E\+L\+I\+Client.\+Input\+Video\+Stream.\+Get\+Input\+Stream\+At (\begin{DoxyParamCaption}\item[{ulong}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_a03a67d8daf2056898db1f3d5a5cb24ae}\label{class_e_l_i_client_1_1_input_video_stream_a03a67d8daf2056898db1f3d5a5cb24ae}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!Get\+Output\+Stream\+At@{Get\+Output\+Stream\+At}}
+\index{Get\+Output\+Stream\+At@{Get\+Output\+Stream\+At}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Get\+Output\+Stream\+At()}{GetOutputStreamAt()}}
+{\footnotesize\ttfamily I\+Output\+Stream E\+L\+I\+Client.\+Input\+Video\+Stream.\+Get\+Output\+Stream\+At (\begin{DoxyParamCaption}\item[{ulong}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_a340ba3e2d2df24bcc4881af011c1a556}\label{class_e_l_i_client_1_1_input_video_stream_a340ba3e2d2df24bcc4881af011c1a556}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!Read\+Async@{Read\+Async}}
+\index{Read\+Async@{Read\+Async}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Read\+Async()}{ReadAsync()}}
+{\footnotesize\ttfamily I\+Async\+Operation\+With\+Progress$<$I\+Buffer, uint$>$ E\+L\+I\+Client.\+Input\+Video\+Stream.\+Read\+Async (\begin{DoxyParamCaption}\item[{I\+Buffer}]{buffer,  }\item[{uint}]{count,  }\item[{Input\+Stream\+Options}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_af6ad40c0bd8e0da1c0d185160e1f7067}\label{class_e_l_i_client_1_1_input_video_stream_af6ad40c0bd8e0da1c0d185160e1f7067}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!Seek@{Seek}}
+\index{Seek@{Seek}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Seek()}{Seek()}}
+{\footnotesize\ttfamily void E\+L\+I\+Client.\+Input\+Video\+Stream.\+Seek (\begin{DoxyParamCaption}\item[{ulong}]{\+\_\+position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_a16dd12ce8ad7d0805b484ec11c646b3e}\label{class_e_l_i_client_1_1_input_video_stream_a16dd12ce8ad7d0805b484ec11c646b3e}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!Write\+Async@{Write\+Async}}
+\index{Write\+Async@{Write\+Async}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Write\+Async()}{WriteAsync()}}
+{\footnotesize\ttfamily I\+Async\+Operation\+With\+Progress$<$uint, uint$>$ E\+L\+I\+Client.\+Input\+Video\+Stream.\+Write\+Async (\begin{DoxyParamCaption}\item[{I\+Buffer}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_a4b9b5dfb4effc20c16c1b8713fb6b2d2}\label{class_e_l_i_client_1_1_input_video_stream_a4b9b5dfb4effc20c16c1b8713fb6b2d2}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!connected@{connected}}
+\index{connected@{connected}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{connected}{connected}}
+{\footnotesize\ttfamily bool E\+L\+I\+Client.\+Input\+Video\+Stream.\+connected = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_afa8afb29384563f3abc625defc4847a4}\label{class_e_l_i_client_1_1_input_video_stream_afa8afb29384563f3abc625defc4847a4}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!position@{position}}
+\index{position@{position}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily ulong E\+L\+I\+Client.\+Input\+Video\+Stream.\+position\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_ae3dd99393a07776d217543c63d745880}\label{class_e_l_i_client_1_1_input_video_stream_ae3dd99393a07776d217543c63d745880}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!server\+Host@{server\+Host}}
+\index{server\+Host@{server\+Host}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{server\+Host}{serverHost}}
+{\footnotesize\ttfamily Host\+Name E\+L\+I\+Client.\+Input\+Video\+Stream.\+server\+Host\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_aa8980ab6e2baf1ca3035472d7e7fb10a}\label{class_e_l_i_client_1_1_input_video_stream_aa8980ab6e2baf1ca3035472d7e7fb10a}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!server\+Port@{server\+Port}}
+\index{server\+Port@{server\+Port}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{server\+Port}{serverPort}}
+{\footnotesize\ttfamily string E\+L\+I\+Client.\+Input\+Video\+Stream.\+server\+Port\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_afd80ab457d638f2d783dc8c403566290}\label{class_e_l_i_client_1_1_input_video_stream_afd80ab457d638f2d783dc8c403566290}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!size@{size}}
+\index{size@{size}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily ulong E\+L\+I\+Client.\+Input\+Video\+Stream.\+size = ulong.\+Max\+Value\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_ad4a616700059844fb7035fc366e0abc5}\label{class_e_l_i_client_1_1_input_video_stream_ad4a616700059844fb7035fc366e0abc5}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!socket@{socket}}
+\index{socket@{socket}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{socket}{socket}}
+{\footnotesize\ttfamily Stream\+Socket E\+L\+I\+Client.\+Input\+Video\+Stream.\+socket\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_a2d698a07eac376481d0ed20dfb664c0a}\label{class_e_l_i_client_1_1_input_video_stream_a2d698a07eac376481d0ed20dfb664c0a}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!Can\+Read@{Can\+Read}}
+\index{Can\+Read@{Can\+Read}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Can\+Read}{CanRead}}
+{\footnotesize\ttfamily bool E\+L\+I\+Client.\+Input\+Video\+Stream.\+Can\+Read\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_aaa9a5b3b5591f4faa479ca63b702ef54}\label{class_e_l_i_client_1_1_input_video_stream_aaa9a5b3b5591f4faa479ca63b702ef54}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!Can\+Write@{Can\+Write}}
+\index{Can\+Write@{Can\+Write}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Can\+Write}{CanWrite}}
+{\footnotesize\ttfamily bool E\+L\+I\+Client.\+Input\+Video\+Stream.\+Can\+Write\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_ad7aa08dea5beb6c2cdd356f6b8f2afbc}\label{class_e_l_i_client_1_1_input_video_stream_ad7aa08dea5beb6c2cdd356f6b8f2afbc}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!Position@{Position}}
+\index{Position@{Position}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily ulong E\+L\+I\+Client.\+Input\+Video\+Stream.\+Position\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_input_video_stream_a720f0a6225a45adda7e48fe6e388c645}\label{class_e_l_i_client_1_1_input_video_stream_a720f0a6225a45adda7e48fe6e388c645}} 
+\index{E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}!Size@{Size}}
+\index{Size@{Size}!E\+L\+I\+Client\+::\+Input\+Video\+Stream@{E\+L\+I\+Client\+::\+Input\+Video\+Stream}}
+\subsubsection{\texorpdfstring{Size}{Size}}
+{\footnotesize\ttfamily ulong E\+L\+I\+Client.\+Input\+Video\+Stream.\+Size\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Documents/\+H\+B\+O/3/\+Periode 4/\+H\+P-\/\+Lab/\+Development/\+E\+L\+I\+Client/\+E\+L\+I\+Client/\+Video\+Input/\hyperlink{_input_video_stream_8cs}{Input\+Video\+Stream.\+cs}\end{DoxyCompactItemize}

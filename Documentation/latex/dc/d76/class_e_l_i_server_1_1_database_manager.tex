@@ -1,0 +1,152 @@
+\hypertarget{class_e_l_i_server_1_1_database_manager}{}\section{E\+L\+I\+Server.\+Database\+Manager Class Reference}
+\label{class_e_l_i_server_1_1_database_manager}\index{E\+L\+I\+Server.\+Database\+Manager@{E\+L\+I\+Server.\+Database\+Manager}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_l_i_server_1_1_database_manager_af4932c44cd155cec929be0207f17605e}{Database\+Manager} ()
+\item 
+Dictionary$<$ string, string $>$ \hyperlink{class_e_l_i_server_1_1_database_manager_a5eaf0569ca067ab6e074fc76c03439fe}{Get\+User\+By\+Username\+And\+Password} (String username, String password)
+\item 
+List$<$ Dictionary$<$ string, string $>$ $>$ \hyperlink{class_e_l_i_server_1_1_database_manager_a85c00dfc07b07c4840aca4fcdd09175e}{Get\+All\+Cities\+With\+Lat\+Lon} ()
+\item 
+void \hyperlink{class_e_l_i_server_1_1_database_manager_a7f64bd7fd49cd35e15362d2db5a302e0}{Close} ()
+\item 
+void \hyperlink{class_e_l_i_server_1_1_database_manager_a27bf3444db3446216c2a0c7b957895d9}{Set\+Video\+Call\+Connection} (string client1\+Id, string client2\+Id)
+\item 
+void \hyperlink{class_e_l_i_server_1_1_database_manager_a8e8315c9b23095cbe799c8f75ccacc87}{Remove\+Video\+Call\+Connection} (string client1\+Id, string client2\+Id)
+\item 
+void \hyperlink{class_e_l_i_server_1_1_database_manager_a4167599aa3be67444134c0fd4f837c82}{Connect\+Guest\+To\+Table} (string guest\+Id, string table\+Id)
+\item 
+void \hyperlink{class_e_l_i_server_1_1_database_manager_a99034ff69cba06942d29a9ad444b04c3}{Disconnect\+Guest\+From\+Table} (string guest\+Id, string table\+Id)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ string, string $>$ \hyperlink{class_e_l_i_server_1_1_database_manager_a4ccfa58357d3f8e7fd495f78a117856e}{Get\+Dictionary\+From\+Fb\+Data\+Reader\+With\+One\+Result} (Fb\+Data\+Reader reader, String type)
+\begin{DoxyCompactList}\small\item\em Create a dictionary from colums in the first row in the reader. If there are no rows, return an empty dictionary. \end{DoxyCompactList}\item 
+List$<$ Dictionary$<$ string, string $>$ $>$ \hyperlink{class_e_l_i_server_1_1_database_manager_a9732d7fca81399afcb1ad6f5f01a42f3}{Get\+Dictionary\+From\+Fb\+Data\+Reader\+With\+Many\+Results} (Fb\+Data\+Reader reader, String type)
+\begin{DoxyCompactList}\small\item\em Create a list of dictonaries that represent the returned row from the database. The keys are the column names and the values are the values from the database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_e_l_i_server_1_1_database_manager_abd72094260884e6f8d417bc2a3d6f192}{connection\+String}
+\item 
+Fb\+Connection \hyperlink{class_e_l_i_server_1_1_database_manager_a34b35f163316da5270e526b1d0f51889}{connection}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_database_manager_af4932c44cd155cec929be0207f17605e}\label{class_e_l_i_server_1_1_database_manager_af4932c44cd155cec929be0207f17605e}} 
+\index{E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}!Database\+Manager@{Database\+Manager}}
+\index{Database\+Manager@{Database\+Manager}!E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}}
+\subsubsection{\texorpdfstring{Database\+Manager()}{DatabaseManager()}}
+{\footnotesize\ttfamily E\+L\+I\+Server.\+Database\+Manager.\+Database\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_database_manager_a7f64bd7fd49cd35e15362d2db5a302e0}\label{class_e_l_i_server_1_1_database_manager_a7f64bd7fd49cd35e15362d2db5a302e0}} 
+\index{E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}!Close@{Close}}
+\index{Close@{Close}!E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}}
+\subsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily void E\+L\+I\+Server.\+Database\+Manager.\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_database_manager_a4167599aa3be67444134c0fd4f837c82}\label{class_e_l_i_server_1_1_database_manager_a4167599aa3be67444134c0fd4f837c82}} 
+\index{E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}!Connect\+Guest\+To\+Table@{Connect\+Guest\+To\+Table}}
+\index{Connect\+Guest\+To\+Table@{Connect\+Guest\+To\+Table}!E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}}
+\subsubsection{\texorpdfstring{Connect\+Guest\+To\+Table()}{ConnectGuestToTable()}}
+{\footnotesize\ttfamily void E\+L\+I\+Server.\+Database\+Manager.\+Connect\+Guest\+To\+Table (\begin{DoxyParamCaption}\item[{string}]{guest\+Id,  }\item[{string}]{table\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_database_manager_a99034ff69cba06942d29a9ad444b04c3}\label{class_e_l_i_server_1_1_database_manager_a99034ff69cba06942d29a9ad444b04c3}} 
+\index{E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}!Disconnect\+Guest\+From\+Table@{Disconnect\+Guest\+From\+Table}}
+\index{Disconnect\+Guest\+From\+Table@{Disconnect\+Guest\+From\+Table}!E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}}
+\subsubsection{\texorpdfstring{Disconnect\+Guest\+From\+Table()}{DisconnectGuestFromTable()}}
+{\footnotesize\ttfamily void E\+L\+I\+Server.\+Database\+Manager.\+Disconnect\+Guest\+From\+Table (\begin{DoxyParamCaption}\item[{string}]{guest\+Id,  }\item[{string}]{table\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_database_manager_a85c00dfc07b07c4840aca4fcdd09175e}\label{class_e_l_i_server_1_1_database_manager_a85c00dfc07b07c4840aca4fcdd09175e}} 
+\index{E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}!Get\+All\+Cities\+With\+Lat\+Lon@{Get\+All\+Cities\+With\+Lat\+Lon}}
+\index{Get\+All\+Cities\+With\+Lat\+Lon@{Get\+All\+Cities\+With\+Lat\+Lon}!E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}}
+\subsubsection{\texorpdfstring{Get\+All\+Cities\+With\+Lat\+Lon()}{GetAllCitiesWithLatLon()}}
+{\footnotesize\ttfamily List$<$Dictionary$<$string, string$>$ $>$ E\+L\+I\+Server.\+Database\+Manager.\+Get\+All\+Cities\+With\+Lat\+Lon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_database_manager_a9732d7fca81399afcb1ad6f5f01a42f3}\label{class_e_l_i_server_1_1_database_manager_a9732d7fca81399afcb1ad6f5f01a42f3}} 
+\index{E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}!Get\+Dictionary\+From\+Fb\+Data\+Reader\+With\+Many\+Results@{Get\+Dictionary\+From\+Fb\+Data\+Reader\+With\+Many\+Results}}
+\index{Get\+Dictionary\+From\+Fb\+Data\+Reader\+With\+Many\+Results@{Get\+Dictionary\+From\+Fb\+Data\+Reader\+With\+Many\+Results}!E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Dictionary\+From\+Fb\+Data\+Reader\+With\+Many\+Results()}{GetDictionaryFromFbDataReaderWithManyResults()}}
+{\footnotesize\ttfamily List$<$Dictionary$<$string, string$>$ $>$ E\+L\+I\+Server.\+Database\+Manager.\+Get\+Dictionary\+From\+Fb\+Data\+Reader\+With\+Many\+Results (\begin{DoxyParamCaption}\item[{Fb\+Data\+Reader}]{reader,  }\item[{String}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Create a list of dictonaries that represent the returned row from the database. The keys are the column names and the values are the values from the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & The reader that contains the data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list with dictionaries that contain the column name and value.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_database_manager_a4ccfa58357d3f8e7fd495f78a117856e}\label{class_e_l_i_server_1_1_database_manager_a4ccfa58357d3f8e7fd495f78a117856e}} 
+\index{E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}!Get\+Dictionary\+From\+Fb\+Data\+Reader\+With\+One\+Result@{Get\+Dictionary\+From\+Fb\+Data\+Reader\+With\+One\+Result}}
+\index{Get\+Dictionary\+From\+Fb\+Data\+Reader\+With\+One\+Result@{Get\+Dictionary\+From\+Fb\+Data\+Reader\+With\+One\+Result}!E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Dictionary\+From\+Fb\+Data\+Reader\+With\+One\+Result()}{GetDictionaryFromFbDataReaderWithOneResult()}}
+{\footnotesize\ttfamily Dictionary$<$string, string$>$ E\+L\+I\+Server.\+Database\+Manager.\+Get\+Dictionary\+From\+Fb\+Data\+Reader\+With\+One\+Result (\begin{DoxyParamCaption}\item[{Fb\+Data\+Reader}]{reader,  }\item[{String}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Create a dictionary from colums in the first row in the reader. If there are no rows, return an empty dictionary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & The reader that contains the data.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_database_manager_a5eaf0569ca067ab6e074fc76c03439fe}\label{class_e_l_i_server_1_1_database_manager_a5eaf0569ca067ab6e074fc76c03439fe}} 
+\index{E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}!Get\+User\+By\+Username\+And\+Password@{Get\+User\+By\+Username\+And\+Password}}
+\index{Get\+User\+By\+Username\+And\+Password@{Get\+User\+By\+Username\+And\+Password}!E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}}
+\subsubsection{\texorpdfstring{Get\+User\+By\+Username\+And\+Password()}{GetUserByUsernameAndPassword()}}
+{\footnotesize\ttfamily Dictionary$<$string, string$>$ E\+L\+I\+Server.\+Database\+Manager.\+Get\+User\+By\+Username\+And\+Password (\begin{DoxyParamCaption}\item[{String}]{username,  }\item[{String}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_database_manager_a8e8315c9b23095cbe799c8f75ccacc87}\label{class_e_l_i_server_1_1_database_manager_a8e8315c9b23095cbe799c8f75ccacc87}} 
+\index{E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}!Remove\+Video\+Call\+Connection@{Remove\+Video\+Call\+Connection}}
+\index{Remove\+Video\+Call\+Connection@{Remove\+Video\+Call\+Connection}!E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}}
+\subsubsection{\texorpdfstring{Remove\+Video\+Call\+Connection()}{RemoveVideoCallConnection()}}
+{\footnotesize\ttfamily void E\+L\+I\+Server.\+Database\+Manager.\+Remove\+Video\+Call\+Connection (\begin{DoxyParamCaption}\item[{string}]{client1\+Id,  }\item[{string}]{client2\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_database_manager_a27bf3444db3446216c2a0c7b957895d9}\label{class_e_l_i_server_1_1_database_manager_a27bf3444db3446216c2a0c7b957895d9}} 
+\index{E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}!Set\+Video\+Call\+Connection@{Set\+Video\+Call\+Connection}}
+\index{Set\+Video\+Call\+Connection@{Set\+Video\+Call\+Connection}!E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}}
+\subsubsection{\texorpdfstring{Set\+Video\+Call\+Connection()}{SetVideoCallConnection()}}
+{\footnotesize\ttfamily void E\+L\+I\+Server.\+Database\+Manager.\+Set\+Video\+Call\+Connection (\begin{DoxyParamCaption}\item[{string}]{client1\+Id,  }\item[{string}]{client2\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_database_manager_a34b35f163316da5270e526b1d0f51889}\label{class_e_l_i_server_1_1_database_manager_a34b35f163316da5270e526b1d0f51889}} 
+\index{E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}!connection@{connection}}
+\index{connection@{connection}!E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}}
+\subsubsection{\texorpdfstring{connection}{connection}}
+{\footnotesize\ttfamily Fb\+Connection E\+L\+I\+Server.\+Database\+Manager.\+connection\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_database_manager_abd72094260884e6f8d417bc2a3d6f192}\label{class_e_l_i_server_1_1_database_manager_abd72094260884e6f8d417bc2a3d6f192}} 
+\index{E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}!connection\+String@{connection\+String}}
+\index{connection\+String@{connection\+String}!E\+L\+I\+Server\+::\+Database\+Manager@{E\+L\+I\+Server\+::\+Database\+Manager}}
+\subsubsection{\texorpdfstring{connection\+String}{connectionString}}
+{\footnotesize\ttfamily string E\+L\+I\+Server.\+Database\+Manager.\+connection\+String\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+                        \textcolor{stringliteral}{"User=SYSDBA;"} +
+                        \textcolor{stringliteral}{"Password=ELI;"} +
+                        \textcolor{stringliteral}{"Database='C:/Users/0891435/DATA/ELI\_CLIENT\_DATABASE.FDB';"} +
+                        \textcolor{stringliteral}{"DataSource=145.24.222.19;"} +
+                        \textcolor{stringliteral}{"Port=8001;"} +
+                        \textcolor{stringliteral}{"Dialect=3"}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+L\+I\+Server/\hyperlink{_database_manager_8cs}{Database\+Manager.\+cs}\end{DoxyCompactItemize}

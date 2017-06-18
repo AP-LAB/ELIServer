@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['c_5fframerated',['c_frameRateD',['../dc/dca/class_e_l_i_client_1_1_custom_media_stream_source.html#a6e79c416317129330d6f892269b14560',1,'ELIClient::CustomMediaStreamSource']]],
+  ['c_5fframeraten',['c_frameRateN',['../dc/dca/class_e_l_i_client_1_1_custom_media_stream_source.html#ab060659fb19df455b86d5bd6fe5bf691',1,'ELIClient::CustomMediaStreamSource']]],
+  ['callconnections',['callConnections',['../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#a1f25b676369fa4e59beca49d3ecf294a',1,'ELIServer::MessageSocketManager']]],
+  ['capturer',['capturer',['../d2/d05/class_e_l_i_client_1_1_video_call_view_1_1_video_call_view.html#a81d9faac1d2a2b04a3953b66735ea1f7',1,'ELIClient::VideoCallView::VideoCallView']]],
+  ['cityconnectionbtn',['CityConnectionBtn',['../d1/d6f/class_e_l_i_client_1_1_main_page.html#a4779791c2de61403ee9f5caa9726dde5',1,'ELIClient::MainPage']]],
+  ['client',['client',['../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a0373b287a964b75f145c12031d28accd',1,'ELIServer::Messaging::MessageHandler']]],
+  ['client1',['client1',['../d7/d79/class_e_l_i_server_1_1_call_connection.html#adfdb5fc52756028eeac454f6e61e9de6',1,'ELIServer::CallConnection']]],
+  ['client2',['client2',['../d7/d79/class_e_l_i_server_1_1_call_connection.html#af687483721642ebfcb3eaf00e586c7a1',1,'ELIServer::CallConnection']]],
+  ['clientid',['clientID',['../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html#afdf35ffe78727bb8d1b1e53a9dd48760',1,'ELIServer::Messaging::ClientMessageSocket']]],
+  ['clock',['clock',['../da/d96/class_custom_media_sink.html#a76f04a9bab9e51a358e094b107b16420',1,'CustomMediaSink']]],
+  ['codeconnectionbtn',['CodeConnectionBtn',['../d1/d6f/class_e_l_i_client_1_1_main_page.html#aeaa715ecc3cfcc76b4362888ddd160ae',1,'ELIClient::MainPage']]],
+  ['connected',['connected',['../df/d9b/class_e_l_i_client_1_1_input_video_stream.html#a4b9b5dfb4effc20c16c1b8713fb6b2d2',1,'ELIClient::InputVideoStream']]],
+  ['connectedcallslabel',['connectedCallsLabel',['../d4/da4/class_e_l_i_server_1_1_main_window.html#a52d218404ef3448c67c4cb90d869b052',1,'ELIServer::MainWindow']]],
+  ['connectedclientslabel',['connectedClientsLabel',['../d4/da4/class_e_l_i_server_1_1_main_window.html#aab341ea0e21840106f606219464d28d1',1,'ELIServer::MainWindow']]],
+  ['connectedsockets',['connectedSockets',['../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#a042e9dc087484feacc3128eb3f7ac2f4',1,'ELIServer::MessageSocketManager']]],
+  ['connection',['connection',['../dc/d76/class_e_l_i_server_1_1_database_manager.html#a34b35f163316da5270e526b1d0f51889',1,'ELIServer.DatabaseManager.connection()'],['../d1/dad/class_e_l_i_server_test_1_1_test_database_helper.html#a4f6ef15321f9ce2e1ad311df36dd84d4',1,'ELIServerTest.TestDatabaseHelper.connection()']]],
+  ['connectionstring',['connectionString',['../dc/d76/class_e_l_i_server_1_1_database_manager.html#abd72094260884e6f8d417bc2a3d6f192',1,'ELIServer.DatabaseManager.connectionString()'],['../d1/dad/class_e_l_i_server_test_1_1_test_database_helper.html#a68c640584a57eaf87cf2c29950a2e19a',1,'ELIServerTest.TestDatabaseHelper.connectionString()']]],
+  ['containergrid',['ContainerGrid',['../d5/d97/class_eli_log_in_app_1_1_credentials_view.html#a669f0c23d9107acadc26bb968a83de16',1,'EliLogInApp::CredentialsView']]],
+  ['currentoutputstream',['currentOutputStream',['../d3/d49/class_e_l_i_client_1_1_capturer.html#a7c579fcee6eca00cf6f438d5983a1299',1,'ELIClient::Capturer']]]
+];

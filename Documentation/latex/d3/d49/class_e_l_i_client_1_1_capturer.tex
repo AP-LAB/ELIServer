@@ -1,0 +1,152 @@
+\hypertarget{class_e_l_i_client_1_1_capturer}{}\section{E\+L\+I\+Client.\+Capturer Class Reference}
+\label{class_e_l_i_client_1_1_capturer}\index{E\+L\+I\+Client.\+Capturer@{E\+L\+I\+Client.\+Capturer}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_l_i_client_1_1_capturer_a3455ba52cb52e5297f02e95413eec9c5}{Capturer} ()
+\item 
+async Task$<$ Device\+Information $>$ \hyperlink{class_e_l_i_client_1_1_capturer_accf1111c1021efa12abdb1ebc7e2f394}{Get\+Video\+Capture\+Device\+On\+Machine} ()
+\item 
+async Task$<$ Device\+Information $>$ \hyperlink{class_e_l_i_client_1_1_capturer_a1b8998f20c6a85835fdbb900383c9e18}{Get\+Audio\+Capture\+Device\+On\+Machine} ()
+\item 
+async void \hyperlink{class_e_l_i_client_1_1_capturer_a5e64d7010dccca9d81ce8e758372a663}{Initialize\+And\+Set\+Media\+Capture\+Async} ()
+\begin{DoxyCompactList}\small\item\em This method searches for audio and video devices on the machine. After the devices are found, settings for the Media\+Capture object are created and used to initialize the Media\+Capture object. When finished, the is\+Set\+Up boolean is set to true. The method must be called before the Start\+Recording method. \end{DoxyCompactList}\item 
+async void \hyperlink{class_e_l_i_client_1_1_capturer_a319a1f370fec226ad47ba982812535af}{Start\+Video\+Recording} ()
+\item 
+async void \hyperlink{class_e_l_i_client_1_1_capturer_a1804509b6a4af7aff8d08943bb59da76}{Eljakim} ()
+\item 
+async void \hyperlink{class_e_l_i_client_1_1_capturer_a0b99d531c208233d08e9cb531f1e27ca}{Stop\+Recording\+Async} ()
+\item 
+async void \hyperlink{class_e_l_i_client_1_1_capturer_a9a472a3f53feb00c6bb1bb0689e52872}{A} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Media\+Capture \hyperlink{class_e_l_i_client_1_1_capturer_afce477fff2b67de230a211ff3f639201}{\+\_\+media\+Capture}
+\item 
+bool \hyperlink{class_e_l_i_client_1_1_capturer_a99b1a695b80e8984744c065862eceb3e}{is\+Set\+Up} = false
+\item 
+bool \hyperlink{class_e_l_i_client_1_1_capturer_a2063ed98b28c4a20315abb65c46954fd}{is\+Recording} = false
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_e_l_i_client_1_1_capturer_a8ec8dc9bc9feaab18678ec7243d3fe1a}{Thermal\+Status\+Changed} (Media\+Capture sender, object args)
+\item 
+void \hyperlink{class_e_l_i_client_1_1_capturer_af6d3770fe2218af444a50373c9113edd}{Failed} (Media\+Capture sender, Media\+Capture\+Failed\+Event\+Args error\+Event\+Args)
+\item 
+async Task \hyperlink{class_e_l_i_client_1_1_capturer_a2f70c5ede4af4832530c9a6e0bc550d3}{Check\+Set\+Up} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_l_i_client_1_1_output_video_stream}{Output\+Video\+Stream} \hyperlink{class_e_l_i_client_1_1_capturer_a7c579fcee6eca00cf6f438d5983a1299}{current\+Output\+Stream}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_e_l_i_client_1_1_capturer_a3455ba52cb52e5297f02e95413eec9c5}\label{class_e_l_i_client_1_1_capturer_a3455ba52cb52e5297f02e95413eec9c5}} 
+\index{E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}!Capturer@{Capturer}}
+\index{Capturer@{Capturer}!E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}}
+\subsubsection{\texorpdfstring{Capturer()}{Capturer()}}
+{\footnotesize\ttfamily E\+L\+I\+Client.\+Capturer.\+Capturer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_l_i_client_1_1_capturer_a9a472a3f53feb00c6bb1bb0689e52872}\label{class_e_l_i_client_1_1_capturer_a9a472a3f53feb00c6bb1bb0689e52872}} 
+\index{E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}!A@{A}}
+\index{A@{A}!E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}}
+\subsubsection{\texorpdfstring{A()}{A()}}
+{\footnotesize\ttfamily async void E\+L\+I\+Client.\+Capturer.\+A (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_capturer_a2f70c5ede4af4832530c9a6e0bc550d3}\label{class_e_l_i_client_1_1_capturer_a2f70c5ede4af4832530c9a6e0bc550d3}} 
+\index{E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}!Check\+Set\+Up@{Check\+Set\+Up}}
+\index{Check\+Set\+Up@{Check\+Set\+Up}!E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}}
+\subsubsection{\texorpdfstring{Check\+Set\+Up()}{CheckSetUp()}}
+{\footnotesize\ttfamily async Task E\+L\+I\+Client.\+Capturer.\+Check\+Set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_capturer_a1804509b6a4af7aff8d08943bb59da76}\label{class_e_l_i_client_1_1_capturer_a1804509b6a4af7aff8d08943bb59da76}} 
+\index{E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}!Eljakim@{Eljakim}}
+\index{Eljakim@{Eljakim}!E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}}
+\subsubsection{\texorpdfstring{Eljakim()}{Eljakim()}}
+{\footnotesize\ttfamily async void E\+L\+I\+Client.\+Capturer.\+Eljakim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_capturer_af6d3770fe2218af444a50373c9113edd}\label{class_e_l_i_client_1_1_capturer_af6d3770fe2218af444a50373c9113edd}} 
+\index{E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}!Failed@{Failed}}
+\index{Failed@{Failed}!E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}}
+\subsubsection{\texorpdfstring{Failed()}{Failed()}}
+{\footnotesize\ttfamily void E\+L\+I\+Client.\+Capturer.\+Failed (\begin{DoxyParamCaption}\item[{Media\+Capture}]{sender,  }\item[{Media\+Capture\+Failed\+Event\+Args}]{error\+Event\+Args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_capturer_a1b8998f20c6a85835fdbb900383c9e18}\label{class_e_l_i_client_1_1_capturer_a1b8998f20c6a85835fdbb900383c9e18}} 
+\index{E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}!Get\+Audio\+Capture\+Device\+On\+Machine@{Get\+Audio\+Capture\+Device\+On\+Machine}}
+\index{Get\+Audio\+Capture\+Device\+On\+Machine@{Get\+Audio\+Capture\+Device\+On\+Machine}!E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}}
+\subsubsection{\texorpdfstring{Get\+Audio\+Capture\+Device\+On\+Machine()}{GetAudioCaptureDeviceOnMachine()}}
+{\footnotesize\ttfamily async Task$<$Device\+Information$>$ E\+L\+I\+Client.\+Capturer.\+Get\+Audio\+Capture\+Device\+On\+Machine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_capturer_accf1111c1021efa12abdb1ebc7e2f394}\label{class_e_l_i_client_1_1_capturer_accf1111c1021efa12abdb1ebc7e2f394}} 
+\index{E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}!Get\+Video\+Capture\+Device\+On\+Machine@{Get\+Video\+Capture\+Device\+On\+Machine}}
+\index{Get\+Video\+Capture\+Device\+On\+Machine@{Get\+Video\+Capture\+Device\+On\+Machine}!E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}}
+\subsubsection{\texorpdfstring{Get\+Video\+Capture\+Device\+On\+Machine()}{GetVideoCaptureDeviceOnMachine()}}
+{\footnotesize\ttfamily async Task$<$Device\+Information$>$ E\+L\+I\+Client.\+Capturer.\+Get\+Video\+Capture\+Device\+On\+Machine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_capturer_a5e64d7010dccca9d81ce8e758372a663}\label{class_e_l_i_client_1_1_capturer_a5e64d7010dccca9d81ce8e758372a663}} 
+\index{E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}!Initialize\+And\+Set\+Media\+Capture\+Async@{Initialize\+And\+Set\+Media\+Capture\+Async}}
+\index{Initialize\+And\+Set\+Media\+Capture\+Async@{Initialize\+And\+Set\+Media\+Capture\+Async}!E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}}
+\subsubsection{\texorpdfstring{Initialize\+And\+Set\+Media\+Capture\+Async()}{InitializeAndSetMediaCaptureAsync()}}
+{\footnotesize\ttfamily async void E\+L\+I\+Client.\+Capturer.\+Initialize\+And\+Set\+Media\+Capture\+Async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method searches for audio and video devices on the machine. After the devices are found, settings for the Media\+Capture object are created and used to initialize the Media\+Capture object. When finished, the is\+Set\+Up boolean is set to true. The method must be called before the Start\+Recording method. 
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_capturer_a319a1f370fec226ad47ba982812535af}\label{class_e_l_i_client_1_1_capturer_a319a1f370fec226ad47ba982812535af}} 
+\index{E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}!Start\+Video\+Recording@{Start\+Video\+Recording}}
+\index{Start\+Video\+Recording@{Start\+Video\+Recording}!E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}}
+\subsubsection{\texorpdfstring{Start\+Video\+Recording()}{StartVideoRecording()}}
+{\footnotesize\ttfamily async void E\+L\+I\+Client.\+Capturer.\+Start\+Video\+Recording (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_capturer_a0b99d531c208233d08e9cb531f1e27ca}\label{class_e_l_i_client_1_1_capturer_a0b99d531c208233d08e9cb531f1e27ca}} 
+\index{E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}!Stop\+Recording\+Async@{Stop\+Recording\+Async}}
+\index{Stop\+Recording\+Async@{Stop\+Recording\+Async}!E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}}
+\subsubsection{\texorpdfstring{Stop\+Recording\+Async()}{StopRecordingAsync()}}
+{\footnotesize\ttfamily async void E\+L\+I\+Client.\+Capturer.\+Stop\+Recording\+Async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_capturer_a8ec8dc9bc9feaab18678ec7243d3fe1a}\label{class_e_l_i_client_1_1_capturer_a8ec8dc9bc9feaab18678ec7243d3fe1a}} 
+\index{E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}!Thermal\+Status\+Changed@{Thermal\+Status\+Changed}}
+\index{Thermal\+Status\+Changed@{Thermal\+Status\+Changed}!E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}}
+\subsubsection{\texorpdfstring{Thermal\+Status\+Changed()}{ThermalStatusChanged()}}
+{\footnotesize\ttfamily void E\+L\+I\+Client.\+Capturer.\+Thermal\+Status\+Changed (\begin{DoxyParamCaption}\item[{Media\+Capture}]{sender,  }\item[{object}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_e_l_i_client_1_1_capturer_afce477fff2b67de230a211ff3f639201}\label{class_e_l_i_client_1_1_capturer_afce477fff2b67de230a211ff3f639201}} 
+\index{E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}!\+\_\+media\+Capture@{\+\_\+media\+Capture}}
+\index{\+\_\+media\+Capture@{\+\_\+media\+Capture}!E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}}
+\subsubsection{\texorpdfstring{\+\_\+media\+Capture}{\_mediaCapture}}
+{\footnotesize\ttfamily Media\+Capture E\+L\+I\+Client.\+Capturer.\+\_\+media\+Capture}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_capturer_a7c579fcee6eca00cf6f438d5983a1299}\label{class_e_l_i_client_1_1_capturer_a7c579fcee6eca00cf6f438d5983a1299}} 
+\index{E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}!current\+Output\+Stream@{current\+Output\+Stream}}
+\index{current\+Output\+Stream@{current\+Output\+Stream}!E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}}
+\subsubsection{\texorpdfstring{current\+Output\+Stream}{currentOutputStream}}
+{\footnotesize\ttfamily \hyperlink{class_e_l_i_client_1_1_output_video_stream}{Output\+Video\+Stream} E\+L\+I\+Client.\+Capturer.\+current\+Output\+Stream\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_capturer_a2063ed98b28c4a20315abb65c46954fd}\label{class_e_l_i_client_1_1_capturer_a2063ed98b28c4a20315abb65c46954fd}} 
+\index{E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}!is\+Recording@{is\+Recording}}
+\index{is\+Recording@{is\+Recording}!E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}}
+\subsubsection{\texorpdfstring{is\+Recording}{isRecording}}
+{\footnotesize\ttfamily bool E\+L\+I\+Client.\+Capturer.\+is\+Recording = false}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_capturer_a99b1a695b80e8984744c065862eceb3e}\label{class_e_l_i_client_1_1_capturer_a99b1a695b80e8984744c065862eceb3e}} 
+\index{E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}!is\+Set\+Up@{is\+Set\+Up}}
+\index{is\+Set\+Up@{is\+Set\+Up}!E\+L\+I\+Client\+::\+Capturer@{E\+L\+I\+Client\+::\+Capturer}}
+\subsubsection{\texorpdfstring{is\+Set\+Up}{isSetUp}}
+{\footnotesize\ttfamily bool E\+L\+I\+Client.\+Capturer.\+is\+Set\+Up = false}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Documents/\+H\+B\+O/3/\+Periode 4/\+H\+P-\/\+Lab/\+Development/\+E\+L\+I\+Client/\+E\+L\+I\+Client/\+Capture/\hyperlink{_capturer_8cs}{Capturer.\+cs}\end{DoxyCompactItemize}

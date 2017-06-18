@@ -1,0 +1,212 @@
+\hypertarget{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{}\section{E\+L\+I\+Server.\+Messaging.\+Client\+Message\+Socket Class Reference}
+\label{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}\index{E\+L\+I\+Server.\+Messaging.\+Client\+Message\+Socket@{E\+L\+I\+Server.\+Messaging.\+Client\+Message\+Socket}}
+
+
+ 
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_ae2c5fabcf44e180e767e22dbbe797174}{Client\+Message\+Socket} (Tcp\+Client client)
+\item 
+void \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_ae337f033eec166081fc56f6a35a22c8f}{Get\+Initial\+Message} ()
+\item 
+void \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a0b1b4e6b86d3724706b8abf34a7a061c}{Send\+Message} (String message)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_afdf35ffe78727bb8d1b1e53a9dd48760}{client\+ID}
+\begin{DoxyCompactList}\small\item\em The ID of the connected client/table. \end{DoxyCompactList}\item 
+String \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a133a6eff37e294286e2777799bc644f4}{user\+ID}
+\begin{DoxyCompactList}\small\item\em The ID of the connected user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Package Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a6068ed137f8fa6fcafcfe24764444ca5}{Is\+Connected} ()
+\item 
+Tcp\+Client \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a22a77525ef761a701c8be319d5e31a50}{Get\+Inner\+Client} ()
+\begin{DoxyCompactList}\small\item\em A getter for the inner Tcp\+Client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a3d83f53c3a99a74cc67092265a9d75ea}{Handle\+Incoming\+Messages\+Client} ()
+\item 
+String \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_af243c323ef5f9a2e49b4ea5eb8de1dab}{Get\+String\+From\+Network\+Stream} (Network\+Stream stream)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Tcp\+Client \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a1ef8df027624ee609a4d32db7ccdd2ef}{inner\+Client}
+\begin{DoxyCompactList}\small\item\em The inner Tcp\+Client client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+A class that communicates with a Tcp\+Client object.
+
+This class is used as a wrapper for a Tcp\+Client object. It also represents a connected user and the client that the user is using. The object contains the following global variables\+:
+\begin{DoxyItemize}
+\item inner\+Client\+: the Tcp\+Client to communicate with.
+\item client\+ID\+: the ID of the client (table).
+\item user\+ID\+: the ID of the connected user. 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_ae2c5fabcf44e180e767e22dbbe797174}\label{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_ae2c5fabcf44e180e767e22dbbe797174}} 
+\index{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}!Client\+Message\+Socket@{Client\+Message\+Socket}}
+\index{Client\+Message\+Socket@{Client\+Message\+Socket}!E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}}
+\subsubsection{\texorpdfstring{Client\+Message\+Socket()}{ClientMessageSocket()}}
+{\footnotesize\ttfamily E\+L\+I\+Server.\+Messaging.\+Client\+Message\+Socket.\+Client\+Message\+Socket (\begin{DoxyParamCaption}\item[{Tcp\+Client}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+Create a new instance of \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}.
+
+When the \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} object is created, an intitial message will be requested. This message is handled in the \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_ae337f033eec166081fc56f6a35a22c8f}{Get\+Initial\+Message()} method. After the intitial message is handled, all incoming messages will be handled using the \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a3d83f53c3a99a74cc67092265a9d75ea}{Handle\+Incoming\+Messages\+Client()} method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & The Tcp\+Client that will be the inner Tcp\+Client.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_ae337f033eec166081fc56f6a35a22c8f}\label{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_ae337f033eec166081fc56f6a35a22c8f}} 
+\index{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}!Get\+Initial\+Message@{Get\+Initial\+Message}}
+\index{Get\+Initial\+Message@{Get\+Initial\+Message}!E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}}
+\subsubsection{\texorpdfstring{Get\+Initial\+Message()}{GetInitialMessage()}}
+{\footnotesize\ttfamily void E\+L\+I\+Server.\+Messaging.\+Client\+Message\+Socket.\+Get\+Initial\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+Handle the first messages that is send to the inner\+Client object.
+
+Get the initial message that is send to the inner\+Client object. The client\+ID and user\+ID will be gathered from this message. Note\+: Make sure the initial message contains the \char`\"{}\+Client\+I\+D\char`\"{}(client\+ID) and \char`\"{}\+I\+D\char`\"{} (user\+ID) tokens and values. \mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a22a77525ef761a701c8be319d5e31a50}\label{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a22a77525ef761a701c8be319d5e31a50}} 
+\index{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}!Get\+Inner\+Client@{Get\+Inner\+Client}}
+\index{Get\+Inner\+Client@{Get\+Inner\+Client}!E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}}
+\subsubsection{\texorpdfstring{Get\+Inner\+Client()}{GetInnerClient()}}
+{\footnotesize\ttfamily Tcp\+Client E\+L\+I\+Server.\+Messaging.\+Client\+Message\+Socket.\+Get\+Inner\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [package]}}
+
+
+
+A getter for the inner Tcp\+Client. 
+
+\begin{DoxyReturn}{Returns}
+The inner Tcp\+Client.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_af243c323ef5f9a2e49b4ea5eb8de1dab}\label{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_af243c323ef5f9a2e49b4ea5eb8de1dab}} 
+\index{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}!Get\+String\+From\+Network\+Stream@{Get\+String\+From\+Network\+Stream}}
+\index{Get\+String\+From\+Network\+Stream@{Get\+String\+From\+Network\+Stream}!E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}}
+\subsubsection{\texorpdfstring{Get\+String\+From\+Network\+Stream()}{GetStringFromNetworkStream()}}
+{\footnotesize\ttfamily String E\+L\+I\+Server.\+Messaging.\+Client\+Message\+Socket.\+Get\+String\+From\+Network\+Stream (\begin{DoxyParamCaption}\item[{Network\+Stream}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+
+
+Recieve a message from the network stream.
+
+The first 4 element of the string should contain the size of the following bytes. The method will hang if te size specified is bigger than the real size, because it waits for all bytes. The size is in little endian order and the message is encoded in U\+T\+F8. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & The stream to gather data from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string that follows the 4 bytes, thus the message send.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a3d83f53c3a99a74cc67092265a9d75ea}\label{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a3d83f53c3a99a74cc67092265a9d75ea}} 
+\index{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}!Handle\+Incoming\+Messages\+Client@{Handle\+Incoming\+Messages\+Client}}
+\index{Handle\+Incoming\+Messages\+Client@{Handle\+Incoming\+Messages\+Client}!E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}}
+\subsubsection{\texorpdfstring{Handle\+Incoming\+Messages\+Client()}{HandleIncomingMessagesClient()}}
+{\footnotesize\ttfamily void E\+L\+I\+Server.\+Messaging.\+Client\+Message\+Socket.\+Handle\+Incoming\+Messages\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+
+
+Handle all incoming messages for this client.
+
+This is done using the static \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a54b8fc68511fe197932338c0ffdb75c0}{Message\+Handler.\+Handle\+Incoming\+Json\+Message()} method. When the clients\textquotesingle{} connection closes, the client will be remove from the connected clients list in the \hyperlink{class_e_l_i_server_1_1_message_socket_manager}{Message\+Socket\+Manager}. This method is called in the constructor method of \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}. \mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a6068ed137f8fa6fcafcfe24764444ca5}\label{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a6068ed137f8fa6fcafcfe24764444ca5}} 
+\index{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}!Is\+Connected@{Is\+Connected}}
+\index{Is\+Connected@{Is\+Connected}!E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}}
+\subsubsection{\texorpdfstring{Is\+Connected()}{IsConnected()}}
+{\footnotesize\ttfamily bool E\+L\+I\+Server.\+Messaging.\+Client\+Message\+Socket.\+Is\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [package]}}
+
+
+
+
+
+Check the connection to the inner\+Client.
+
+The check is done using the Poll() method. 
+
+\begin{DoxyReturn}{Returns}
+If the client is connected, true. Otherwise, false.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a0b1b4e6b86d3724706b8abf34a7a061c}\label{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a0b1b4e6b86d3724706b8abf34a7a061c}} 
+\index{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}!Send\+Message@{Send\+Message}}
+\index{Send\+Message@{Send\+Message}!E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}}
+\subsubsection{\texorpdfstring{Send\+Message()}{SendMessage()}}
+{\footnotesize\ttfamily void E\+L\+I\+Server.\+Messaging.\+Client\+Message\+Socket.\+Send\+Message (\begin{DoxyParamCaption}\item[{String}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+Send a message to the client of this object.
+
+The first 4 bytes should contain the lenght of the message. The size is in little endian order and the message is encoded in U\+T\+F8. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to send to the client\\
+\hline
+\end{DoxyParams}
+$<$ The byte array containing the message. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_afdf35ffe78727bb8d1b1e53a9dd48760}\label{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_afdf35ffe78727bb8d1b1e53a9dd48760}} 
+\index{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}!client\+ID@{client\+ID}}
+\index{client\+ID@{client\+ID}!E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}}
+\subsubsection{\texorpdfstring{client\+ID}{clientID}}
+{\footnotesize\ttfamily String E\+L\+I\+Server.\+Messaging.\+Client\+Message\+Socket.\+client\+ID}
+
+
+
+The ID of the connected client/table. 
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a1ef8df027624ee609a4d32db7ccdd2ef}\label{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a1ef8df027624ee609a4d32db7ccdd2ef}} 
+\index{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}!inner\+Client@{inner\+Client}}
+\index{inner\+Client@{inner\+Client}!E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}}
+\subsubsection{\texorpdfstring{inner\+Client}{innerClient}}
+{\footnotesize\ttfamily Tcp\+Client E\+L\+I\+Server.\+Messaging.\+Client\+Message\+Socket.\+inner\+Client\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The inner Tcp\+Client client. 
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a133a6eff37e294286e2777799bc644f4}\label{class_e_l_i_server_1_1_messaging_1_1_client_message_socket_a133a6eff37e294286e2777799bc644f4}} 
+\index{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}!user\+ID@{user\+ID}}
+\index{user\+ID@{user\+ID}!E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket@{E\+L\+I\+Server\+::\+Messaging\+::\+Client\+Message\+Socket}}
+\subsubsection{\texorpdfstring{user\+ID}{userID}}
+{\footnotesize\ttfamily String E\+L\+I\+Server.\+Messaging.\+Client\+Message\+Socket.\+user\+ID}
+
+
+
+The ID of the connected user. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+L\+I\+Server/\+Messaging/\hyperlink{_client_message_socket_8cs}{Client\+Message\+Socket.\+cs}\end{DoxyCompactItemize}

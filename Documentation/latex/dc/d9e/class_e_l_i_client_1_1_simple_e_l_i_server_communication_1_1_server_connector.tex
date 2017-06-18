@@ -1,0 +1,105 @@
+\hypertarget{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector}{}\section{E\+L\+I\+Client.\+Simple\+E\+L\+I\+Server\+Communication.\+Server\+Connector Class Reference}
+\label{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector}\index{E\+L\+I\+Client.\+Simple\+E\+L\+I\+Server\+Communication.\+Server\+Connector@{E\+L\+I\+Client.\+Simple\+E\+L\+I\+Server\+Communication.\+Server\+Connector}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_ad9a29fa265ea9a860f92ed58c11858e6}{Server\+Connector} (String hostname, String port)
+\item 
+async Task$<$ bool $>$ \hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a6c02f184947bf664847cefe578225cf5}{Send\+Message} (Json\+Object json)
+\item 
+async Task \hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a51b31eed1d4faf571cc0aa512dc675c1}{Send\+Random\+Connection\+Request\+Message} ()
+\item 
+async Task \hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a524197983d52fb96d7e9105c3730011a}{Send\+Get\+Cities\+Request} ()
+\item 
+async Task$<$ Json\+Object $>$ \hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_af805dc6dc3d37342b2ae263cf02740e3}{Receive\+Message} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task \hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a71309c0a8d78df03c57c74b7da8b360a}{Connect} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Stream\+Socket \hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_add9c36f3ca36f096570915423fd01522}{socket}
+\item 
+Host\+Name \hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_ab925d748f9a9b359302e877cb8c6c9b6}{server\+Host}
+\item 
+String \hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a821828ede549ca68c383949588a5f5e1}{server\+Port}
+\item 
+bool \hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a601bc05dedac1a49b3ec77ce7279362a}{is\+Connected} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_ad9a29fa265ea9a860f92ed58c11858e6}\label{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_ad9a29fa265ea9a860f92ed58c11858e6}} 
+\index{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}!Server\+Connector@{Server\+Connector}}
+\index{Server\+Connector@{Server\+Connector}!E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}}
+\subsubsection{\texorpdfstring{Server\+Connector()}{ServerConnector()}}
+{\footnotesize\ttfamily E\+L\+I\+Client.\+Simple\+E\+L\+I\+Server\+Communication.\+Server\+Connector.\+Server\+Connector (\begin{DoxyParamCaption}\item[{String}]{hostname,  }\item[{String}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a71309c0a8d78df03c57c74b7da8b360a}\label{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a71309c0a8d78df03c57c74b7da8b360a}} 
+\index{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}!Connect@{Connect}}
+\index{Connect@{Connect}!E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}}
+\subsubsection{\texorpdfstring{Connect()}{Connect()}}
+{\footnotesize\ttfamily async Task E\+L\+I\+Client.\+Simple\+E\+L\+I\+Server\+Communication.\+Server\+Connector.\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_af805dc6dc3d37342b2ae263cf02740e3}\label{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_af805dc6dc3d37342b2ae263cf02740e3}} 
+\index{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}!Receive\+Message@{Receive\+Message}}
+\index{Receive\+Message@{Receive\+Message}!E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}}
+\subsubsection{\texorpdfstring{Receive\+Message()}{ReceiveMessage()}}
+{\footnotesize\ttfamily async Task$<$Json\+Object$>$ E\+L\+I\+Client.\+Simple\+E\+L\+I\+Server\+Communication.\+Server\+Connector.\+Receive\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a524197983d52fb96d7e9105c3730011a}\label{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a524197983d52fb96d7e9105c3730011a}} 
+\index{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}!Send\+Get\+Cities\+Request@{Send\+Get\+Cities\+Request}}
+\index{Send\+Get\+Cities\+Request@{Send\+Get\+Cities\+Request}!E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}}
+\subsubsection{\texorpdfstring{Send\+Get\+Cities\+Request()}{SendGetCitiesRequest()}}
+{\footnotesize\ttfamily async Task E\+L\+I\+Client.\+Simple\+E\+L\+I\+Server\+Communication.\+Server\+Connector.\+Send\+Get\+Cities\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a6c02f184947bf664847cefe578225cf5}\label{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a6c02f184947bf664847cefe578225cf5}} 
+\index{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}!Send\+Message@{Send\+Message}}
+\index{Send\+Message@{Send\+Message}!E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}}
+\subsubsection{\texorpdfstring{Send\+Message()}{SendMessage()}}
+{\footnotesize\ttfamily async Task$<$bool$>$ E\+L\+I\+Client.\+Simple\+E\+L\+I\+Server\+Communication.\+Server\+Connector.\+Send\+Message (\begin{DoxyParamCaption}\item[{Json\+Object}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a51b31eed1d4faf571cc0aa512dc675c1}\label{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a51b31eed1d4faf571cc0aa512dc675c1}} 
+\index{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}!Send\+Random\+Connection\+Request\+Message@{Send\+Random\+Connection\+Request\+Message}}
+\index{Send\+Random\+Connection\+Request\+Message@{Send\+Random\+Connection\+Request\+Message}!E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}}
+\subsubsection{\texorpdfstring{Send\+Random\+Connection\+Request\+Message()}{SendRandomConnectionRequestMessage()}}
+{\footnotesize\ttfamily async Task E\+L\+I\+Client.\+Simple\+E\+L\+I\+Server\+Communication.\+Server\+Connector.\+Send\+Random\+Connection\+Request\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a601bc05dedac1a49b3ec77ce7279362a}\label{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a601bc05dedac1a49b3ec77ce7279362a}} 
+\index{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}!is\+Connected@{is\+Connected}}
+\index{is\+Connected@{is\+Connected}!E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}}
+\subsubsection{\texorpdfstring{is\+Connected}{isConnected}}
+{\footnotesize\ttfamily bool E\+L\+I\+Client.\+Simple\+E\+L\+I\+Server\+Communication.\+Server\+Connector.\+is\+Connected = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_ab925d748f9a9b359302e877cb8c6c9b6}\label{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_ab925d748f9a9b359302e877cb8c6c9b6}} 
+\index{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}!server\+Host@{server\+Host}}
+\index{server\+Host@{server\+Host}!E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}}
+\subsubsection{\texorpdfstring{server\+Host}{serverHost}}
+{\footnotesize\ttfamily Host\+Name E\+L\+I\+Client.\+Simple\+E\+L\+I\+Server\+Communication.\+Server\+Connector.\+server\+Host\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a821828ede549ca68c383949588a5f5e1}\label{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a821828ede549ca68c383949588a5f5e1}} 
+\index{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}!server\+Port@{server\+Port}}
+\index{server\+Port@{server\+Port}!E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}}
+\subsubsection{\texorpdfstring{server\+Port}{serverPort}}
+{\footnotesize\ttfamily String E\+L\+I\+Client.\+Simple\+E\+L\+I\+Server\+Communication.\+Server\+Connector.\+server\+Port\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_add9c36f3ca36f096570915423fd01522}\label{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_add9c36f3ca36f096570915423fd01522}} 
+\index{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}!socket@{socket}}
+\index{socket@{socket}!E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}}
+\subsubsection{\texorpdfstring{socket}{socket}}
+{\footnotesize\ttfamily Stream\+Socket E\+L\+I\+Client.\+Simple\+E\+L\+I\+Server\+Communication.\+Server\+Connector.\+socket\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Documents/\+H\+B\+O/3/\+Periode 4/\+H\+P-\/\+Lab/\+Development/\+E\+L\+I\+Client/\+E\+L\+I\+Client/\+Simple\+E\+L\+I\+Server\+Communication/\hyperlink{_server_connector_8cs}{Server\+Connector.\+cs}\end{DoxyCompactItemize}
