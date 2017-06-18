@@ -19,6 +19,10 @@ namespace ELIServer
     {
         private FbConnection connection;
 
+        /// <summary>
+        /// Default constuctor.
+        /// The connection is created and opened in this constuctor using the connection string returned by GetConnectionString().
+        /// </summary>
         public DatabaseManager()
         {            
             connection = new FbConnection(GetConnectionString());
@@ -26,10 +30,20 @@ namespace ELIServer
         }
 
         /// <summary>
+        /// This constuctor is used for testing.
+        /// </summary>
+        /// <param name="connectionString">The FireBird connection string to the database.</param>
+        public DatabaseManager(String connectionString)
+        {
+            connection = new FbConnection(connectionString);
+            connection.Open();
+        }
+
+        /// <summary>
         /// Load the connection string from the App.config file.
         /// </summary>
         /// <returns>The connection string.</returns>
-        static private String GetConnectionString()
+        private String GetConnectionString()
         {
             return ConfigurationManager.ConnectionStrings["ELIDatabase"].ConnectionString;
         }
@@ -170,7 +184,7 @@ namespace ELIServer
                 var command = new FbCommand(sql, connection);
                 command.ExecuteNonQuery();
             }
-            catch (FbException ex)
+            catch (FbException)
             {
                 //This could not be done because the connection already exists.
             }            
@@ -189,7 +203,7 @@ namespace ELIServer
                 var command = new FbCommand(sql, connection);
                 command.ExecuteNonQuery();
             }
-            catch (FbException ex)
+            catch (FbException)
             {
                 //This could not be done because the connection does not exist.
             }

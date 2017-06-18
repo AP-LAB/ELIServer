@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ELIServer;
+using NSubstitute;
 
 namespace ELIServerTest
 {
@@ -9,11 +10,18 @@ namespace ELIServerTest
     {
         DatabaseManager databaseManager;
         MockDataGenerator mockDataGenerator;
+        String connectionString = @"User=SYSDBA;
+                        Password=ELI;
+                        Database='C:/Users/0891435/DATA/ELI_CLIENT_DATABASE.FDB';
+                        DataSource=145.24.222.19;
+                        Port=8001;
+                        Dialect=3";
+       
 
         [TestInitialize]
         public void SetUpDatabase()
         {
-            databaseManager = new DatabaseManager();
+            databaseManager = new DatabaseManager(connectionString);
             mockDataGenerator = new MockDataGenerator();
         }
 
