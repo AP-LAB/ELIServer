@@ -50,7 +50,7 @@ namespace ELIServer.Messaging
                 // Deserialize the message.
                 dynamic jsonObject = JsonConvert.DeserializeObject(message);
                 // Get the message_type of the message.
-                var type = jsonObject.message_type.ToString();
+                String type = jsonObject.message_type.ToString();
                 // Handle the message.
                 // If the message type is unknown, no action will be taken.
                 switch (type)
