@@ -27,6 +27,7 @@ namespace ELIServer.Messaging
         private TcpClient innerClient;  //!< The inner TcpClient client.
         public String clientID;         //!< The ID of the connected client/table.
         private String userID;           //!< The ID of the connected user.
+        public bool isCalling = false;  //!< An boolean that represents the call state of the client.
 
         /// <summary>
         /// \brief Create a new instance of ClientMessageSocket.
@@ -71,7 +72,7 @@ namespace ELIServer.Messaging
         /// </summary>
         private void HandleIncomingMessagesClient()
         {
-            while (innerClient.Connected && IsConnected())
+            while (innerClient.Connected && IsConnected() && !isCalling)
             {
                 var stream = innerClient.GetStream();
                 if (stream.DataAvailable)

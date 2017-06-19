@@ -1,7 +1,9 @@
 ﻿using ELIServer.Messaging;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Dynamic;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
@@ -34,10 +36,28 @@ namespace ELIServer
         {
             client1 = _client1;
             client2 = _client2;
+            client1.isCalling = true;
+            client2.isCalling = true;
             var dbManager = new DatabaseManager();
             dbManager.SetVideoCallConnection(client1.clientID, client2.clientID);
             dbManager.Close();
+            SendStartMessaged();
             SetThreads();
+        }
+
+        /// <summary>
+        /// Send a "Start recording" message to both clients.
+        /// </summary>
+        private void SendStartMessaged()
+        {
+            /// Create a dynamic message object.
+            dynamic returnMessage = new ExpandoObject();
+            /// Add values to the message object.
+            returnMessage.TYPE = "Message";
+            returnMessage.MESSAGE = "Start recording";
+            // Serialize and send the message.
+            client1.SendMessage(JsonConvert.SerializeObject(returnMessage));
+            client2.SendMessage(JsonConvert.SerializeObject(returnMessage));
         }
 
 
@@ -59,7 +79,7 @@ namespace ELIServer
         /// \brief Start streaming from one stream to another.
         /// 
         /// This is repeated as long as both clients are connected.
-        /// When the connection on one of the clients is closed, the CallConnection is removed from the callConnections list in MessageSocketManager.
+        /// When the connection on one of the clients is closed, the CloseConnection() method is called.
         /// </summary>
         /// <param name="inStream">The input stream to get data from.</param>
         /// <param name="outStream">The output stream to pass data to.</param>
@@ -72,8 +92,19 @@ namespace ELIServer
                     await inStream.CopyToAsync(outStream);
                 }
             }
+            CloseConnection();
+        }
 
+        /// <summary>
+        /// \brief This method is called when the callconnection is closed.
+        /// Set the isCalling state of the clients to false and remove the CallConnection from the callConnectios list in the MessageSocketManager class
+        /// </summary>
+        private void CloseConnection()
+        {
+            client1.isCalling = false;
+            client2.isCalling = false;
             MessageSocketManager.RemoveCallConnection(this);
+
         }
 
         /// <summary>

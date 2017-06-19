@@ -93,6 +93,8 @@ namespace ELIServer
                 if (callConnection != null) RemoveCallConnection(callConnection);
                 // Update MainWindow.
                 mainWindow.SetNumberOfConnectedClients(connectedSockets.Count());
+                // Remove the client from the pendingRandomCallConnections list.
+                RemovePendingRandomCallConnection(client);
             }
         }
 
@@ -138,6 +140,19 @@ namespace ELIServer
         }
 
         /// <summary>
+        /// Remove a ClientMessageSocket from the pendingRandomCallConnections list.
+        /// </summary>
+        /// <param name="client">The ClientMessageSocket to remove</param>
+        public static void RemovePendingRandomCallConnection(ClientMessageSocket client)
+        {
+            // Ensure that the client is in the pendingRandomCallConnections list.
+            if (pendingRandomCallConnections.Contains(client))
+            {
+                pendingRandomCallConnections.Remove(client);
+            }
+        }
+
+        /// <summary>
         /// Get a pending ClientMessageSocket instance that has requested a random call connection.
         /// If the pendingRandomCallConnections list is empty, null is returned.
         /// When a ClientMessageSocket instance is found, it is removed from the pendingRandomCallConnections list.
@@ -150,7 +165,7 @@ namespace ELIServer
                 // Get the first pending ClientMessageSocket instance in the list.
                 ClientMessageSocket clientMessageSocket = pendingRandomCallConnections.First();
                 // Remove the ClientMessageSocket instance from pendingRandomCallConnections.
-                pendingRandomCallConnections.Remove(clientMessageSocket);
+                RemovePendingRandomCallConnection(clientMessageSocket);
                 // Update the MainWindow.
                 mainWindow.SetNumberOfPendingCalls(pendingRandomCallConnections.Count());
                 return clientMessageSocket;
