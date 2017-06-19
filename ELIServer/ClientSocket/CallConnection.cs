@@ -17,7 +17,7 @@ namespace ELIServer
     /// 
     /// The class contains two ClientMessageSocket instances, client1 and client2. 
     /// A connection is established between those clients.
-    /// When an instance is created, the clients will immediately start streaming to eachother.
+    /// When an instance is created, the clients will immediately start streaming to each other.
     /// </summary>
     public class CallConnection
     {
@@ -41,14 +41,14 @@ namespace ELIServer
             var dbManager = new DatabaseManager();
             dbManager.SetVideoCallConnection(client1.clientID, client2.clientID);
             dbManager.Close();
-            SendStartMessaged();
+            SendStartMessages();
             SetThreads();
         }
 
         /// <summary>
         /// Send a "Start recording" message to both clients.
         /// </summary>
-        private void SendStartMessaged()
+        private void SendStartMessages()
         {
             /// Create a dynamic message object.
             dynamic returnMessage = new ExpandoObject();

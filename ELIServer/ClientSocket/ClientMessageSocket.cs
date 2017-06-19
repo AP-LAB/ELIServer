@@ -34,7 +34,7 @@ namespace ELIServer.Messaging
         /// 
         /// When the ClientMessageSocket object is created, an intitial message will be requested.
         /// This message is handled in the GetInitialMessage() method.
-        /// After the intitial message is handled, all incoming messages will be handled using the HandleIncomingMessagesClient() method.
+        /// After the intitial message is handled, all incoming messages will be handled using the HandleIncomingMessagesFromClient() method.
         /// </summary>
         /// <param name="client">The TcpClient that will be the inner TcpClient.</param>
         public ClientMessageSocket(TcpClient client)
@@ -43,7 +43,7 @@ namespace ELIServer.Messaging
             // Get the initial message.
             GetInitialMessage();
             //Handle all incoming messages from this point.
-            new Thread(new ThreadStart(HandleIncomingMessagesClient)).Start(); ;
+            new Thread(new ThreadStart(HandleIncomingMessagesFromClient)).Start(); ;
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace ELIServer.Messaging
         /// When the clients' connection closes, the client will be remove from the connected clients list in the MessageSocketManager.
         /// This method is called in the constructor method of ClientMessageSocket.
         /// </summary>
-        private void HandleIncomingMessagesClient()
+        private void HandleIncomingMessagesFromClient()
         {
             while (innerClient.Connected && IsConnected() && !isCalling)
             {
