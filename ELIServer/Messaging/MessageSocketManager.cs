@@ -25,7 +25,7 @@ namespace ELIServer
         private static List<ClientMessageSocket> pendingRandomCallConnections = new List<ClientMessageSocket>(); //!<A collection of pending ClientMessageSocket instance that have requested a random call partner.
         private static MainWindow mainWindow; //!< A MainWindow instance where the state of the client lists can be updated.
         private TcpListener listener = null; //!< The TcpListener that is used to listen for new connections.
-        private int port = 30000; //!< The port to listen to.
+        private int port = 8005; //!< The port to listen to.
         private string hostname = "127.0.0.1"; //!< The hostname to listen to.
         private bool running = false; //!< A boolean that represents the state of the MessageSocketManager instance.
         private Thread thread; //!< The thread that is used for the StartListening() method.        
