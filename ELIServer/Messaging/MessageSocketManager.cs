@@ -43,7 +43,7 @@ namespace ELIServer
             // Parse IP address
             IPAddress localAddr = IPAddress.Parse(hostname);
             // Create a new instance of TcpListener
-            listener = new TcpListener(localAddr, port);
+            listener = new TcpListener(IPAddress.Any, port);
             listener.Start();            
             // Create a new thread to handle the incoming messages.
             thread = new Thread(new ThreadStart(StartListening));
