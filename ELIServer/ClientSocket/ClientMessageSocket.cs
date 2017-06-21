@@ -136,19 +136,41 @@ namespace ELIServer.Messaging
         /// <returns>The string that follows the 4 bytes, thus the message send.</returns>
         private String GetStringFromNetworkStream(NetworkStream stream)
         {
+        
+            ///TODO if the system is big endian, reverse
+            
             // The first 4 bytes are the size of the string that will follow.
             byte[] sizeRead = new byte[4];
             stream.Read(sizeRead, 0, 4);
-
+            sizeRead = ReverseByteArrayIfNotLittleEndian(sizeRead);
             // Convert the read byte array to the size of the following string
             int size = BitConverter.ToInt32(sizeRead, 0);
 
             // Read the string that will follow with a byte[] that has the same size as the size gathered.
             byte[] bytesReceived = new byte[size];
             stream.Read(bytesReceived, 0, size);
-
+            bytesReceived = ReverseByteArrayIfNotLittleEndian(bytesReceived);
+            
             // Convert the byte[] to string and return it.
             return Encoding.UTF8.GetString(bytesReceived);
+        }
+
+        /// <summary>
+        /// This methods reverses the input array if the byte order of the current system is not little endian.
+        /// If the byte order is little endian, the original array is returend.
+        /// </summary>
+        /// <param name="array">The array to be reversed.</param>
+        /// <returns></returns>
+        private byte[] ReverseByteArrayIfNotLittleEndian(byte[] array)
+        {
+            if (!BitConverter.IsLittleEndian)
+            {
+                return array.Reverse().ToArray();
+            }
+            else
+            {
+                return array;
+            }
         }
 
         /// <summary>
@@ -170,7 +192,9 @@ namespace ELIServer.Messaging
             System.Buffer.BlockCopy(sizeBytesArray, 0, returnArray, 0, sizeBytesArray.Length);
             System.Buffer.BlockCopy(messageByteArray, 0, returnArray, 4, messageByteArray.Length);
             //Write the returnArray to the client
-            innerClient.GetStream().Write(returnArray, 0, returnArray.Length);
+
+            byte[] reversedArray = ReverseByteArrayIfNotLittleEndian(returnArray);
+            innerClient.GetStream().Write(returnArray, 0, reversedArray.Length);
         }
         
     }
