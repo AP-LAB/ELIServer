@@ -5,6 +5,8 @@
 \item 
 \hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_ad9a29fa265ea9a860f92ed58c11858e6}{Server\+Connector} (String hostname, String port)
 \item 
+Stream\+Socket \hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a9dcf13bb05d9d410088f319d20a5faaa}{Get\+Socket} ()
+\item 
 async Task$<$ bool $>$ \hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a6c02f184947bf664847cefe578225cf5}{Send\+Message} (Json\+Object json)
 \item 
 async Task \hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a51b31eed1d4faf571cc0aa512dc675c1}{Send\+Random\+Connection\+Request\+Message} ()
@@ -12,7 +14,7 @@ async Task \hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1
 async Task \hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a524197983d52fb96d7e9105c3730011a}{Send\+Get\+Cities\+Request} ()
 \item 
 async Task$<$ Json\+Object $>$ \hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_af805dc6dc3d37342b2ae263cf02740e3}{Receive\+Message} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Receive a message response from the server. The encoding of the message should be Utf8 and the byte\+Order should be Little\+Endian. The message is parsed to a Json\+Object using Json\+Object.\+Parse() method. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -47,12 +49,25 @@ bool \hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_ser
 \subsubsection{\texorpdfstring{Connect()}{Connect()}}
 {\footnotesize\ttfamily async Task E\+L\+I\+Client.\+Simple\+E\+L\+I\+Server\+Communication.\+Server\+Connector.\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
+\mbox{\Hypertarget{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a9dcf13bb05d9d410088f319d20a5faaa}\label{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a9dcf13bb05d9d410088f319d20a5faaa}} 
+\index{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}!Get\+Socket@{Get\+Socket}}
+\index{Get\+Socket@{Get\+Socket}!E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}}
+\subsubsection{\texorpdfstring{Get\+Socket()}{GetSocket()}}
+{\footnotesize\ttfamily Stream\+Socket E\+L\+I\+Client.\+Simple\+E\+L\+I\+Server\+Communication.\+Server\+Connector.\+Get\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_af805dc6dc3d37342b2ae263cf02740e3}\label{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_af805dc6dc3d37342b2ae263cf02740e3}} 
 \index{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}!Receive\+Message@{Receive\+Message}}
 \index{Receive\+Message@{Receive\+Message}!E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}}
 \subsubsection{\texorpdfstring{Receive\+Message()}{ReceiveMessage()}}
 {\footnotesize\ttfamily async Task$<$Json\+Object$>$ E\+L\+I\+Client.\+Simple\+E\+L\+I\+Server\+Communication.\+Server\+Connector.\+Receive\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Receive a message response from the server. The encoding of the message should be Utf8 and the byte\+Order should be Little\+Endian. The message is parsed to a Json\+Object using Json\+Object.\+Parse() method. 
+
+\begin{DoxyReturn}{Returns}
+The message in Json\+Object format.
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a524197983d52fb96d7e9105c3730011a}\label{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector_a524197983d52fb96d7e9105c3730011a}} 
 \index{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}!Send\+Get\+Cities\+Request@{Send\+Get\+Cities\+Request}}
 \index{Send\+Get\+Cities\+Request@{Send\+Get\+Cities\+Request}!E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector@{E\+L\+I\+Client\+::\+Simple\+E\+L\+I\+Server\+Communication\+::\+Server\+Connector}}

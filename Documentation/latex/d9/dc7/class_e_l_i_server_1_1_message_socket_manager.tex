@@ -1,60 +1,77 @@
 \hypertarget{class_e_l_i_server_1_1_message_socket_manager}{}\section{E\+L\+I\+Server.\+Message\+Socket\+Manager Class Reference}
 \label{class_e_l_i_server_1_1_message_socket_manager}\index{E\+L\+I\+Server.\+Message\+Socket\+Manager@{E\+L\+I\+Server.\+Message\+Socket\+Manager}}
+
+
+This class handles all incoming T\+CP client connections. When an instance of the \hyperlink{class_e_l_i_server_1_1_message_socket_manager}{Message\+Socket\+Manager} class is created, \hyperlink{class_e_l_i_server_1_1_message_socket_manager_ab5d2f61a349046960ae63303ff1c2130}{Start\+Listening()} is called on a new Thread. The class has a couple of static lists\+:  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_e_l_i_server_1_1_message_socket_manager_a28b6d0e215aa417970fc82b9239bebbb}{Message\+Socket\+Manager} (\hyperlink{class_e_l_i_server_1_1_main_window}{Main\+Window} \+\_\+main\+Window)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The constuctor for the \hyperlink{class_e_l_i_server_1_1_message_socket_manager}{Message\+Socket\+Manager} class. The values for main\+Window, listener, running and thread are set in the constructor. The listener is created using the port an hostname global variables. The \hyperlink{class_e_l_i_server_1_1_message_socket_manager_ab5d2f61a349046960ae63303ff1c2130}{Start\+Listening()} method is called on a new thread. This thread is stored in the global variable thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static void \hyperlink{class_e_l_i_server_1_1_message_socket_manager_a921b68b4622c90628ae7b179bccdb10c}{Remove\+Client\+From\+Connected\+Sockets} (\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client)
-\item 
+\begin{DoxyCompactList}\small\item\em Removes a Client\+Message\+Socket instance from the connected\+Sockets list. If the Client\+Message\+Socket instance is used in a \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} instance, this instance is removed too. The main\+Window is also updated. \end{DoxyCompactList}\item 
 static \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} \hyperlink{class_e_l_i_server_1_1_message_socket_manager_aa93a10042f33c7fe76d611346eb80ea0}{Get\+Client\+Message\+Socket\+By\+Id} (String client\+ID)
 \begin{DoxyCompactList}\small\item\em Searches a socket with the given ID in the connected\+Sockets list. \end{DoxyCompactList}\item 
 static void \hyperlink{class_e_l_i_server_1_1_message_socket_manager_acf805bfb3292019f77e637135009ee78}{Add\+Call\+Connection} (\hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} call\+Connection)
-\item 
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} to the call\+Connections list. \end{DoxyCompactList}\item 
 static void \hyperlink{class_e_l_i_server_1_1_message_socket_manager_af591d88e97afd289dfd4f2d89713f5b2}{Remove\+Call\+Connection} (\hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} call\+Connection)
-\item 
+\begin{DoxyCompactList}\small\item\em Remove a \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} instance from the call\+Connections list and remove the connection from the database. \end{DoxyCompactList}\item 
+static void \hyperlink{class_e_l_i_server_1_1_message_socket_manager_aa4716112d551ce249f56cca53764d19d}{Remove\+Pending\+Random\+Call\+Connection} (\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client)
+\begin{DoxyCompactList}\small\item\em Remove a Client\+Message\+Socket from the pending\+Random\+Call\+Connections list. \end{DoxyCompactList}\item 
 static \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} \hyperlink{class_e_l_i_server_1_1_message_socket_manager_a6988d1ee0c08ded66a3d428f04585716}{Get\+Random\+Pending\+Connection} ()
-\item 
-static void \hyperlink{class_e_l_i_server_1_1_message_socket_manager_aeceb2994f44b015e0663d266b2ed11a6}{Add\+Pending\+Call\+Client} (\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get a pending Client\+Message\+Socket instance that has requested a random call connection. If the pending\+Random\+Call\+Connections list is empty, null is returned. When a Client\+Message\+Socket instance is found, it is removed from the pending\+Random\+Call\+Connections list. \end{DoxyCompactList}\item 
+static void \hyperlink{class_e_l_i_server_1_1_message_socket_manager_ac2dffa438503f596446e4a0137582962}{Add\+Pending\+Random\+Call\+Client} (\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client)
+\begin{DoxyCompactList}\small\item\em Add a Client\+Message\+Socket instance that has send a random connection request to the pending\+Random\+Call\+Connections. The instance will only be added if it does not exist in the pending\+Random\+Call\+Connections list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_e_l_i_server_1_1_message_socket_manager_ab5d2f61a349046960ae63303ff1c2130}{Start\+Listening} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This method checks for new pending Tcp\+Client connections. When a new connection is detected, a Client\+Message\+Socket instance is added to the connected\+Sockets list. The \hyperlink{class_e_l_i_server_1_1_main_window}{Main\+Window} is also updated using the Set\+Number\+Of\+Connected\+Clients() method. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} \hyperlink{class_e_l_i_server_1_1_message_socket_manager_aa9a1bde31e6bb4d0ef01f974a5784d08}{Get\+Call\+Connection\+With\+Cient} (\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Find a \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} instance that uses the given client. If it does not exist, null will be return. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Tcp\+Listener \hyperlink{class_e_l_i_server_1_1_message_socket_manager_a0c3b11ce72614567322dc025fd40c1c5}{listener} = null
-\item 
-int \hyperlink{class_e_l_i_server_1_1_message_socket_manager_af344f11a273d91f2d2c520583f105b95}{port} = 30000
-\item 
+\begin{DoxyCompactList}\small\item\em The Tcp\+Listener that is used to listen for new connections. \end{DoxyCompactList}\item 
+int \hyperlink{class_e_l_i_server_1_1_message_socket_manager_af344f11a273d91f2d2c520583f105b95}{port} = 8005
+\begin{DoxyCompactList}\small\item\em The port to listen to. \end{DoxyCompactList}\item 
 string \hyperlink{class_e_l_i_server_1_1_message_socket_manager_afe7ddcd6b733f389617621037d713db4}{hostname} = \char`\"{}127.\+0.\+0.\+1\char`\"{}
-\item 
+\begin{DoxyCompactList}\small\item\em The hostname to listen to. \end{DoxyCompactList}\item 
 bool \hyperlink{class_e_l_i_server_1_1_message_socket_manager_ae7079918e3fb3c205ee8831f800cd4d9}{running} = false
-\item 
+\begin{DoxyCompactList}\small\item\em A boolean that represents the state of the \hyperlink{class_e_l_i_server_1_1_message_socket_manager}{Message\+Socket\+Manager} instance. \end{DoxyCompactList}\item 
 Thread \hyperlink{class_e_l_i_server_1_1_message_socket_manager_a2c6114a87afeb4ecb1cbf42daea68df0}{thread}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The thread that is used for the \hyperlink{class_e_l_i_server_1_1_message_socket_manager_ab5d2f61a349046960ae63303ff1c2130}{Start\+Listening()} method. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 static List$<$ \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} $>$ \hyperlink{class_e_l_i_server_1_1_message_socket_manager_a042e9dc087484feacc3128eb3f7ac2f4}{connected\+Sockets} = new List$<$\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}$>$()
-\item 
+\begin{DoxyCompactList}\small\item\em A collection of the currently connected Client\+Message\+Socket instances. \end{DoxyCompactList}\item 
 static List$<$ \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} $>$ \hyperlink{class_e_l_i_server_1_1_message_socket_manager_a1f25b676369fa4e59beca49d3ecf294a}{call\+Connections} = new List$<$\hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection}$>$()
-\item 
-static List$<$ \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} $>$ \hyperlink{class_e_l_i_server_1_1_message_socket_manager_ad34ae3d8801eea0c2fd2305c5b05e692}{pending\+Call\+Connections} = new List$<$\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}$>$()
-\item 
+\begin{DoxyCompactList}\small\item\em A collection of the currently live \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} instances. \end{DoxyCompactList}\item 
+static List$<$ \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} $>$ \hyperlink{class_e_l_i_server_1_1_message_socket_manager_ad145fe640e3a8f0af780441fc1d5221a}{pending\+Random\+Call\+Connections} = new List$<$\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}$>$()
+\begin{DoxyCompactList}\small\item\em A collection of pending Client\+Message\+Socket instance that have requested a random call partner. \end{DoxyCompactList}\item 
 static \hyperlink{class_e_l_i_server_1_1_main_window}{Main\+Window} \hyperlink{class_e_l_i_server_1_1_message_socket_manager_a937d0802b2bb8f1e173a17ee27e3b8cc}{main\+Window}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A \hyperlink{class_e_l_i_server_1_1_main_window}{Main\+Window} instance where the state of the client lists can be updated. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+This class handles all incoming T\+CP client connections. When an instance of the \hyperlink{class_e_l_i_server_1_1_message_socket_manager}{Message\+Socket\+Manager} class is created, \hyperlink{class_e_l_i_server_1_1_message_socket_manager_ab5d2f61a349046960ae63303ff1c2130}{Start\+Listening()} is called on a new Thread. The class has a couple of static lists\+: 
+
+
+\begin{DoxyItemize}
+\item connected\+Sockets\+: a collection of the currently connected Client\+Message\+Socket instances.
+\item call\+Connections\+: a collection of the currently live \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} instances.
+\item pending\+Random\+Call\+Connections\+: a collection of pending Client\+Message\+Socket instance that have requested a random call partner. 
+\end{DoxyItemize}
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_a28b6d0e215aa417970fc82b9239bebbb}\label{class_e_l_i_server_1_1_message_socket_manager_a28b6d0e215aa417970fc82b9239bebbb}} 
@@ -65,6 +82,15 @@ static \hyperlink{class_e_l_i_server_1_1_main_window}{Main\+Window} \hyperlink{c
 
 
 
+The constuctor for the \hyperlink{class_e_l_i_server_1_1_message_socket_manager}{Message\+Socket\+Manager} class. The values for main\+Window, listener, running and thread are set in the constructor. The listener is created using the port an hostname global variables. The \hyperlink{class_e_l_i_server_1_1_message_socket_manager_ab5d2f61a349046960ae63303ff1c2130}{Start\+Listening()} method is called on a new thread. This thread is stored in the global variable thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+main\+Window} & A \hyperlink{class_e_l_i_server_1_1_main_window}{Main\+Window} instance where the state of the client lists can be updated.\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_acf805bfb3292019f77e637135009ee78}\label{class_e_l_i_server_1_1_message_socket_manager_acf805bfb3292019f77e637135009ee78}} 
 \index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!Add\+Call\+Connection@{Add\+Call\+Connection}}
@@ -72,18 +98,48 @@ static \hyperlink{class_e_l_i_server_1_1_main_window}{Main\+Window} \hyperlink{c
 \subsubsection{\texorpdfstring{Add\+Call\+Connection()}{AddCallConnection()}}
 {\footnotesize\ttfamily static void E\+L\+I\+Server.\+Message\+Socket\+Manager.\+Add\+Call\+Connection (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection}}]{call\+Connection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
-\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_aeceb2994f44b015e0663d266b2ed11a6}\label{class_e_l_i_server_1_1_message_socket_manager_aeceb2994f44b015e0663d266b2ed11a6}} 
-\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!Add\+Pending\+Call\+Client@{Add\+Pending\+Call\+Client}}
-\index{Add\+Pending\+Call\+Client@{Add\+Pending\+Call\+Client}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
-\subsubsection{\texorpdfstring{Add\+Pending\+Call\+Client()}{AddPendingCallClient()}}
-{\footnotesize\ttfamily static void E\+L\+I\+Server.\+Message\+Socket\+Manager.\+Add\+Pending\+Call\+Client (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
+
+Add a \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} to the call\+Connections list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em call\+Connection} & An instance of the \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} class\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_ac2dffa438503f596446e4a0137582962}\label{class_e_l_i_server_1_1_message_socket_manager_ac2dffa438503f596446e4a0137582962}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!Add\+Pending\+Random\+Call\+Client@{Add\+Pending\+Random\+Call\+Client}}
+\index{Add\+Pending\+Random\+Call\+Client@{Add\+Pending\+Random\+Call\+Client}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{Add\+Pending\+Random\+Call\+Client()}{AddPendingRandomCallClient()}}
+{\footnotesize\ttfamily static void E\+L\+I\+Server.\+Message\+Socket\+Manager.\+Add\+Pending\+Random\+Call\+Client (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Add a Client\+Message\+Socket instance that has send a random connection request to the pending\+Random\+Call\+Connections. The instance will only be added if it does not exist in the pending\+Random\+Call\+Connections list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & A Client\+Message\+Socket instance\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_aa9a1bde31e6bb4d0ef01f974a5784d08}\label{class_e_l_i_server_1_1_message_socket_manager_aa9a1bde31e6bb4d0ef01f974a5784d08}} 
 \index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!Get\+Call\+Connection\+With\+Cient@{Get\+Call\+Connection\+With\+Cient}}
 \index{Get\+Call\+Connection\+With\+Cient@{Get\+Call\+Connection\+With\+Cient}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
 \subsubsection{\texorpdfstring{Get\+Call\+Connection\+With\+Cient()}{GetCallConnectionWithCient()}}
 {\footnotesize\ttfamily static \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} E\+L\+I\+Server.\+Message\+Socket\+Manager.\+Get\+Call\+Connection\+With\+Cient (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
 
+
+
+Find a \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} instance that uses the given client. If it does not exist, null will be return. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & The Client\+Message\+Socket instance to find.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} instance or null.
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_aa93a10042f33c7fe76d611346eb80ea0}\label{class_e_l_i_server_1_1_message_socket_manager_aa93a10042f33c7fe76d611346eb80ea0}} 
 \index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!Get\+Client\+Message\+Socket\+By\+Id@{Get\+Client\+Message\+Socket\+By\+Id}}
 \index{Get\+Client\+Message\+Socket\+By\+Id@{Get\+Client\+Message\+Socket\+By\+Id}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
@@ -108,23 +164,67 @@ The found Client\+Message\+Socket
 \subsubsection{\texorpdfstring{Get\+Random\+Pending\+Connection()}{GetRandomPendingConnection()}}
 {\footnotesize\ttfamily static \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} E\+L\+I\+Server.\+Message\+Socket\+Manager.\+Get\+Random\+Pending\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
+
+
+Get a pending Client\+Message\+Socket instance that has requested a random call connection. If the pending\+Random\+Call\+Connections list is empty, null is returned. When a Client\+Message\+Socket instance is found, it is removed from the pending\+Random\+Call\+Connections list. 
+
+\begin{DoxyReturn}{Returns}
+A Client\+Message\+Socket instance or null
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_af591d88e97afd289dfd4f2d89713f5b2}\label{class_e_l_i_server_1_1_message_socket_manager_af591d88e97afd289dfd4f2d89713f5b2}} 
 \index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!Remove\+Call\+Connection@{Remove\+Call\+Connection}}
 \index{Remove\+Call\+Connection@{Remove\+Call\+Connection}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
 \subsubsection{\texorpdfstring{Remove\+Call\+Connection()}{RemoveCallConnection()}}
 {\footnotesize\ttfamily static void E\+L\+I\+Server.\+Message\+Socket\+Manager.\+Remove\+Call\+Connection (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection}}]{call\+Connection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
+
+
+Remove a \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} instance from the call\+Connections list and remove the connection from the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em call\+Connection} & A \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} instance.\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_a921b68b4622c90628ae7b179bccdb10c}\label{class_e_l_i_server_1_1_message_socket_manager_a921b68b4622c90628ae7b179bccdb10c}} 
 \index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!Remove\+Client\+From\+Connected\+Sockets@{Remove\+Client\+From\+Connected\+Sockets}}
 \index{Remove\+Client\+From\+Connected\+Sockets@{Remove\+Client\+From\+Connected\+Sockets}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
 \subsubsection{\texorpdfstring{Remove\+Client\+From\+Connected\+Sockets()}{RemoveClientFromConnectedSockets()}}
 {\footnotesize\ttfamily static void E\+L\+I\+Server.\+Message\+Socket\+Manager.\+Remove\+Client\+From\+Connected\+Sockets (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
+
+
+Removes a Client\+Message\+Socket instance from the connected\+Sockets list. If the Client\+Message\+Socket instance is used in a \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} instance, this instance is removed too. The main\+Window is also updated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & The Client\+Message\+Socket instance to remove.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_aa4716112d551ce249f56cca53764d19d}\label{class_e_l_i_server_1_1_message_socket_manager_aa4716112d551ce249f56cca53764d19d}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!Remove\+Pending\+Random\+Call\+Connection@{Remove\+Pending\+Random\+Call\+Connection}}
+\index{Remove\+Pending\+Random\+Call\+Connection@{Remove\+Pending\+Random\+Call\+Connection}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{Remove\+Pending\+Random\+Call\+Connection()}{RemovePendingRandomCallConnection()}}
+{\footnotesize\ttfamily static void E\+L\+I\+Server.\+Message\+Socket\+Manager.\+Remove\+Pending\+Random\+Call\+Connection (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Remove a Client\+Message\+Socket from the pending\+Random\+Call\+Connections list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & The Client\+Message\+Socket to remove\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_ab5d2f61a349046960ae63303ff1c2130}\label{class_e_l_i_server_1_1_message_socket_manager_ab5d2f61a349046960ae63303ff1c2130}} 
 \index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!Start\+Listening@{Start\+Listening}}
 \index{Start\+Listening@{Start\+Listening}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
 \subsubsection{\texorpdfstring{Start\+Listening()}{StartListening()}}
 {\footnotesize\ttfamily void E\+L\+I\+Server.\+Message\+Socket\+Manager.\+Start\+Listening (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+This method checks for new pending Tcp\+Client connections. When a new connection is detected, a Client\+Message\+Socket instance is added to the connected\+Sockets list. The \hyperlink{class_e_l_i_server_1_1_main_window}{Main\+Window} is also updated using the Set\+Number\+Of\+Connected\+Clients() method. 
 
 
 
@@ -135,11 +235,19 @@ The found Client\+Message\+Socket
 \subsubsection{\texorpdfstring{call\+Connections}{callConnections}}
 {\footnotesize\ttfamily List$<$\hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection}$>$ E\+L\+I\+Server.\+Message\+Socket\+Manager.\+call\+Connections = new List$<$\hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection}$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
+
+
+A collection of the currently live \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} instances. 
+
 \mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_a042e9dc087484feacc3128eb3f7ac2f4}\label{class_e_l_i_server_1_1_message_socket_manager_a042e9dc087484feacc3128eb3f7ac2f4}} 
 \index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!connected\+Sockets@{connected\+Sockets}}
 \index{connected\+Sockets@{connected\+Sockets}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
 \subsubsection{\texorpdfstring{connected\+Sockets}{connectedSockets}}
 {\footnotesize\ttfamily List$<$\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}$>$ E\+L\+I\+Server.\+Message\+Socket\+Manager.\+connected\+Sockets = new List$<$\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+A collection of the currently connected Client\+Message\+Socket instances. 
 
 \mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_afe7ddcd6b733f389617621037d713db4}\label{class_e_l_i_server_1_1_message_socket_manager_afe7ddcd6b733f389617621037d713db4}} 
 \index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!hostname@{hostname}}
@@ -147,11 +255,19 @@ The found Client\+Message\+Socket
 \subsubsection{\texorpdfstring{hostname}{hostname}}
 {\footnotesize\ttfamily string E\+L\+I\+Server.\+Message\+Socket\+Manager.\+hostname = \char`\"{}127.\+0.\+0.\+1\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+The hostname to listen to. 
+
 \mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_a0c3b11ce72614567322dc025fd40c1c5}\label{class_e_l_i_server_1_1_message_socket_manager_a0c3b11ce72614567322dc025fd40c1c5}} 
 \index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!listener@{listener}}
 \index{listener@{listener}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
 \subsubsection{\texorpdfstring{listener}{listener}}
 {\footnotesize\ttfamily Tcp\+Listener E\+L\+I\+Server.\+Message\+Socket\+Manager.\+listener = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The Tcp\+Listener that is used to listen for new connections. 
 
 \mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_a937d0802b2bb8f1e173a17ee27e3b8cc}\label{class_e_l_i_server_1_1_message_socket_manager_a937d0802b2bb8f1e173a17ee27e3b8cc}} 
 \index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!main\+Window@{main\+Window}}
@@ -159,17 +275,29 @@ The found Client\+Message\+Socket
 \subsubsection{\texorpdfstring{main\+Window}{mainWindow}}
 {\footnotesize\ttfamily \hyperlink{class_e_l_i_server_1_1_main_window}{Main\+Window} E\+L\+I\+Server.\+Message\+Socket\+Manager.\+main\+Window\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_ad34ae3d8801eea0c2fd2305c5b05e692}\label{class_e_l_i_server_1_1_message_socket_manager_ad34ae3d8801eea0c2fd2305c5b05e692}} 
-\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!pending\+Call\+Connections@{pending\+Call\+Connections}}
-\index{pending\+Call\+Connections@{pending\+Call\+Connections}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
-\subsubsection{\texorpdfstring{pending\+Call\+Connections}{pendingCallConnections}}
-{\footnotesize\ttfamily List$<$\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}$>$ E\+L\+I\+Server.\+Message\+Socket\+Manager.\+pending\+Call\+Connections = new List$<$\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+A \hyperlink{class_e_l_i_server_1_1_main_window}{Main\+Window} instance where the state of the client lists can be updated. 
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_ad145fe640e3a8f0af780441fc1d5221a}\label{class_e_l_i_server_1_1_message_socket_manager_ad145fe640e3a8f0af780441fc1d5221a}} 
+\index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!pending\+Random\+Call\+Connections@{pending\+Random\+Call\+Connections}}
+\index{pending\+Random\+Call\+Connections@{pending\+Random\+Call\+Connections}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
+\subsubsection{\texorpdfstring{pending\+Random\+Call\+Connections}{pendingRandomCallConnections}}
+{\footnotesize\ttfamily List$<$\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}$>$ E\+L\+I\+Server.\+Message\+Socket\+Manager.\+pending\+Random\+Call\+Connections = new List$<$\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+A collection of pending Client\+Message\+Socket instance that have requested a random call partner. 
 
 \mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_af344f11a273d91f2d2c520583f105b95}\label{class_e_l_i_server_1_1_message_socket_manager_af344f11a273d91f2d2c520583f105b95}} 
 \index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!port@{port}}
 \index{port@{port}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
 \subsubsection{\texorpdfstring{port}{port}}
-{\footnotesize\ttfamily int E\+L\+I\+Server.\+Message\+Socket\+Manager.\+port = 30000\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily int E\+L\+I\+Server.\+Message\+Socket\+Manager.\+port = 8005\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The port to listen to. 
 
 \mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_ae7079918e3fb3c205ee8831f800cd4d9}\label{class_e_l_i_server_1_1_message_socket_manager_ae7079918e3fb3c205ee8831f800cd4d9}} 
 \index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!running@{running}}
@@ -177,11 +305,19 @@ The found Client\+Message\+Socket
 \subsubsection{\texorpdfstring{running}{running}}
 {\footnotesize\ttfamily bool E\+L\+I\+Server.\+Message\+Socket\+Manager.\+running = false\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+A boolean that represents the state of the \hyperlink{class_e_l_i_server_1_1_message_socket_manager}{Message\+Socket\+Manager} instance. 
+
 \mbox{\Hypertarget{class_e_l_i_server_1_1_message_socket_manager_a2c6114a87afeb4ecb1cbf42daea68df0}\label{class_e_l_i_server_1_1_message_socket_manager_a2c6114a87afeb4ecb1cbf42daea68df0}} 
 \index{E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}!thread@{thread}}
 \index{thread@{thread}!E\+L\+I\+Server\+::\+Message\+Socket\+Manager@{E\+L\+I\+Server\+::\+Message\+Socket\+Manager}}
 \subsubsection{\texorpdfstring{thread}{thread}}
 {\footnotesize\ttfamily Thread E\+L\+I\+Server.\+Message\+Socket\+Manager.\+thread\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The thread that is used for the \hyperlink{class_e_l_i_server_1_1_message_socket_manager_ab5d2f61a349046960ae63303ff1c2130}{Start\+Listening()} method. 
 
 
 

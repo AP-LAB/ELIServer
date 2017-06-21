@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ELIServer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="ELIServer" 
+        Height="350" 
+        Width="525"
+        Closing="StopApplication">
     <Grid>
         <Label Content="Number of connected clients:" HorizontalAlignment="Left" Margin="80,116,0,0" VerticalAlignment="Top"/>
         <Label x:Name="connectedClientsLabel" Content="" HorizontalAlignment="Left" Margin="259,116,0,0" VerticalAlignment="Top"/>

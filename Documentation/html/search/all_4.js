@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['databasemanager',['DatabaseManager',['../dc/d76/class_e_l_i_server_1_1_database_manager.html',1,'ELIServer.DatabaseManager'],['../dd/d4e/class_e_l_i_server_test_1_1_database_manager_test.html#a8ea046ca1fc628c89fd5337c1acf1576',1,'ELIServerTest.DatabaseManagerTest.databaseManager()'],['../dc/d76/class_e_l_i_server_1_1_database_manager.html#af4932c44cd155cec929be0207f17605e',1,'ELIServer.DatabaseManager.DatabaseManager()']]],
+  ['databasemanager',['DatabaseManager',['../dc/d76/class_e_l_i_server_1_1_database_manager.html',1,'ELIServer.DatabaseManager'],['../dc/d76/class_e_l_i_server_1_1_database_manager.html#af4932c44cd155cec929be0207f17605e',1,'ELIServer.DatabaseManager.DatabaseManager()'],['../dc/d76/class_e_l_i_server_1_1_database_manager.html#a194f6838e3c20bc118069a33a7b3465b',1,'ELIServer.DatabaseManager.DatabaseManager(String connectionString)'],['../dd/d4e/class_e_l_i_server_test_1_1_database_manager_test.html#a8ea046ca1fc628c89fd5337c1acf1576',1,'ELIServerTest.DatabaseManagerTest.databaseManager()']]],
   ['databasemanager_2ecs',['DatabaseManager.cs',['../dd/d9f/_database_manager_8cs.html',1,'']]],
   ['databasemanagertest',['DatabaseManagerTest',['../dd/d4e/class_e_l_i_server_test_1_1_database_manager_test.html',1,'ELIServerTest']]],
   ['databasemanagertest_2ecs',['DatabaseManagerTest.cs',['../d4/d26/_database_manager_test_8cs.html',1,'']]],

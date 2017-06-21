@@ -97,8 +97,13 @@ Package Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
+<tr class="memitem:ad458164bca02a4640893be5cda913149"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html#ad458164bca02a4640893be5cda913149">SendStartMessages</a> ()</td></tr>
+<tr class="memdesc:ad458164bca02a4640893be5cda913149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a "Start recording" message to both clients.  <a href="#ad458164bca02a4640893be5cda913149">More...</a><br /></td></tr>
+<tr class="separator:ad458164bca02a4640893be5cda913149"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01514395594e70da5e9acb48d908a238"><td class="memItemLeft" align="right" valign="top">async void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html#a01514395594e70da5e9acb48d908a238">StreamTo</a> (NetworkStream inStream, NetworkStream outStream)</td></tr>
 <tr class="separator:a01514395594e70da5e9acb48d908a238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58cfbc1878bb29632972ed7c21c580bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html#a58cfbc1878bb29632972ed7c21c580bb">CloseConnection</a> ()</td></tr>
+<tr class="separator:a58cfbc1878bb29632972ed7c21c580bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -106,10 +111,12 @@ Private Attributes</h2></td></tr>
 <tr class="separator:adfdb5fc52756028eeac454f6e61e9de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af687483721642ebfcb3eaf00e586c7a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html#af687483721642ebfcb3eaf00e586c7a1">client2</a></td></tr>
 <tr class="separator:af687483721642ebfcb3eaf00e586c7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ea22c08df4058ec3c34aa0deb4d67c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html#a2ea22c08df4058ec3c34aa0deb4d67c3">running</a></td></tr>
+<tr class="separator:a2ea22c08df4058ec3c34aa0deb4d67c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class represents a video call connection.</p>
-<p>The class contains two ClientMessageSocket instances, client1 and client2. A connection is established between those clients. When an instance is created, the clients will immediately start streaming to eachother. </p>
+<p>The class contains two ClientMessageSocket instances, client1 and client2. A connection is established between those clients. When an instance is created, the clients will immediately start streaming to each other. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad0182673abc1aaffa6f4f539a727f782"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad0182673abc1aaffa6f4f539a727f782">&#9670;&nbsp;</a></span>CallConnection()</h2>
@@ -159,6 +166,34 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a58cfbc1878bb29632972ed7c21c580bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58cfbc1878bb29632972ed7c21c580bb">&#9670;&nbsp;</a></span>CloseConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ELIServer.CallConnection.CloseConnection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<p>This method is called when the callconnection is closed. Set the isCalling state of the clients to false and remove the <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> from the callConnectios list in the <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html" title="This class handles all incoming TCP client connections. When an instance of the MessageSocketManager ...">MessageSocketManager</a> class </p>
+
+</div>
+</div>
 <a id="ae65d1e69b626abc7d354ca87ab800b12"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae65d1e69b626abc7d354ca87ab800b12">&#9670;&nbsp;</a></span>GetClient1()</h2>
 
@@ -212,6 +247,35 @@ Private Attributes</h2></td></tr>
 
 <p>Get the second client of the connection. This client is of the ClientMessageSocket class. </p>
 <dl class="section return"><dt>Returns</dt><dd>An object of the class ClientMessageSocket</dd></dl>
+
+</div>
+</div>
+<a id="ad458164bca02a4640893be5cda913149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad458164bca02a4640893be5cda913149">&#9670;&nbsp;</a></span>SendStartMessages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ELIServer.CallConnection.SendStartMessages </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Send a "Start recording" message to both clients. </p>
+<p>Create a dynamic message object.</p>
+<p>Add values to the message object. </p>
 
 </div>
 </div>
@@ -280,7 +344,7 @@ Private Attributes</h2></td></tr>
 
 <p></p>
 <p>Start streaming from one stream to another.</p>
-<p>This is repeated as long as both clients are connected. When the connection on one of the clients is closed, the <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> is removed from the callConnections list in <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html">MessageSocketManager</a>. </p>
+<p>This is repeated as long as both clients are connected. When the connection on one of the clients is closed, the <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html#a58cfbc1878bb29632972ed7c21c580bb">CloseConnection()</a> method is called. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">inStream</td><td>The input stream to get data from.</td></tr>
@@ -325,6 +389,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> ELIServer.CallConnection.client2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ea22c08df4058ec3c34aa0deb4d67c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ea22c08df4058ec3c34aa0deb4d67c3">&#9670;&nbsp;</a></span>running</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ELIServer.CallConnection.running</td>
         </tr>
       </table>
   </td>

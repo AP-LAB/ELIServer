@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,11 @@ namespace ELIServer
         {
             InitializeComponent();
             messageSocketManager = new MessageSocketManager(this);
+        }
+
+        private void StopApplication(object sender, CancelEventArgs e)
+        {
+            System.Environment.Exit(1);
         }
 
         public void SetNumberOfConnectedClients(int amount)

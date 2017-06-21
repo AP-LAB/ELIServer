@@ -68,6 +68,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../df/d5c/class_e_l_i_client_1_1_video_call_view_1_1_video_call_view-members.html">List of all members</a>  </div>
@@ -123,8 +124,16 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:ac7804ca40c1b52e0a9987f7344b06109"><td class="memItemLeft" align="right" valign="top">static MediaPlaybackList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_e_l_i_client_1_1_video_call_view_1_1_video_call_view.html#ac7804ca40c1b52e0a9987f7344b06109">_playlist</a> = null</td></tr>
 <tr class="separator:ac7804ca40c1b52e0a9987f7344b06109"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a15a433bd1392e3005c84e7d6856f6384"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_e_l_i_client_1_1_video_call_view_1_1_video_call_view.html#a15a433bd1392e3005c84e7d6856f6384">OnNavigatedTo</a> (NavigationEventArgs e)</td></tr>
+<tr class="separator:a15a433bd1392e3005c84e7d6856f6384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
+<tr class="memitem:ab73d29666dec40a1e3095f7d7d4a529b"><td class="memItemLeft" align="right" valign="top">async void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_e_l_i_client_1_1_video_call_view_1_1_video_call_view.html#ab73d29666dec40a1e3095f7d7d4a529b">SetUpStreams</a> (<a class="el" href="../../dc/d9e/class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector.html">ServerConnector</a> serverConnector)</td></tr>
+<tr class="memdesc:ab73d29666dec40a1e3095f7d7d4a529b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Await a server response that indicates that a client to connect to is found. When the correct message ("Start recording") is assed, the capturing and streaming is started.  <a href="#ab73d29666dec40a1e3095f7d7d4a529b">More...</a><br /></td></tr>
+<tr class="separator:ab73d29666dec40a1e3095f7d7d4a529b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7306aa6f777886bf08c0134b435f7064"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_e_l_i_client_1_1_video_call_view_1_1_video_call_view.html#a7306aa6f777886bf08c0134b435f7064">OnExit</a> (object sender, object e)</td></tr>
 <tr class="separator:a7306aa6f777886bf08c0134b435f7064"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9aa4d793f9c9240b8660ff70c44a9d6a"><td class="memItemLeft" align="right" valign="top">async void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d05/class_e_l_i_client_1_1_video_call_view_1_1_video_call_view.html#a9aa4d793f9c9240b8660ff70c44a9d6a">SetUpReceiver</a> ()</td></tr>
@@ -623,6 +632,32 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a15a433bd1392e3005c84e7d6856f6384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15a433bd1392e3005c84e7d6856f6384">&#9670;&nbsp;</a></span>OnNavigatedTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void ELIClient.VideoCallView.VideoCallView.OnNavigatedTo </td>
+          <td>(</td>
+          <td class="paramtype">NavigationEventArgs&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a9aa4d793f9c9240b8660ff70c44a9d6a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9aa4d793f9c9240b8660ff70c44a9d6a">&#9670;&nbsp;</a></span>SetUpReceiver()</h2>
 
@@ -645,6 +680,40 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab73d29666dec40a1e3095f7d7d4a529b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab73d29666dec40a1e3095f7d7d4a529b">&#9670;&nbsp;</a></span>SetUpStreams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">async void ELIClient.VideoCallView.VideoCallView.SetUpStreams </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d9e/class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector.html">ServerConnector</a>&#160;</td>
+          <td class="paramname"><em>serverConnector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Await a server response that indicates that a client to connect to is found. When the correct message ("Start recording") is assed, the capturing and streaming is started. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">serverConnector</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

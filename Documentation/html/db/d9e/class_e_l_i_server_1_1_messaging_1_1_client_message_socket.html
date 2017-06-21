@@ -94,9 +94,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:afdf35ffe78727bb8d1b1e53a9dd48760"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html#afdf35ffe78727bb8d1b1e53a9dd48760">clientID</a></td></tr>
 <tr class="memdesc:afdf35ffe78727bb8d1b1e53a9dd48760"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ID of the connected client/table.  <a href="#afdf35ffe78727bb8d1b1e53a9dd48760">More...</a><br /></td></tr>
 <tr class="separator:afdf35ffe78727bb8d1b1e53a9dd48760"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a133a6eff37e294286e2777799bc644f4"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html#a133a6eff37e294286e2777799bc644f4">userID</a></td></tr>
-<tr class="memdesc:a133a6eff37e294286e2777799bc644f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ID of the connected user.  <a href="#a133a6eff37e294286e2777799bc644f4">More...</a><br /></td></tr>
-<tr class="separator:a133a6eff37e294286e2777799bc644f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4b6f81ca94ef986655714c470d044e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html#af4b6f81ca94ef986655714c470d044e6">isCalling</a> = false</td></tr>
+<tr class="memdesc:af4b6f81ca94ef986655714c470d044e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">An boolean that represents the call state of the client.  <a href="#af4b6f81ca94ef986655714c470d044e6">More...</a><br /></td></tr>
+<tr class="separator:af4b6f81ca94ef986655714c470d044e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-methods"></a>
 Package Functions</h2></td></tr>
@@ -108,8 +108,8 @@ Package Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a3d83f53c3a99a74cc67092265a9d75ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html#a3d83f53c3a99a74cc67092265a9d75ea">HandleIncomingMessagesClient</a> ()</td></tr>
-<tr class="separator:a3d83f53c3a99a74cc67092265a9d75ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79f0022875996b0902f22bf3db2eed9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html#a79f0022875996b0902f22bf3db2eed9b">HandleIncomingMessagesFromClient</a> ()</td></tr>
+<tr class="separator:a79f0022875996b0902f22bf3db2eed9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af243c323ef5f9a2e49b4ea5eb8de1dab"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html#af243c323ef5f9a2e49b4ea5eb8de1dab">GetStringFromNetworkStream</a> (NetworkStream stream)</td></tr>
 <tr class="separator:af243c323ef5f9a2e49b4ea5eb8de1dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -118,6 +118,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a1ef8df027624ee609a4d32db7ccdd2ef"><td class="memItemLeft" align="right" valign="top">TcpClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html#a1ef8df027624ee609a4d32db7ccdd2ef">innerClient</a></td></tr>
 <tr class="memdesc:a1ef8df027624ee609a4d32db7ccdd2ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">The inner TcpClient client.  <a href="#a1ef8df027624ee609a4d32db7ccdd2ef">More...</a><br /></td></tr>
 <tr class="separator:a1ef8df027624ee609a4d32db7ccdd2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a133a6eff37e294286e2777799bc644f4"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html#a133a6eff37e294286e2777799bc644f4">userID</a></td></tr>
+<tr class="memdesc:a133a6eff37e294286e2777799bc644f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ID of the connected user.  <a href="#a133a6eff37e294286e2777799bc644f4">More...</a><br /></td></tr>
+<tr class="separator:a133a6eff37e294286e2777799bc644f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class that communicates with a TcpClient object.</p>
@@ -153,7 +156,7 @@ Private Attributes</h2></td></tr>
 
 <p></p>
 <p>Create a new instance of <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>.</p>
-<p>When the <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> object is created, an intitial message will be requested. This message is handled in the <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html#ae337f033eec166081fc56f6a35a22c8f">GetInitialMessage()</a> method. After the intitial message is handled, all incoming messages will be handled using the <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html#a3d83f53c3a99a74cc67092265a9d75ea">HandleIncomingMessagesClient()</a> method. </p>
+<p>When the <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> object is created, an intitial message will be requested. This message is handled in the <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html#ae337f033eec166081fc56f6a35a22c8f">GetInitialMessage()</a> method. After the intitial message is handled, all incoming messages will be handled using the <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html#a79f0022875996b0902f22bf3db2eed9b">HandleIncomingMessagesFromClient()</a> method. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">client</td><td>The TcpClient that will be the inner TcpClient.</td></tr>
@@ -258,8 +261,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a3d83f53c3a99a74cc67092265a9d75ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d83f53c3a99a74cc67092265a9d75ea">&#9670;&nbsp;</a></span>HandleIncomingMessagesClient()</h2>
+<a id="a79f0022875996b0902f22bf3db2eed9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79f0022875996b0902f22bf3db2eed9b">&#9670;&nbsp;</a></span>HandleIncomingMessagesFromClient()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -268,7 +271,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ELIServer.Messaging.ClientMessageSocket.HandleIncomingMessagesClient </td>
+          <td class="memname">void ELIServer.Messaging.ClientMessageSocket.HandleIncomingMessagesFromClient </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -283,7 +286,7 @@ Private Attributes</h2></td></tr>
 
 <p></p>
 <p>Handle all incoming messages for this client.</p>
-<p>This is done using the static <a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a54b8fc68511fe197932338c0ffdb75c0">MessageHandler.HandleIncomingJsonMessage()</a> method. When the clients' connection closes, the client will be remove from the connected clients list in the <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html">MessageSocketManager</a>. This method is called in the constructor method of <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>. </p>
+<p>This is done using the static <a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a54b8fc68511fe197932338c0ffdb75c0">MessageHandler.HandleIncomingJsonMessage()</a> method. When the clients' connection closes, the client will be remove from the connected clients list in the <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html" title="This class handles all incoming TCP client connections. When an instance of the MessageSocketManager ...">MessageSocketManager</a>. This method is called in the constructor method of <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>. </p>
 
 </div>
 </div>
@@ -346,11 +349,10 @@ Private Attributes</h2></td></tr>
 <p>The first 4 bytes should contain the lenght of the message. The size is in little endian order and the message is encoded in UTF8. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">message</td><td>The message to send to the client</td></tr>
+    <tr><td class="paramname">message</td><td>The message to send to the client.</td></tr>
   </table>
   </dd>
 </dl>
-<p>&lt; The byte array containing the message. </p>
 
 </div>
 </div>
@@ -395,16 +397,40 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a133a6eff37e294286e2777799bc644f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a133a6eff37e294286e2777799bc644f4">&#9670;&nbsp;</a></span>userID</h2>
+<a id="af4b6f81ca94ef986655714c470d044e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4b6f81ca94ef986655714c470d044e6">&#9670;&nbsp;</a></span>isCalling</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
+          <td class="memname">bool ELIServer.Messaging.ClientMessageSocket.isCalling = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An boolean that represents the call state of the client. </p>
+
+</div>
+</div>
+<a id="a133a6eff37e294286e2777799bc644f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a133a6eff37e294286e2777799bc644f4">&#9670;&nbsp;</a></span>userID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
           <td class="memname">String ELIServer.Messaging.ClientMessageSocket.userID</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>The ID of the connected user. </p>
@@ -412,7 +438,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>ELIServer/Messaging/<a class="el" href="../../d6/dc6/_client_message_socket_8cs.html">ClientMessageSocket.cs</a></li>
+<li>ELIServer/ClientSocket/<a class="el" href="../../d6/dc6/_client_message_socket_8cs.html">ClientMessageSocket.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

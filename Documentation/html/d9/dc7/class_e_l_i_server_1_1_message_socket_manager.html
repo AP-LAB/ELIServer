@@ -77,63 +77,93 @@ $(function() {
 <div class="title">ELIServer.MessageSocketManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class handles all incoming TCP client connections. When an instance of the <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html" title="This class handles all incoming TCP client connections. When an instance of the MessageSocketManager ...">MessageSocketManager</a> class is created, <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#ab5d2f61a349046960ae63303ff1c2130" title="This method checks for new pending TcpClient connections. When a new connection is detected...">StartListening()</a> is called on a new Thread. The class has a couple of static lists:  
+ <a href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a28b6d0e215aa417970fc82b9239bebbb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#a28b6d0e215aa417970fc82b9239bebbb">MessageSocketManager</a> (<a class="el" href="../../d4/da4/class_e_l_i_server_1_1_main_window.html">MainWindow</a> _mainWindow)</td></tr>
+<tr class="memdesc:a28b6d0e215aa417970fc82b9239bebbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constuctor for the <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html" title="This class handles all incoming TCP client connections. When an instance of the MessageSocketManager ...">MessageSocketManager</a> class. The values for mainWindow, listener, running and thread are set in the constructor. The listener is created using the port an hostname global variables. The <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#ab5d2f61a349046960ae63303ff1c2130" title="This method checks for new pending TcpClient connections. When a new connection is detected...">StartListening()</a> method is called on a new thread. This thread is stored in the global variable thread.  <a href="#a28b6d0e215aa417970fc82b9239bebbb">More...</a><br /></td></tr>
 <tr class="separator:a28b6d0e215aa417970fc82b9239bebbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a921b68b4622c90628ae7b179bccdb10c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#a921b68b4622c90628ae7b179bccdb10c">RemoveClientFromConnectedSockets</a> (<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client)</td></tr>
+<tr class="memdesc:a921b68b4622c90628ae7b179bccdb10c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a ClientMessageSocket instance from the connectedSockets list. If the ClientMessageSocket instance is used in a <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> instance, this instance is removed too. The mainWindow is also updated.  <a href="#a921b68b4622c90628ae7b179bccdb10c">More...</a><br /></td></tr>
 <tr class="separator:a921b68b4622c90628ae7b179bccdb10c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa93a10042f33c7fe76d611346eb80ea0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#aa93a10042f33c7fe76d611346eb80ea0">GetClientMessageSocketById</a> (String clientID)</td></tr>
 <tr class="memdesc:aa93a10042f33c7fe76d611346eb80ea0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches a socket with the given ID in the connectedSockets list.  <a href="#aa93a10042f33c7fe76d611346eb80ea0">More...</a><br /></td></tr>
 <tr class="separator:aa93a10042f33c7fe76d611346eb80ea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf805bfb3292019f77e637135009ee78"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#acf805bfb3292019f77e637135009ee78">AddCallConnection</a> (<a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> callConnection)</td></tr>
+<tr class="memdesc:acf805bfb3292019f77e637135009ee78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> to the callConnections list.  <a href="#acf805bfb3292019f77e637135009ee78">More...</a><br /></td></tr>
 <tr class="separator:acf805bfb3292019f77e637135009ee78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af591d88e97afd289dfd4f2d89713f5b2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#af591d88e97afd289dfd4f2d89713f5b2">RemoveCallConnection</a> (<a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> callConnection)</td></tr>
+<tr class="memdesc:af591d88e97afd289dfd4f2d89713f5b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> instance from the callConnections list and remove the connection from the database.  <a href="#af591d88e97afd289dfd4f2d89713f5b2">More...</a><br /></td></tr>
 <tr class="separator:af591d88e97afd289dfd4f2d89713f5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4716112d551ce249f56cca53764d19d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#aa4716112d551ce249f56cca53764d19d">RemovePendingRandomCallConnection</a> (<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client)</td></tr>
+<tr class="memdesc:aa4716112d551ce249f56cca53764d19d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a ClientMessageSocket from the pendingRandomCallConnections list.  <a href="#aa4716112d551ce249f56cca53764d19d">More...</a><br /></td></tr>
+<tr class="separator:aa4716112d551ce249f56cca53764d19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6988d1ee0c08ded66a3d428f04585716"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#a6988d1ee0c08ded66a3d428f04585716">GetRandomPendingConnection</a> ()</td></tr>
+<tr class="memdesc:a6988d1ee0c08ded66a3d428f04585716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pending ClientMessageSocket instance that has requested a random call connection. If the pendingRandomCallConnections list is empty, null is returned. When a ClientMessageSocket instance is found, it is removed from the pendingRandomCallConnections list.  <a href="#a6988d1ee0c08ded66a3d428f04585716">More...</a><br /></td></tr>
 <tr class="separator:a6988d1ee0c08ded66a3d428f04585716"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeceb2994f44b015e0663d266b2ed11a6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#aeceb2994f44b015e0663d266b2ed11a6">AddPendingCallClient</a> (<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client)</td></tr>
-<tr class="separator:aeceb2994f44b015e0663d266b2ed11a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2dffa438503f596446e4a0137582962"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#ac2dffa438503f596446e4a0137582962">AddPendingRandomCallClient</a> (<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client)</td></tr>
+<tr class="memdesc:ac2dffa438503f596446e4a0137582962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a ClientMessageSocket instance that has send a random connection request to the pendingRandomCallConnections. The instance will only be added if it does not exist in the pendingRandomCallConnections list.  <a href="#ac2dffa438503f596446e4a0137582962">More...</a><br /></td></tr>
+<tr class="separator:ac2dffa438503f596446e4a0137582962"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ab5d2f61a349046960ae63303ff1c2130"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#ab5d2f61a349046960ae63303ff1c2130">StartListening</a> ()</td></tr>
+<tr class="memdesc:ab5d2f61a349046960ae63303ff1c2130"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method checks for new pending TcpClient connections. When a new connection is detected, a ClientMessageSocket instance is added to the connectedSockets list. The <a class="el" href="../../d4/da4/class_e_l_i_server_1_1_main_window.html" title="Interaction logic for MainWindow.xaml ">MainWindow</a> is also updated using the SetNumberOfConnectedClients() method.  <a href="#ab5d2f61a349046960ae63303ff1c2130">More...</a><br /></td></tr>
 <tr class="separator:ab5d2f61a349046960ae63303ff1c2130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
 <tr class="memitem:aa9a1bde31e6bb4d0ef01f974a5784d08"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#aa9a1bde31e6bb4d0ef01f974a5784d08">GetCallConnectionWithCient</a> (<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client)</td></tr>
+<tr class="memdesc:aa9a1bde31e6bb4d0ef01f974a5784d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> instance that uses the given client. If it does not exist, null will be return.  <a href="#aa9a1bde31e6bb4d0ef01f974a5784d08">More...</a><br /></td></tr>
 <tr class="separator:aa9a1bde31e6bb4d0ef01f974a5784d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a0c3b11ce72614567322dc025fd40c1c5"><td class="memItemLeft" align="right" valign="top">TcpListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#a0c3b11ce72614567322dc025fd40c1c5">listener</a> = null</td></tr>
+<tr class="memdesc:a0c3b11ce72614567322dc025fd40c1c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The TcpListener that is used to listen for new connections.  <a href="#a0c3b11ce72614567322dc025fd40c1c5">More...</a><br /></td></tr>
 <tr class="separator:a0c3b11ce72614567322dc025fd40c1c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af344f11a273d91f2d2c520583f105b95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#af344f11a273d91f2d2c520583f105b95">port</a> = 30000</td></tr>
+<tr class="memitem:af344f11a273d91f2d2c520583f105b95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#af344f11a273d91f2d2c520583f105b95">port</a> = 8005</td></tr>
+<tr class="memdesc:af344f11a273d91f2d2c520583f105b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">The port to listen to.  <a href="#af344f11a273d91f2d2c520583f105b95">More...</a><br /></td></tr>
 <tr class="separator:af344f11a273d91f2d2c520583f105b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe7ddcd6b733f389617621037d713db4"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#afe7ddcd6b733f389617621037d713db4">hostname</a> = &quot;127.0.0.1&quot;</td></tr>
+<tr class="memdesc:afe7ddcd6b733f389617621037d713db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The hostname to listen to.  <a href="#afe7ddcd6b733f389617621037d713db4">More...</a><br /></td></tr>
 <tr class="separator:afe7ddcd6b733f389617621037d713db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7079918e3fb3c205ee8831f800cd4d9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#ae7079918e3fb3c205ee8831f800cd4d9">running</a> = false</td></tr>
+<tr class="memdesc:ae7079918e3fb3c205ee8831f800cd4d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A boolean that represents the state of the <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html" title="This class handles all incoming TCP client connections. When an instance of the MessageSocketManager ...">MessageSocketManager</a> instance.  <a href="#ae7079918e3fb3c205ee8831f800cd4d9">More...</a><br /></td></tr>
 <tr class="separator:ae7079918e3fb3c205ee8831f800cd4d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c6114a87afeb4ecb1cbf42daea68df0"><td class="memItemLeft" align="right" valign="top">Thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#a2c6114a87afeb4ecb1cbf42daea68df0">thread</a></td></tr>
+<tr class="memdesc:a2c6114a87afeb4ecb1cbf42daea68df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The thread that is used for the <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#ab5d2f61a349046960ae63303ff1c2130" title="This method checks for new pending TcpClient connections. When a new connection is detected...">StartListening()</a> method.  <a href="#a2c6114a87afeb4ecb1cbf42daea68df0">More...</a><br /></td></tr>
 <tr class="separator:a2c6114a87afeb4ecb1cbf42daea68df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a042e9dc087484feacc3128eb3f7ac2f4"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#a042e9dc087484feacc3128eb3f7ac2f4">connectedSockets</a> = new List&lt;<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>&gt;()</td></tr>
+<tr class="memdesc:a042e9dc087484feacc3128eb3f7ac2f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A collection of the currently connected ClientMessageSocket instances.  <a href="#a042e9dc087484feacc3128eb3f7ac2f4">More...</a><br /></td></tr>
 <tr class="separator:a042e9dc087484feacc3128eb3f7ac2f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f25b676369fa4e59beca49d3ecf294a"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#a1f25b676369fa4e59beca49d3ecf294a">callConnections</a> = new List&lt;<a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a>&gt;()</td></tr>
+<tr class="memdesc:a1f25b676369fa4e59beca49d3ecf294a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A collection of the currently live <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> instances.  <a href="#a1f25b676369fa4e59beca49d3ecf294a">More...</a><br /></td></tr>
 <tr class="separator:a1f25b676369fa4e59beca49d3ecf294a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad34ae3d8801eea0c2fd2305c5b05e692"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#ad34ae3d8801eea0c2fd2305c5b05e692">pendingCallConnections</a> = new List&lt;<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>&gt;()</td></tr>
-<tr class="separator:ad34ae3d8801eea0c2fd2305c5b05e692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad145fe640e3a8f0af780441fc1d5221a"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#ad145fe640e3a8f0af780441fc1d5221a">pendingRandomCallConnections</a> = new List&lt;<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>&gt;()</td></tr>
+<tr class="memdesc:ad145fe640e3a8f0af780441fc1d5221a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A collection of pending ClientMessageSocket instance that have requested a random call partner.  <a href="#ad145fe640e3a8f0af780441fc1d5221a">More...</a><br /></td></tr>
+<tr class="separator:ad145fe640e3a8f0af780441fc1d5221a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a937d0802b2bb8f1e173a17ee27e3b8cc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d4/da4/class_e_l_i_server_1_1_main_window.html">MainWindow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#a937d0802b2bb8f1e173a17ee27e3b8cc">mainWindow</a></td></tr>
+<tr class="memdesc:a937d0802b2bb8f1e173a17ee27e3b8cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="../../d4/da4/class_e_l_i_server_1_1_main_window.html" title="Interaction logic for MainWindow.xaml ">MainWindow</a> instance where the state of the client lists can be updated.  <a href="#a937d0802b2bb8f1e173a17ee27e3b8cc">More...</a><br /></td></tr>
 <tr class="separator:a937d0802b2bb8f1e173a17ee27e3b8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class handles all incoming TCP client connections. When an instance of the <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html" title="This class handles all incoming TCP client connections. When an instance of the MessageSocketManager ...">MessageSocketManager</a> class is created, <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#ab5d2f61a349046960ae63303ff1c2130" title="This method checks for new pending TcpClient connections. When a new connection is detected...">StartListening()</a> is called on a new Thread. The class has a couple of static lists: </p>
+<ul>
+<li>connectedSockets: a collection of the currently connected ClientMessageSocket instances.</li>
+<li>callConnections: a collection of the currently live <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> instances.</li>
+<li>pendingRandomCallConnections: a collection of pending ClientMessageSocket instance that have requested a random call partner. </li>
+</ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a28b6d0e215aa417970fc82b9239bebbb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a28b6d0e215aa417970fc82b9239bebbb">&#9670;&nbsp;</a></span>MessageSocketManager()</h2>
 
@@ -157,6 +187,14 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The constuctor for the <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html" title="This class handles all incoming TCP client connections. When an instance of the MessageSocketManager ...">MessageSocketManager</a> class. The values for mainWindow, listener, running and thread are set in the constructor. The listener is created using the port an hostname global variables. The <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#ab5d2f61a349046960ae63303ff1c2130" title="This method checks for new pending TcpClient connections. When a new connection is detected...">StartListening()</a> method is called on a new thread. This thread is stored in the global variable thread. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_mainWindow</td><td>A <a class="el" href="../../d4/da4/class_e_l_i_server_1_1_main_window.html" title="Interaction logic for MainWindow.xaml ">MainWindow</a> instance where the state of the client lists can be updated.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -185,10 +223,18 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Add a <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> to the callConnections list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callConnection</td><td>An instance of the <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> class</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="aeceb2994f44b015e0663d266b2ed11a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeceb2994f44b015e0663d266b2ed11a6">&#9670;&nbsp;</a></span>AddPendingCallClient()</h2>
+<a id="ac2dffa438503f596446e4a0137582962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2dffa438503f596446e4a0137582962">&#9670;&nbsp;</a></span>AddPendingRandomCallClient()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,7 +243,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void ELIServer.MessageSocketManager.AddPendingCallClient </td>
+          <td class="memname">static void ELIServer.MessageSocketManager.AddPendingRandomCallClient </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>&#160;</td>
           <td class="paramname"><em>client</em></td><td>)</td>
@@ -210,6 +256,14 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Add a ClientMessageSocket instance that has send a random connection request to the pendingRandomCallConnections. The instance will only be added if it does not exist in the pendingRandomCallConnections list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">client</td><td>A ClientMessageSocket instance</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -236,6 +290,15 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Find a <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> instance that uses the given client. If it does not exist, null will be return. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">client</td><td>The ClientMessageSocket instance to find.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> instance or null.</dd></dl>
 
 </div>
 </div>
@@ -297,6 +360,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Get a pending ClientMessageSocket instance that has requested a random call connection. If the pendingRandomCallConnections list is empty, null is returned. When a ClientMessageSocket instance is found, it is removed from the pendingRandomCallConnections list. </p>
+<dl class="section return"><dt>Returns</dt><dd>A ClientMessageSocket instance or null</dd></dl>
+
 </div>
 </div>
 <a id="af591d88e97afd289dfd4f2d89713f5b2"></a>
@@ -322,6 +388,14 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Remove a <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> instance from the callConnections list and remove the connection from the database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callConnection</td><td>A <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> instance.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -349,6 +423,48 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Removes a ClientMessageSocket instance from the connectedSockets list. If the ClientMessageSocket instance is used in a <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> instance, this instance is removed too. The mainWindow is also updated. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">client</td><td>The ClientMessageSocket instance to remove.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa4716112d551ce249f56cca53764d19d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4716112d551ce249f56cca53764d19d">&#9670;&nbsp;</a></span>RemovePendingRandomCallConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ELIServer.MessageSocketManager.RemovePendingRandomCallConnection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>&#160;</td>
+          <td class="paramname"><em>client</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove a ClientMessageSocket from the pendingRandomCallConnections list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">client</td><td>The ClientMessageSocket to remove</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ab5d2f61a349046960ae63303ff1c2130"></a>
@@ -374,6 +490,8 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>This method checks for new pending TcpClient connections. When a new connection is detected, a ClientMessageSocket instance is added to the connectedSockets list. The <a class="el" href="../../d4/da4/class_e_l_i_server_1_1_main_window.html" title="Interaction logic for MainWindow.xaml ">MainWindow</a> is also updated using the SetNumberOfConnectedClients() method. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -397,6 +515,8 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>A collection of the currently live <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> instances. </p>
+
 </div>
 </div>
 <a id="a042e9dc087484feacc3128eb3f7ac2f4"></a>
@@ -418,6 +538,8 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>A collection of the currently connected ClientMessageSocket instances. </p>
 
 </div>
 </div>
@@ -441,6 +563,8 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The hostname to listen to. </p>
+
 </div>
 </div>
 <a id="a0c3b11ce72614567322dc025fd40c1c5"></a>
@@ -462,6 +586,8 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The TcpListener that is used to listen for new connections. </p>
 
 </div>
 </div>
@@ -485,10 +611,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>A <a class="el" href="../../d4/da4/class_e_l_i_server_1_1_main_window.html" title="Interaction logic for MainWindow.xaml ">MainWindow</a> instance where the state of the client lists can be updated. </p>
+
 </div>
 </div>
-<a id="ad34ae3d8801eea0c2fd2305c5b05e692"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad34ae3d8801eea0c2fd2305c5b05e692">&#9670;&nbsp;</a></span>pendingCallConnections</h2>
+<a id="ad145fe640e3a8f0af780441fc1d5221a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad145fe640e3a8f0af780441fc1d5221a">&#9670;&nbsp;</a></span>pendingRandomCallConnections</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -497,7 +625,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>&gt; ELIServer.MessageSocketManager.pendingCallConnections = new List&lt;<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>&gt;()</td>
+          <td class="memname">List&lt;<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>&gt; ELIServer.MessageSocketManager.pendingRandomCallConnections = new List&lt;<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>&gt;()</td>
         </tr>
       </table>
   </td>
@@ -506,6 +634,8 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>A collection of pending ClientMessageSocket instance that have requested a random call partner. </p>
 
 </div>
 </div>
@@ -519,7 +649,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ELIServer.MessageSocketManager.port = 30000</td>
+          <td class="memname">int ELIServer.MessageSocketManager.port = 8005</td>
         </tr>
       </table>
   </td>
@@ -528,6 +658,8 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The port to listen to. </p>
 
 </div>
 </div>
@@ -551,6 +683,8 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>A boolean that represents the state of the <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html" title="This class handles all incoming TCP client connections. When an instance of the MessageSocketManager ...">MessageSocketManager</a> instance. </p>
+
 </div>
 </div>
 <a id="a2c6114a87afeb4ecb1cbf42daea68df0"></a>
@@ -572,6 +706,8 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The thread that is used for the <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#ab5d2f61a349046960ae63303ff1c2130" title="This method checks for new pending TcpClient connections. When a new connection is detected...">StartListening()</a> method. </p>
 
 </div>
 </div>

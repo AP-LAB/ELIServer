@@ -1,28 +1,37 @@
 \hypertarget{class_e_l_i_server_1_1_messaging_1_1_message_handler}{}\section{E\+L\+I\+Server.\+Messaging.\+Message\+Handler Class Reference}
 \label{class_e_l_i_server_1_1_messaging_1_1_message_handler}\index{E\+L\+I\+Server.\+Messaging.\+Message\+Handler@{E\+L\+I\+Server.\+Messaging.\+Message\+Handler}}
+
+
+This abstract class provides is used for handling incoming message from a \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} instance. The starting point of this class is the \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a54b8fc68511fe197932338c0ffdb75c0}{Handle\+Incoming\+Json\+Message()} method. All methods in this class are static.  
+
+
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a54b8fc68511fe197932338c0ffdb75c0}{Handle\+Incoming\+Json\+Message} (\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a0373b287a964b75f145c12031d28accd}{client}, String message)
+static void \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a54b8fc68511fe197932338c0ffdb75c0}{Handle\+Incoming\+Json\+Message} (\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client, String message)
 \end{DoxyCompactItemize}
 \subsection*{Static Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a3dd06c4f9c959db12a96af3397114861}{Get\+All\+Cities} (\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a0373b287a964b75f145c12031d28accd}{client})
+static void \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a760bf18782afa59dd63cf733ad7adb3a}{Return\+Unknown\+Type\+Message} (\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client)
+\begin{DoxyCompactList}\small\item\em Return a \char`\"{}\+Unknown\+Type\char`\"{} error message to the client. \end{DoxyCompactList}\item 
+static void \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_af295ba9c01e4e01a19edba696944cfae}{Return\+Readable\+Message\+Error\+Message} (\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client, String error\+Message)
+\begin{DoxyCompactList}\small\item\em Return a \char`\"{}\+Unreadable\+Message\char`\"{} error message to the client. \end{DoxyCompactList}\item 
+static void \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a3dd06c4f9c959db12a96af3397114861}{Get\+All\+Cities} (\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client)
 \item 
-static void \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a2e0ec94ce30e0f2ebf9ed02393fb35e1}{Get\+Random\+Table} (dynamic json\+Object, \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a0373b287a964b75f145c12031d28accd}{client})
+static void \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a45ed426f6fdc21493aa8727d44a1b502}{Get\+Random\+Table} (dynamic message, \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client)
 \item 
-static void \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_ac7d3cf8905a2ddb6ff26f092c92fa886}{Log\+In} (dynamic json\+Object, \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a0373b287a964b75f145c12031d28accd}{client})
-\item 
+static void \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_ac7d3cf8905a2ddb6ff26f092c92fa886}{Log\+In} (dynamic json\+Object, \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client)
+\begin{DoxyCompactList}\small\item\em This method checks the user credentials that where passed through the message. If the combination of username and password exists in the database, the users information is returned to the \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client. If not, an error message is send. This is done using the \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a9594cb08cdb01a3ae81e0e794447ff9c}{Return\+Incorrect\+User\+Name\+Or\+Password\+Message()} method. \end{DoxyCompactList}\item 
+static void \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a9594cb08cdb01a3ae81e0e794447ff9c}{Return\+Incorrect\+User\+Name\+Or\+Password\+Message} (\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client)
+\begin{DoxyCompactList}\small\item\em Return a \char`\"{}\+Incorrect\+User\+Name\+Or\+Password\char`\"{} error message to the client. \end{DoxyCompactList}\item 
 static void \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a1fe43aa94ee3e3d03fcf147549eabced}{Log\+Out} (dynamic json\+Object)
-\item 
-static void \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a5340630c241299aa12547888d42edd03}{Return\+Message} (string message, \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a0373b287a964b75f145c12031d28accd}{client})
-\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a0373b287a964b75f145c12031d28accd}{client}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Log the user and client out. The \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client is removed from the connected\+Sockets list in the \hyperlink{class_e_l_i_server_1_1_message_socket_manager}{Message\+Socket\+Manager} and the connection is removed from the database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This abstract class provides is used for handling incoming message from a \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} instance. The starting point of this class is the \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a54b8fc68511fe197932338c0ffdb75c0}{Handle\+Incoming\+Json\+Message()} method. All methods in this class are static. 
+
 
 
 \subsection{Member Function Documentation}
@@ -32,46 +41,172 @@ static void \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a534
 \subsubsection{\texorpdfstring{Get\+All\+Cities()}{GetAllCities()}}
 {\footnotesize\ttfamily static void E\+L\+I\+Server.\+Messaging.\+Message\+Handler.\+Get\+All\+Cities (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_message_handler_a2e0ec94ce30e0f2ebf9ed02393fb35e1}\label{class_e_l_i_server_1_1_messaging_1_1_message_handler_a2e0ec94ce30e0f2ebf9ed02393fb35e1}} 
+
+
+
+
+Load all cities from the database and send a J\+S\+ON object to the client.
+
+The return message will be a J\+S\+ON object with a \char`\"{}\+R\+E\+S\+U\+L\+T\+S\char`\"{} key and an array of the cities. See the release docs for more information about the return message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & The \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client to send the message to.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_message_handler_a45ed426f6fdc21493aa8727d44a1b502}\label{class_e_l_i_server_1_1_messaging_1_1_message_handler_a45ed426f6fdc21493aa8727d44a1b502}} 
 \index{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler@{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler}!Get\+Random\+Table@{Get\+Random\+Table}}
 \index{Get\+Random\+Table@{Get\+Random\+Table}!E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler@{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler}}
 \subsubsection{\texorpdfstring{Get\+Random\+Table()}{GetRandomTable()}}
-{\footnotesize\ttfamily static void E\+L\+I\+Server.\+Messaging.\+Message\+Handler.\+Get\+Random\+Table (\begin{DoxyParamCaption}\item[{dynamic}]{json\+Object,  }\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily static void E\+L\+I\+Server.\+Messaging.\+Message\+Handler.\+Get\+Random\+Table (\begin{DoxyParamCaption}\item[{dynamic}]{message,  }\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
 
+
+
+
+
+Create a new \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} between the specified client and a random client.
+
+The random client is selected using the \hyperlink{class_e_l_i_server_1_1_message_socket_manager_a6988d1ee0c08ded66a3d428f04585716}{Message\+Socket\+Manager.\+Get\+Random\+Pending\+Connection()} method. When a \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} is created, the call\+Connections list in the \hyperlink{class_e_l_i_server_1_1_message_socket_manager}{Message\+Socket\+Manager} class will be updated accordingly. If no random client is found, the client will be stored in the pending\+Random\+Call\+Connections list of the \hyperlink{class_e_l_i_server_1_1_message_socket_manager}{Message\+Socket\+Manager} class. This will be done using the \hyperlink{class_e_l_i_server_1_1_message_socket_manager_ac2dffa438503f596446e4a0137582962}{Message\+Socket\+Manager.\+Add\+Pending\+Random\+Call\+Client()}; 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message.\\
+\hline
+{\em client} & The \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client to connect the \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} to.\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_message_handler_a54b8fc68511fe197932338c0ffdb75c0}\label{class_e_l_i_server_1_1_messaging_1_1_message_handler_a54b8fc68511fe197932338c0ffdb75c0}} 
 \index{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler@{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler}!Handle\+Incoming\+Json\+Message@{Handle\+Incoming\+Json\+Message}}
 \index{Handle\+Incoming\+Json\+Message@{Handle\+Incoming\+Json\+Message}!E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler@{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler}}
 \subsubsection{\texorpdfstring{Handle\+Incoming\+Json\+Message()}{HandleIncomingJsonMessage()}}
 {\footnotesize\ttfamily static void E\+L\+I\+Server.\+Messaging.\+Message\+Handler.\+Handle\+Incoming\+Json\+Message (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{client,  }\item[{String}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
+
+
+
+
+Handle the incoming message according to the given type.
+
+The incoming messages is handled according to the type specified in the message. The type of message should be included in the \char`\"{}message\+\_\+type\char`\"{} J\+S\+ON value. Possible values are\+:
+\begin{DoxyItemize}
+\item Log\+In
+\item Log\+Out
+\item Get\+Random\+Table
+\item Get\+All\+Cities
+\end{DoxyItemize}
+
+(In the future other types will be added.) Please ensure that the message\+\_\+type key is present.
+
+The types will be handled using the according methods in the \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler}{Message\+Handler} class, namely\+:
+\begin{DoxyItemize}
+\item Log\+In\+: \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_ac7d3cf8905a2ddb6ff26f092c92fa886}{Log\+In()}
+\item Log\+Out\+: \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a1fe43aa94ee3e3d03fcf147549eabced}{Log\+Out()}
+\item Get\+Random\+Table\+: \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a45ed426f6fdc21493aa8727d44a1b502}{Get\+Random\+Table()}
+\item Get\+All\+Cities\+: \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a3dd06c4f9c959db12a96af3397114861}{Get\+All\+Cities()}
+\item Other values\+: \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a760bf18782afa59dd63cf733ad7adb3a}{Return\+Unknown\+Type\+Message()}
+\end{DoxyItemize}
+
+The message that needs to be handled is parsed using Json\+Convert.\+Deserialize\+Object(). Please ensure that the message is an string in J\+S\+ON format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & An instance of a \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} object where return messages should be send to.\\
+\hline
+{\em message} & The message to handle.\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_message_handler_ac7d3cf8905a2ddb6ff26f092c92fa886}\label{class_e_l_i_server_1_1_messaging_1_1_message_handler_ac7d3cf8905a2ddb6ff26f092c92fa886}} 
 \index{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler@{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler}!Log\+In@{Log\+In}}
 \index{Log\+In@{Log\+In}!E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler@{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler}}
 \subsubsection{\texorpdfstring{Log\+In()}{LogIn()}}
 {\footnotesize\ttfamily static void E\+L\+I\+Server.\+Messaging.\+Message\+Handler.\+Log\+In (\begin{DoxyParamCaption}\item[{dynamic}]{json\+Object,  }\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
 
+
+
+This method checks the user credentials that where passed through the message. If the combination of username and password exists in the database, the users information is returned to the \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client. If not, an error message is send. This is done using the \hyperlink{class_e_l_i_server_1_1_messaging_1_1_message_handler_a9594cb08cdb01a3ae81e0e794447ff9c}{Return\+Incorrect\+User\+Name\+Or\+Password\+Message()} method. 
+
+Note\+: This method is not secure. It should be altered before the application is released. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+Object} & A dynamic object that was created using the Json\+Convert.\+Deserialize\+Object() method.\\
+\hline
+{\em client} & The \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client to send the return message to.\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_message_handler_a1fe43aa94ee3e3d03fcf147549eabced}\label{class_e_l_i_server_1_1_messaging_1_1_message_handler_a1fe43aa94ee3e3d03fcf147549eabced}} 
 \index{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler@{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler}!Log\+Out@{Log\+Out}}
 \index{Log\+Out@{Log\+Out}!E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler@{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler}}
 \subsubsection{\texorpdfstring{Log\+Out()}{LogOut()}}
 {\footnotesize\ttfamily static void E\+L\+I\+Server.\+Messaging.\+Message\+Handler.\+Log\+Out (\begin{DoxyParamCaption}\item[{dynamic}]{json\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_message_handler_a5340630c241299aa12547888d42edd03}\label{class_e_l_i_server_1_1_messaging_1_1_message_handler_a5340630c241299aa12547888d42edd03}} 
-\index{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler@{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler}!Return\+Message@{Return\+Message}}
-\index{Return\+Message@{Return\+Message}!E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler@{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler}}
-\subsubsection{\texorpdfstring{Return\+Message()}{ReturnMessage()}}
-{\footnotesize\ttfamily static void E\+L\+I\+Server.\+Messaging.\+Message\+Handler.\+Return\+Message (\begin{DoxyParamCaption}\item[{string}]{message,  }\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+Log the user and client out. The \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client is removed from the connected\+Sockets list in the \hyperlink{class_e_l_i_server_1_1_message_socket_manager}{Message\+Socket\+Manager} and the connection is removed from the database. 
+
+The Log\+Out message should containt the following values\+:
+\begin{DoxyItemize}
+\item Client\+ID\+: the ID of the table
+\item ID\+: the ID of the user An Missing\+Field\+Exception will be thrown if the message does not contain these values. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+Object} & The Log\+Out message\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_message_handler_a9594cb08cdb01a3ae81e0e794447ff9c}\label{class_e_l_i_server_1_1_messaging_1_1_message_handler_a9594cb08cdb01a3ae81e0e794447ff9c}} 
+\index{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler@{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler}!Return\+Incorrect\+User\+Name\+Or\+Password\+Message@{Return\+Incorrect\+User\+Name\+Or\+Password\+Message}}
+\index{Return\+Incorrect\+User\+Name\+Or\+Password\+Message@{Return\+Incorrect\+User\+Name\+Or\+Password\+Message}!E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler@{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler}}
+\subsubsection{\texorpdfstring{Return\+Incorrect\+User\+Name\+Or\+Password\+Message()}{ReturnIncorrectUserNameOrPasswordMessage()}}
+{\footnotesize\ttfamily static void E\+L\+I\+Server.\+Messaging.\+Message\+Handler.\+Return\+Incorrect\+User\+Name\+Or\+Password\+Message (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
-\subsection{Member Data Documentation}
-\mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_message_handler_a0373b287a964b75f145c12031d28accd}\label{class_e_l_i_server_1_1_messaging_1_1_message_handler_a0373b287a964b75f145c12031d28accd}} 
-\index{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler@{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler}!client@{client}}
-\index{client@{client}!E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler@{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler}}
-\subsubsection{\texorpdfstring{client}{client}}
-{\footnotesize\ttfamily \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} E\+L\+I\+Server.\+Messaging.\+Message\+Handler.\+client\hspace{0.3cm}{\ttfamily [private]}}
+Return a \char`\"{}\+Incorrect\+User\+Name\+Or\+Password\char`\"{} error message to the client. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em client} & The \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client to send the message to.\\
+\hline
+\end{DoxyParams}
+Create a dynamic message object.
+
+Add values to the message object. \mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_message_handler_af295ba9c01e4e01a19edba696944cfae}\label{class_e_l_i_server_1_1_messaging_1_1_message_handler_af295ba9c01e4e01a19edba696944cfae}} 
+\index{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler@{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler}!Return\+Readable\+Message\+Error\+Message@{Return\+Readable\+Message\+Error\+Message}}
+\index{Return\+Readable\+Message\+Error\+Message@{Return\+Readable\+Message\+Error\+Message}!E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler@{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler}}
+\subsubsection{\texorpdfstring{Return\+Readable\+Message\+Error\+Message()}{ReturnReadableMessageErrorMessage()}}
+{\footnotesize\ttfamily static void E\+L\+I\+Server.\+Messaging.\+Message\+Handler.\+Return\+Readable\+Message\+Error\+Message (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{client,  }\item[{String}]{error\+Message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Return a \char`\"{}\+Unreadable\+Message\char`\"{} error message to the client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & The \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client to send the message to.\\
+\hline
+\end{DoxyParams}
+Create a dynamic message object.
+
+Add values to the message object. \mbox{\Hypertarget{class_e_l_i_server_1_1_messaging_1_1_message_handler_a760bf18782afa59dd63cf733ad7adb3a}\label{class_e_l_i_server_1_1_messaging_1_1_message_handler_a760bf18782afa59dd63cf733ad7adb3a}} 
+\index{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler@{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler}!Return\+Unknown\+Type\+Message@{Return\+Unknown\+Type\+Message}}
+\index{Return\+Unknown\+Type\+Message@{Return\+Unknown\+Type\+Message}!E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler@{E\+L\+I\+Server\+::\+Messaging\+::\+Message\+Handler}}
+\subsubsection{\texorpdfstring{Return\+Unknown\+Type\+Message()}{ReturnUnknownTypeMessage()}}
+{\footnotesize\ttfamily static void E\+L\+I\+Server.\+Messaging.\+Message\+Handler.\+Return\+Unknown\+Type\+Message (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Return a \char`\"{}\+Unknown\+Type\char`\"{} error message to the client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & The \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} client to send the message to.\\
+\hline
+\end{DoxyParams}
+Create a dynamic message object.
+
+Add values to the message object. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

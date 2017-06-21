@@ -22,7 +22,11 @@ void \hyperlink{class_e_l_i_server_1_1_call_connection_ac9a3d9918d1739e322cc9a4a
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \hyperlink{class_e_l_i_server_1_1_call_connection_ad458164bca02a4640893be5cda913149}{Send\+Start\+Messages} ()
+\begin{DoxyCompactList}\small\item\em Send a \char`\"{}\+Start recording\char`\"{} message to both clients. \end{DoxyCompactList}\item 
 async void \hyperlink{class_e_l_i_server_1_1_call_connection_a01514395594e70da5e9acb48d908a238}{Stream\+To} (Network\+Stream in\+Stream, Network\+Stream out\+Stream)
+\item 
+void \hyperlink{class_e_l_i_server_1_1_call_connection_a58cfbc1878bb29632972ed7c21c580bb}{Close\+Connection} ()
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -30,6 +34,8 @@ async void \hyperlink{class_e_l_i_server_1_1_call_connection_a01514395594e70da5e
 \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} \hyperlink{class_e_l_i_server_1_1_call_connection_adfdb5fc52756028eeac454f6e61e9de6}{client1}
 \item 
 \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} \hyperlink{class_e_l_i_server_1_1_call_connection_af687483721642ebfcb3eaf00e586c7a1}{client2}
+\item 
+bool \hyperlink{class_e_l_i_server_1_1_call_connection_a2ea22c08df4058ec3c34aa0deb4d67c3}{running}
 \end{DoxyCompactItemize}
 
 
@@ -38,7 +44,7 @@ async void \hyperlink{class_e_l_i_server_1_1_call_connection_a01514395594e70da5e
 
 This class represents a video call connection.
 
-The class contains two Client\+Message\+Socket instances, client1 and client2. A connection is established between those clients. When an instance is created, the clients will immediately start streaming to eachother. 
+The class contains two Client\+Message\+Socket instances, client1 and client2. A connection is established between those clients. When an instance is created, the clients will immediately start streaming to each other. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_e_l_i_server_1_1_call_connection_ad0182673abc1aaffa6f4f539a727f782}\label{class_e_l_i_server_1_1_call_connection_ad0182673abc1aaffa6f4f539a727f782}} 
@@ -65,7 +71,17 @@ When the instance is created, the database will be updated accordingly.
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_e_l_i_server_1_1_call_connection_ae65d1e69b626abc7d354ca87ab800b12}\label{class_e_l_i_server_1_1_call_connection_ae65d1e69b626abc7d354ca87ab800b12}} 
+\mbox{\Hypertarget{class_e_l_i_server_1_1_call_connection_a58cfbc1878bb29632972ed7c21c580bb}\label{class_e_l_i_server_1_1_call_connection_a58cfbc1878bb29632972ed7c21c580bb}} 
+\index{E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}!Close\+Connection@{Close\+Connection}}
+\index{Close\+Connection@{Close\+Connection}!E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}}
+\subsubsection{\texorpdfstring{Close\+Connection()}{CloseConnection()}}
+{\footnotesize\ttfamily void E\+L\+I\+Server.\+Call\+Connection.\+Close\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+
+
+This method is called when the callconnection is closed. Set the is\+Calling state of the clients to false and remove the \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} from the call\+Connectios list in the \hyperlink{class_e_l_i_server_1_1_message_socket_manager}{Message\+Socket\+Manager} class \mbox{\Hypertarget{class_e_l_i_server_1_1_call_connection_ae65d1e69b626abc7d354ca87ab800b12}\label{class_e_l_i_server_1_1_call_connection_ae65d1e69b626abc7d354ca87ab800b12}} 
 \index{E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}!Get\+Client1@{Get\+Client1}}
 \index{Get\+Client1@{Get\+Client1}!E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}}
 \subsubsection{\texorpdfstring{Get\+Client1()}{GetClient1()}}
@@ -91,7 +107,19 @@ Get the second client of the connection. This client is of the Client\+Message\+
 \begin{DoxyReturn}{Returns}
 An object of the class Client\+Message\+Socket
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_e_l_i_server_1_1_call_connection_ac9a3d9918d1739e322cc9a4a6fdcbeeb}\label{class_e_l_i_server_1_1_call_connection_ac9a3d9918d1739e322cc9a4a6fdcbeeb}} 
+\mbox{\Hypertarget{class_e_l_i_server_1_1_call_connection_ad458164bca02a4640893be5cda913149}\label{class_e_l_i_server_1_1_call_connection_ad458164bca02a4640893be5cda913149}} 
+\index{E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}!Send\+Start\+Messages@{Send\+Start\+Messages}}
+\index{Send\+Start\+Messages@{Send\+Start\+Messages}!E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}}
+\subsubsection{\texorpdfstring{Send\+Start\+Messages()}{SendStartMessages()}}
+{\footnotesize\ttfamily void E\+L\+I\+Server.\+Call\+Connection.\+Send\+Start\+Messages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Send a \char`\"{}\+Start recording\char`\"{} message to both clients. 
+
+Create a dynamic message object.
+
+Add values to the message object. \mbox{\Hypertarget{class_e_l_i_server_1_1_call_connection_ac9a3d9918d1739e322cc9a4a6fdcbeeb}\label{class_e_l_i_server_1_1_call_connection_ac9a3d9918d1739e322cc9a4a6fdcbeeb}} 
 \index{E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}!Set\+Threads@{Set\+Threads}}
 \index{Set\+Threads@{Set\+Threads}!E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}}
 \subsubsection{\texorpdfstring{Set\+Threads()}{SetThreads()}}
@@ -115,7 +143,7 @@ The streaming is done on two seperate threads. The streaming itself is done usin
 
 Start streaming from one stream to another.
 
-This is repeated as long as both clients are connected. When the connection on one of the clients is closed, the \hyperlink{class_e_l_i_server_1_1_call_connection}{Call\+Connection} is removed from the call\+Connections list in \hyperlink{class_e_l_i_server_1_1_message_socket_manager}{Message\+Socket\+Manager}. 
+This is repeated as long as both clients are connected. When the connection on one of the clients is closed, the \hyperlink{class_e_l_i_server_1_1_call_connection_a58cfbc1878bb29632972ed7c21c580bb}{Close\+Connection()} method is called. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -138,6 +166,12 @@ This is repeated as long as both clients are connected. When the connection on o
 \index{client2@{client2}!E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}}
 \subsubsection{\texorpdfstring{client2}{client2}}
 {\footnotesize\ttfamily \hyperlink{class_e_l_i_server_1_1_messaging_1_1_client_message_socket}{Client\+Message\+Socket} E\+L\+I\+Server.\+Call\+Connection.\+client2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_e_l_i_server_1_1_call_connection_a2ea22c08df4058ec3c34aa0deb4d67c3}\label{class_e_l_i_server_1_1_call_connection_a2ea22c08df4058ec3c34aa0deb4d67c3}} 
+\index{E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}!running@{running}}
+\index{running@{running}!E\+L\+I\+Server\+::\+Call\+Connection@{E\+L\+I\+Server\+::\+Call\+Connection}}
+\subsubsection{\texorpdfstring{running}{running}}
+{\footnotesize\ttfamily bool E\+L\+I\+Server.\+Call\+Connection.\+running\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

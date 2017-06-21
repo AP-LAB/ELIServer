@@ -74,28 +74,45 @@ $(function() {
 <div class="title">ELIServer.DatabaseManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class is used for retrieving and sending data to the database. The connectionString is included in the App.config file on the server.  
+ <a href="../../dc/d76/class_e_l_i_server_1_1_database_manager.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af4932c44cd155cec929be0207f17605e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d76/class_e_l_i_server_1_1_database_manager.html#af4932c44cd155cec929be0207f17605e">DatabaseManager</a> ()</td></tr>
+<tr class="memdesc:af4932c44cd155cec929be0207f17605e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constuctor. The connection is created and opened in this constuctor using the connection string returned by <a class="el" href="../../dc/d76/class_e_l_i_server_1_1_database_manager.html#a2a2f09721d3e5ea9db778d74e517e8da" title="Load the connection string from the App.config file. ">GetConnectionString()</a>.  <a href="#af4932c44cd155cec929be0207f17605e">More...</a><br /></td></tr>
 <tr class="separator:af4932c44cd155cec929be0207f17605e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a194f6838e3c20bc118069a33a7b3465b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d76/class_e_l_i_server_1_1_database_manager.html#a194f6838e3c20bc118069a33a7b3465b">DatabaseManager</a> (String connectionString)</td></tr>
+<tr class="memdesc:a194f6838e3c20bc118069a33a7b3465b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This constuctor is used for testing.  <a href="#a194f6838e3c20bc118069a33a7b3465b">More...</a><br /></td></tr>
+<tr class="separator:a194f6838e3c20bc118069a33a7b3465b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5eaf0569ca067ab6e074fc76c03439fe"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d76/class_e_l_i_server_1_1_database_manager.html#a5eaf0569ca067ab6e074fc76c03439fe">GetUserByUsernameAndPassword</a> (String username, String password)</td></tr>
+<tr class="memdesc:a5eaf0569ca067ab6e074fc76c03439fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the guest by the specified username and password from the database.  <a href="#a5eaf0569ca067ab6e074fc76c03439fe">More...</a><br /></td></tr>
 <tr class="separator:a5eaf0569ca067ab6e074fc76c03439fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85c00dfc07b07c4840aca4fcdd09175e"><td class="memItemLeft" align="right" valign="top">List&lt; Dictionary&lt; string, string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d76/class_e_l_i_server_1_1_database_manager.html#a85c00dfc07b07c4840aca4fcdd09175e">GetAllCitiesWithLatLon</a> ()</td></tr>
+<tr class="memdesc:a85c00dfc07b07c4840aca4fcdd09175e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load all cities from the database. The data that is loaded is the cities:  <a href="#a85c00dfc07b07c4840aca4fcdd09175e">More...</a><br /></td></tr>
 <tr class="separator:a85c00dfc07b07c4840aca4fcdd09175e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f64bd7fd49cd35e15362d2db5a302e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d76/class_e_l_i_server_1_1_database_manager.html#a7f64bd7fd49cd35e15362d2db5a302e0">Close</a> ()</td></tr>
+<tr class="memdesc:a7f64bd7fd49cd35e15362d2db5a302e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the database connection.  <a href="#a7f64bd7fd49cd35e15362d2db5a302e0">More...</a><br /></td></tr>
 <tr class="separator:a7f64bd7fd49cd35e15362d2db5a302e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27bf3444db3446216c2a0c7b957895d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d76/class_e_l_i_server_1_1_database_manager.html#a27bf3444db3446216c2a0c7b957895d9">SetVideoCallConnection</a> (string client1Id, string client2Id)</td></tr>
+<tr class="memdesc:a27bf3444db3446216c2a0c7b957895d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> record in the database.  <a href="#a27bf3444db3446216c2a0c7b957895d9">More...</a><br /></td></tr>
 <tr class="separator:a27bf3444db3446216c2a0c7b957895d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e8315c9b23095cbe799c8f75ccacc87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d76/class_e_l_i_server_1_1_database_manager.html#a8e8315c9b23095cbe799c8f75ccacc87">RemoveVideoCallConnection</a> (string client1Id, string client2Id)</td></tr>
+<tr class="memdesc:a8e8315c9b23095cbe799c8f75ccacc87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> records with the specified client ids from the database.  <a href="#a8e8315c9b23095cbe799c8f75ccacc87">More...</a><br /></td></tr>
 <tr class="separator:a8e8315c9b23095cbe799c8f75ccacc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4167599aa3be67444134c0fd4f837c82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d76/class_e_l_i_server_1_1_database_manager.html#a4167599aa3be67444134c0fd4f837c82">ConnectGuestToTable</a> (string guestId, string tableId)</td></tr>
+<tr class="memdesc:a4167599aa3be67444134c0fd4f837c82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert the connection between a guest and a client (table) into the database.  <a href="#a4167599aa3be67444134c0fd4f837c82">More...</a><br /></td></tr>
 <tr class="separator:a4167599aa3be67444134c0fd4f837c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99034ff69cba06942d29a9ad444b04c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d76/class_e_l_i_server_1_1_database_manager.html#a99034ff69cba06942d29a9ad444b04c3">DisconnectGuestFromTable</a> (string guestId, string tableId)</td></tr>
+<tr class="memdesc:a99034ff69cba06942d29a9ad444b04c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the connection between a guest and a client (table) from the database.  <a href="#a99034ff69cba06942d29a9ad444b04c3">More...</a><br /></td></tr>
 <tr class="separator:a99034ff69cba06942d29a9ad444b04c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
+<tr class="memitem:a2a2f09721d3e5ea9db778d74e517e8da"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d76/class_e_l_i_server_1_1_database_manager.html#a2a2f09721d3e5ea9db778d74e517e8da">GetConnectionString</a> ()</td></tr>
+<tr class="memdesc:a2a2f09721d3e5ea9db778d74e517e8da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the connection string from the App.config file.  <a href="#a2a2f09721d3e5ea9db778d74e517e8da">More...</a><br /></td></tr>
+<tr class="separator:a2a2f09721d3e5ea9db778d74e517e8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ccfa58357d3f8e7fd495f78a117856e"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d76/class_e_l_i_server_1_1_database_manager.html#a4ccfa58357d3f8e7fd495f78a117856e">GetDictionaryFromFbDataReaderWithOneResult</a> (FbDataReader reader, String type)</td></tr>
 <tr class="memdesc:a4ccfa58357d3f8e7fd495f78a117856e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a dictionary from colums in the first row in the reader. If there are no rows, return an empty dictionary.  <a href="#a4ccfa58357d3f8e7fd495f78a117856e">More...</a><br /></td></tr>
 <tr class="separator:a4ccfa58357d3f8e7fd495f78a117856e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -105,14 +122,14 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:abd72094260884e6f8d417bc2a3d6f192"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d76/class_e_l_i_server_1_1_database_manager.html#abd72094260884e6f8d417bc2a3d6f192">connectionString</a></td></tr>
-<tr class="separator:abd72094260884e6f8d417bc2a3d6f192"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34b35f163316da5270e526b1d0f51889"><td class="memItemLeft" align="right" valign="top">FbConnection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d76/class_e_l_i_server_1_1_database_manager.html#a34b35f163316da5270e526b1d0f51889">connection</a></td></tr>
 <tr class="separator:a34b35f163316da5270e526b1d0f51889"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class is used for retrieving and sending data to the database. The connectionString is included in the App.config file on the server. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af4932c44cd155cec929be0207f17605e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4932c44cd155cec929be0207f17605e">&#9670;&nbsp;</a></span>DatabaseManager()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af4932c44cd155cec929be0207f17605e">&#9670;&nbsp;</a></span>DatabaseManager() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -133,6 +150,42 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Default constuctor. The connection is created and opened in this constuctor using the connection string returned by <a class="el" href="../../dc/d76/class_e_l_i_server_1_1_database_manager.html#a2a2f09721d3e5ea9db778d74e517e8da" title="Load the connection string from the App.config file. ">GetConnectionString()</a>. </p>
+
+</div>
+</div>
+<a id="a194f6838e3c20bc118069a33a7b3465b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a194f6838e3c20bc118069a33a7b3465b">&#9670;&nbsp;</a></span>DatabaseManager() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ELIServer.DatabaseManager.DatabaseManager </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>connectionString</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This constuctor is used for testing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">connectionString</td><td>The FireBird connection string to the database.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -159,6 +212,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Close the database connection. </p>
 
 </div>
 </div>
@@ -196,6 +251,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Insert the connection between a guest and a client (table) into the database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">guestId</td><td>The ID of the guest.</td></tr>
+    <tr><td class="paramname">tableId</td><td>The ID of the client (table).</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a99034ff69cba06942d29a9ad444b04c3"></a>
@@ -232,6 +296,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Remove the connection between a guest and a client (table) from the database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">guestId</td><td>The ID of the guest.</td></tr>
+    <tr><td class="paramname">tableId</td><td>The ID of the client (table).</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a85c00dfc07b07c4840aca4fcdd09175e"></a>
@@ -256,6 +329,43 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Load all cities from the database. The data that is loaded is the cities: </p>
+<ul>
+<li>Name</li>
+<li>Latitude</li>
+<li>Longitude</li>
+<li>Id </li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd>A list with dictionaries that contain the city objects.</dd></dl>
+
+</div>
+</div>
+<a id="a2a2f09721d3e5ea9db778d74e517e8da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a2f09721d3e5ea9db778d74e517e8da">&#9670;&nbsp;</a></span>GetConnectionString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String ELIServer.DatabaseManager.GetConnectionString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load the connection string from the App.config file. </p>
+<dl class="section return"><dt>Returns</dt><dd>The connection string.</dd></dl>
 
 </div>
 </div>
@@ -382,6 +492,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Load the guest by the specified username and password from the database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">username</td><td>The username to search for.</td></tr>
+    <tr><td class="paramname">password</td><td>The password to search for.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A dictionary with the user, or an dictionary with only the type: "user" pair.</dd></dl>
+
 </div>
 </div>
 <a id="a8e8315c9b23095cbe799c8f75ccacc87"></a>
@@ -417,6 +537,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Remove the <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> records with the specified client ids from the database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">client1Id</td><td>The first client in the <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> instance.</td></tr>
+    <tr><td class="paramname">client2Id</td><td>The second client in the <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> instance.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -454,6 +583,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Insert a <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> record in the database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">client1Id</td><td>The first client in the <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> instance.</td></tr>
+    <tr><td class="paramname">client2Id</td><td>The second client in the <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> instance.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -477,28 +615,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="abd72094260884e6f8d417bc2a3d6f192"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd72094260884e6f8d417bc2a3d6f192">&#9670;&nbsp;</a></span>connectionString</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string ELIServer.DatabaseManager.connectionString</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">                        <span class="stringliteral">&quot;User=SYSDBA;&quot;</span> +</div><div class="line">                        <span class="stringliteral">&quot;Password=ELI;&quot;</span> +</div><div class="line">                        <span class="stringliteral">&quot;Database=&#39;C:/Users/0891435/DATA/ELI_CLIENT_DATABASE.FDB&#39;;&quot;</span> +</div><div class="line">                        <span class="stringliteral">&quot;DataSource=145.24.222.19;&quot;</span> +</div><div class="line">                        <span class="stringliteral">&quot;Port=8001;&quot;</span> +</div><div class="line">                        <span class="stringliteral">&quot;Dialect=3&quot;</span></div></div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

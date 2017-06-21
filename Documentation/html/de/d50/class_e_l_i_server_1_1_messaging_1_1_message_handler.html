@@ -68,37 +68,45 @@ $(function() {
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-static-methods">Static Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d7/d20/class_e_l_i_server_1_1_messaging_1_1_message_handler-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ELIServer.Messaging.MessageHandler Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This abstract class provides is used for handling incoming message from a <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> instance. The starting point of this class is the <a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a54b8fc68511fe197932338c0ffdb75c0">HandleIncomingJsonMessage()</a> method. All methods in this class are static.  
+ <a href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a54b8fc68511fe197932338c0ffdb75c0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a54b8fc68511fe197932338c0ffdb75c0">HandleIncomingJsonMessage</a> (<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> <a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a0373b287a964b75f145c12031d28accd">client</a>, String message)</td></tr>
+<tr class="memitem:a54b8fc68511fe197932338c0ffdb75c0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a54b8fc68511fe197932338c0ffdb75c0">HandleIncomingJsonMessage</a> (<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client, String message)</td></tr>
 <tr class="separator:a54b8fc68511fe197932338c0ffdb75c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a3dd06c4f9c959db12a96af3397114861"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a3dd06c4f9c959db12a96af3397114861">GetAllCities</a> (<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> <a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a0373b287a964b75f145c12031d28accd">client</a>)</td></tr>
+<tr class="memitem:a760bf18782afa59dd63cf733ad7adb3a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a760bf18782afa59dd63cf733ad7adb3a">ReturnUnknownTypeMessage</a> (<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client)</td></tr>
+<tr class="memdesc:a760bf18782afa59dd63cf733ad7adb3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a "UnknownType" error message to the client.  <a href="#a760bf18782afa59dd63cf733ad7adb3a">More...</a><br /></td></tr>
+<tr class="separator:a760bf18782afa59dd63cf733ad7adb3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af295ba9c01e4e01a19edba696944cfae"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#af295ba9c01e4e01a19edba696944cfae">ReturnReadableMessageErrorMessage</a> (<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client, String errorMessage)</td></tr>
+<tr class="memdesc:af295ba9c01e4e01a19edba696944cfae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a "UnreadableMessage" error message to the client.  <a href="#af295ba9c01e4e01a19edba696944cfae">More...</a><br /></td></tr>
+<tr class="separator:af295ba9c01e4e01a19edba696944cfae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dd06c4f9c959db12a96af3397114861"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a3dd06c4f9c959db12a96af3397114861">GetAllCities</a> (<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client)</td></tr>
 <tr class="separator:a3dd06c4f9c959db12a96af3397114861"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e0ec94ce30e0f2ebf9ed02393fb35e1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a2e0ec94ce30e0f2ebf9ed02393fb35e1">GetRandomTable</a> (dynamic jsonObject, <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> <a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a0373b287a964b75f145c12031d28accd">client</a>)</td></tr>
-<tr class="separator:a2e0ec94ce30e0f2ebf9ed02393fb35e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7d3cf8905a2ddb6ff26f092c92fa886"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#ac7d3cf8905a2ddb6ff26f092c92fa886">LogIn</a> (dynamic jsonObject, <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> <a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a0373b287a964b75f145c12031d28accd">client</a>)</td></tr>
+<tr class="memitem:a45ed426f6fdc21493aa8727d44a1b502"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a45ed426f6fdc21493aa8727d44a1b502">GetRandomTable</a> (dynamic message, <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client)</td></tr>
+<tr class="separator:a45ed426f6fdc21493aa8727d44a1b502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7d3cf8905a2ddb6ff26f092c92fa886"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#ac7d3cf8905a2ddb6ff26f092c92fa886">LogIn</a> (dynamic jsonObject, <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client)</td></tr>
+<tr class="memdesc:ac7d3cf8905a2ddb6ff26f092c92fa886"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method checks the user credentials that where passed through the message. If the combination of username and password exists in the database, the users information is returned to the <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client. If not, an error message is send. This is done using the <a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a9594cb08cdb01a3ae81e0e794447ff9c" title="Return a &quot;IncorrectUserNameOrPassword&quot; error message to the client. ">ReturnIncorrectUserNameOrPasswordMessage()</a> method.  <a href="#ac7d3cf8905a2ddb6ff26f092c92fa886">More...</a><br /></td></tr>
 <tr class="separator:ac7d3cf8905a2ddb6ff26f092c92fa886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9594cb08cdb01a3ae81e0e794447ff9c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a9594cb08cdb01a3ae81e0e794447ff9c">ReturnIncorrectUserNameOrPasswordMessage</a> (<a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client)</td></tr>
+<tr class="memdesc:a9594cb08cdb01a3ae81e0e794447ff9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a "IncorrectUserNameOrPassword" error message to the client.  <a href="#a9594cb08cdb01a3ae81e0e794447ff9c">More...</a><br /></td></tr>
+<tr class="separator:a9594cb08cdb01a3ae81e0e794447ff9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fe43aa94ee3e3d03fcf147549eabced"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a1fe43aa94ee3e3d03fcf147549eabced">LogOut</a> (dynamic jsonObject)</td></tr>
+<tr class="memdesc:a1fe43aa94ee3e3d03fcf147549eabced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log the user and client out. The <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client is removed from the connectedSockets list in the <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html" title="This class handles all incoming TCP client connections. When an instance of the MessageSocketManager ...">MessageSocketManager</a> and the connection is removed from the database.  <a href="#a1fe43aa94ee3e3d03fcf147549eabced">More...</a><br /></td></tr>
 <tr class="separator:a1fe43aa94ee3e3d03fcf147549eabced"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5340630c241299aa12547888d42edd03"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a5340630c241299aa12547888d42edd03">ReturnMessage</a> (string message, <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> <a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a0373b287a964b75f145c12031d28accd">client</a>)</td></tr>
-<tr class="separator:a5340630c241299aa12547888d42edd03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a0373b287a964b75f145c12031d28accd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a0373b287a964b75f145c12031d28accd">client</a></td></tr>
-<tr class="separator:a0373b287a964b75f145c12031d28accd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This abstract class provides is used for handling incoming message from a <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> instance. The starting point of this class is the <a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a54b8fc68511fe197932338c0ffdb75c0">HandleIncomingJsonMessage()</a> method. All methods in this class are static. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3dd06c4f9c959db12a96af3397114861"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3dd06c4f9c959db12a96af3397114861">&#9670;&nbsp;</a></span>GetAllCities()</h2>
 
@@ -123,10 +131,20 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p></p>
+<p>Load all cities from the database and send a JSON object to the client.</p>
+<p>The return message will be a JSON object with a "RESULTS" key and an array of the cities. See the release docs for more information about the return message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">client</td><td>The <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client to send the message to.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a2e0ec94ce30e0f2ebf9ed02393fb35e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e0ec94ce30e0f2ebf9ed02393fb35e1">&#9670;&nbsp;</a></span>GetRandomTable()</h2>
+<a id="a45ed426f6fdc21493aa8727d44a1b502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45ed426f6fdc21493aa8727d44a1b502">&#9670;&nbsp;</a></span>GetRandomTable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -138,7 +156,7 @@ Private Attributes</h2></td></tr>
           <td class="memname">static void ELIServer.Messaging.MessageHandler.GetRandomTable </td>
           <td>(</td>
           <td class="paramtype">dynamic&#160;</td>
-          <td class="paramname"><em>jsonObject</em>, </td>
+          <td class="paramname"><em>message</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -158,6 +176,17 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p></p>
+<p>Create a new <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> between the specified client and a random client.</p>
+<p>The random client is selected using the <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#a6988d1ee0c08ded66a3d428f04585716" title="Get a pending ClientMessageSocket instance that has requested a random call connection. If the pendingRandomCallConnections list is empty, null is returned. When a ClientMessageSocket instance is found, it is removed from the pendingRandomCallConnections list. ">MessageSocketManager.GetRandomPendingConnection()</a> method. When a <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> is created, the callConnections list in the <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html" title="This class handles all incoming TCP client connections. When an instance of the MessageSocketManager ...">MessageSocketManager</a> class will be updated accordingly. If no random client is found, the client will be stored in the pendingRandomCallConnections list of the <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html" title="This class handles all incoming TCP client connections. When an instance of the MessageSocketManager ...">MessageSocketManager</a> class. This will be done using the <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#ac2dffa438503f596446e4a0137582962" title="Add a ClientMessageSocket instance that has send a random connection request to the pendingRandomCall...">MessageSocketManager.AddPendingRandomCallClient()</a>; </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The message.</td></tr>
+    <tr><td class="paramname">client</td><td>The <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client to connect the <a class="el" href="../../d7/d79/class_e_l_i_server_1_1_call_connection.html">CallConnection</a> to.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -195,6 +224,31 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p></p>
+<p>Handle the incoming message according to the given type.</p>
+<p>The incoming messages is handled according to the type specified in the message. The type of message should be included in the "message_type" JSON value. Possible values are:</p><ul>
+<li>LogIn</li>
+<li>LogOut</li>
+<li>GetRandomTable</li>
+<li>GetAllCities</li>
+</ul>
+<p>(In the future other types will be added.) Please ensure that the message_type key is present.</p>
+<p>The types will be handled using the according methods in the <a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html" title="This abstract class provides is used for handling incoming message from a ClientMessageSocket instanc...">MessageHandler</a> class, namely:</p><ul>
+<li>LogIn: <a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#ac7d3cf8905a2ddb6ff26f092c92fa886" title="This method checks the user credentials that where passed through the message. If the combination of ...">LogIn()</a></li>
+<li>LogOut: <a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a1fe43aa94ee3e3d03fcf147549eabced" title="Log the user and client out. The ClientMessageSocket client is removed from the connectedSockets list...">LogOut()</a></li>
+<li>GetRandomTable: <a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a45ed426f6fdc21493aa8727d44a1b502">GetRandomTable()</a></li>
+<li>GetAllCities: <a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a3dd06c4f9c959db12a96af3397114861">GetAllCities()</a></li>
+<li>Other values: <a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a760bf18782afa59dd63cf733ad7adb3a" title="Return a &quot;UnknownType&quot; error message to the client. ">ReturnUnknownTypeMessage()</a></li>
+</ul>
+<p>The message that needs to be handled is parsed using JsonConvert.DeserializeObject(). Please ensure that the message is an string in JSON format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">client</td><td>An instance of a <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> object where return messages should be send to.</td></tr>
+    <tr><td class="paramname">message</td><td>The message to handle.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ac7d3cf8905a2ddb6ff26f092c92fa886"></a>
@@ -231,6 +285,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>This method checks the user credentials that where passed through the message. If the combination of username and password exists in the database, the users information is returned to the <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client. If not, an error message is send. This is done using the <a class="el" href="../../de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a9594cb08cdb01a3ae81e0e794447ff9c" title="Return a &quot;IncorrectUserNameOrPassword&quot; error message to the client. ">ReturnIncorrectUserNameOrPasswordMessage()</a> method. </p>
+<p>Note: This method is not secure. It should be altered before the application is released. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jsonObject</td><td>A dynamic object that was created using the JsonConvert.DeserializeObject() method.</td></tr>
+    <tr><td class="paramname">client</td><td>The <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client to send the return message to.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a1fe43aa94ee3e3d03fcf147549eabced"></a>
@@ -257,10 +321,22 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Log the user and client out. The <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client is removed from the connectedSockets list in the <a class="el" href="../../d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html" title="This class handles all incoming TCP client connections. When an instance of the MessageSocketManager ...">MessageSocketManager</a> and the connection is removed from the database. </p>
+<p>The LogOut message should containt the following values:</p><ul>
+<li>ClientID: the ID of the table</li>
+<li>ID: the ID of the user An MissingFieldException will be thrown if the message does not contain these values. </li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jsonObject</td><td>The LogOut message</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a5340630c241299aa12547888d42edd03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5340630c241299aa12547888d42edd03">&#9670;&nbsp;</a></span>ReturnMessage()</h2>
+<a id="a9594cb08cdb01a3ae81e0e794447ff9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9594cb08cdb01a3ae81e0e794447ff9c">&#9670;&nbsp;</a></span>ReturnIncorrectUserNameOrPasswordMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -269,16 +345,52 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void ELIServer.Messaging.MessageHandler.ReturnMessage </td>
+          <td class="memname">static void ELIServer.Messaging.MessageHandler.ReturnIncorrectUserNameOrPasswordMessage </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>message</em>, </td>
+          <td class="paramtype"><a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>&#160;</td>
+          <td class="paramname"><em>client</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a "IncorrectUserNameOrPassword" error message to the client. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">client</td><td>The <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client to send the message to.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Create a dynamic message object.</p>
+<p>Add values to the message object. </p>
+
+</div>
+</div>
+<a id="af295ba9c01e4e01a19edba696944cfae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af295ba9c01e4e01a19edba696944cfae">&#9670;&nbsp;</a></span>ReturnReadableMessageErrorMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ELIServer.Messaging.MessageHandler.ReturnReadableMessageErrorMessage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>&#160;</td>
+          <td class="paramname"><em>client</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>&#160;</td>
-          <td class="paramname"><em>client</em>&#160;</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>errorMessage</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -293,11 +405,20 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Return a "UnreadableMessage" error message to the client. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">client</td><td>The <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client to send the message to.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Create a dynamic message object.</p>
+<p>Add values to the message object. </p>
+
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a0373b287a964b75f145c12031d28accd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0373b287a964b75f145c12031d28accd">&#9670;&nbsp;</a></span>client</h2>
+<a id="a760bf18782afa59dd63cf733ad7adb3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a760bf18782afa59dd63cf733ad7adb3a">&#9670;&nbsp;</a></span>ReturnUnknownTypeMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -306,15 +427,29 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> ELIServer.Messaging.MessageHandler.client</td>
+          <td class="memname">static void ELIServer.Messaging.MessageHandler.ReturnUnknownTypeMessage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a>&#160;</td>
+          <td class="paramname"><em>client</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Return a "UnknownType" error message to the client. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">client</td><td>The <a class="el" href="../../db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html">ClientMessageSocket</a> client to send the message to.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Create a dynamic message object.</p>
+<p>Add values to the message object. </p>
 
 </div>
 </div>

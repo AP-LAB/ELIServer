@@ -77,6 +77,7 @@ $(function() {
 , <a class="el" href="d6/d16/class_e_l_i_client_1_1_views_1_1_city_connection_view.html#a2af70649161e86207da6b08313814377">ELIClient.Views.CityConnectionView</a>
 , <a class="el" href="da/d3c/class_e_l_i_client_1_1_views_1_1_random_connection_view.html#acfb9bf9b0d8a09e90981f453a1a108f3">ELIClient.Views.RandomConnectionView</a>
 , <a class="el" href="dd/dae/class_e_l_i_client_1_1_views_1_1_user_connection_view.html#a83db8c0671745e37813e1a2e1820f6fd">ELIClient.Views.UserConnectionView</a>
+, <a class="el" href="d9/d20/class_e_l_i_client_1_1_views_1_1_video_call_view.html#a8e68364d70c564fcc149848f6a8792f1">ELIClient.Views.VideoCallView</a>
 , <a class="el" href="d0/d27/class_eli_log_in_app_1_1_app.html#a71e2bbbc7515a25fd496fcfe8147be7d">EliLogInApp.App</a>
 , <a class="el" href="d5/d97/class_eli_log_in_app_1_1_credentials_view.html#a3dcc15e010225ad11ef04773902f4657">EliLogInApp.CredentialsView</a>
 , <a class="el" href="d6/dd7/class_eli_log_in_app_1_1_main_page.html#a305cbfd9033456ec39a30e3d4f92d921">EliLogInApp.MainPage</a>
@@ -236,8 +237,8 @@ $(function() {
 <li>CityConnectionBtn
 : <a class="el" href="d1/d6f/class_e_l_i_client_1_1_main_page.html#a4779791c2de61403ee9f5caa9726dde5">ELIClient.MainPage</a>
 </li>
-<li>client
-: <a class="el" href="de/d50/class_e_l_i_server_1_1_messaging_1_1_message_handler.html#a0373b287a964b75f145c12031d28accd">ELIServer.Messaging.MessageHandler</a>
+<li>CityNamTxtBox
+: <a class="el" href="d6/d16/class_e_l_i_client_1_1_views_1_1_city_connection_view.html#a0e546611d65e2aa0f7c1a5a8ae53b61a">ELIClient.Views.CityConnectionView</a>
 </li>
 <li>client1
 : <a class="el" href="d7/d79/class_e_l_i_server_1_1_call_connection.html#adfdb5fc52756028eeac454f6e61e9de6">ELIServer.CallConnection</a>
@@ -253,6 +254,9 @@ $(function() {
 </li>
 <li>CodeConnectionBtn
 : <a class="el" href="d1/d6f/class_e_l_i_client_1_1_main_page.html#aeaa715ecc3cfcc76b4362888ddd160ae">ELIClient.MainPage</a>
+</li>
+<li>connectBtn
+: <a class="el" href="d6/d16/class_e_l_i_client_1_1_views_1_1_city_connection_view.html#a7acc73c0064df6161d66500404d74dee">ELIClient.Views.CityConnectionView</a>
 </li>
 <li>connected
 : <a class="el" href="df/d9b/class_e_l_i_client_1_1_input_video_stream.html#a4b9b5dfb4effc20c16c1b8713fb6b2d2">ELIClient.InputVideoStream</a>
@@ -271,7 +275,7 @@ $(function() {
 , <a class="el" href="d1/dad/class_e_l_i_server_test_1_1_test_database_helper.html#a4f6ef15321f9ce2e1ad311df36dd84d4">ELIServerTest.TestDatabaseHelper</a>
 </li>
 <li>connectionString
-: <a class="el" href="dc/d76/class_e_l_i_server_1_1_database_manager.html#abd72094260884e6f8d417bc2a3d6f192">ELIServer.DatabaseManager</a>
+: <a class="el" href="dd/d4e/class_e_l_i_server_test_1_1_database_manager_test.html#a1eb8c9f100072e4cfbfa18b045ec61b0">ELIServerTest.DatabaseManagerTest</a>
 , <a class="el" href="d1/dad/class_e_l_i_server_test_1_1_test_database_helper.html#a68c640584a57eaf87cf2c29950a2e19a">ELIServerTest.TestDatabaseHelper</a>
 </li>
 <li>ContainerGrid
@@ -322,6 +326,9 @@ $(function() {
 </li>
 <li>inStream
 : <a class="el" href="d2/d05/class_e_l_i_client_1_1_video_call_view_1_1_video_call_view.html#a4e598895140a3d124a297caa3f8c9c4f">ELIClient.VideoCallView.VideoCallView</a>
+</li>
+<li>isCalling
+: <a class="el" href="db/d9e/class_e_l_i_server_1_1_messaging_1_1_client_message_socket.html#af4b6f81ca94ef986655714c470d044e6">ELIServer.Messaging.ClientMessageSocket</a>
 </li>
 <li>isConnected
 : <a class="el" href="dc/d9e/class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector.html#a601bc05dedac1a49b3ec77ce7279362a">ELIClient.SimpleELIServerCommunication.ServerConnector</a>
@@ -444,11 +451,11 @@ $(function() {
 <li>PasswordLabel
 : <a class="el" href="d5/d97/class_eli_log_in_app_1_1_credentials_view.html#aaf1ab2359e902792657e7b93153a63f0">EliLogInApp.CredentialsView</a>
 </li>
-<li>pendingCallConnections
-: <a class="el" href="d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#ad34ae3d8801eea0c2fd2305c5b05e692">ELIServer.MessageSocketManager</a>
-</li>
 <li>pendingCallsLabel
 : <a class="el" href="d4/da4/class_e_l_i_server_1_1_main_window.html#adefe9e0fcb15851978de1b8d0e39d470">ELIServer.MainWindow</a>
+</li>
+<li>pendingRandomCallConnections
+: <a class="el" href="d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#ad145fe640e3a8f0af780441fc1d5221a">ELIServer.MessageSocketManager</a>
 </li>
 <li>port
 : <a class="el" href="d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#af344f11a273d91f2d2c520583f105b95">ELIServer.MessageSocketManager</a>
@@ -477,7 +484,8 @@ $(function() {
 : <a class="el" href="d6/d20/class_e_l_i_server_1_1_properties_1_1_resources.html#af14f5ae3346cb1cf53cda25f67cad6c8">ELIServer.Properties.Resources</a>
 </li>
 <li>running
-: <a class="el" href="d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#ae7079918e3fb3c205ee8831f800cd4d9">ELIServer.MessageSocketManager</a>
+: <a class="el" href="d7/d79/class_e_l_i_server_1_1_call_connection.html#a2ea22c08df4058ec3c34aa0deb4d67c3">ELIServer.CallConnection</a>
+, <a class="el" href="d9/dc7/class_e_l_i_server_1_1_message_socket_manager.html#ae7079918e3fb3c205ee8831f800cd4d9">ELIServer.MessageSocketManager</a>
 </li>
 </ul>
 

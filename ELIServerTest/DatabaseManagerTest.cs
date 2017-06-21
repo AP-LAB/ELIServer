@@ -55,7 +55,6 @@ namespace ELIServerTest
             Assert.IsTrue(result.ContainsValue("user"));
             // Remove the user from the list.
             mockDataGenerator.RemoveUser1();
-
         }
 
         [TestMethod]

@@ -39,9 +39,16 @@ void \hyperlink{class_e_l_i_client_1_1_video_call_view_1_1_video_call_view_a9c63
 \item 
 static Media\+Playback\+List \hyperlink{class_e_l_i_client_1_1_video_call_view_1_1_video_call_view_ac7804ca40c1b52e0a9987f7344b06109}{\+\_\+playlist} = null
 \end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_e_l_i_client_1_1_video_call_view_1_1_video_call_view_a15a433bd1392e3005c84e7d6856f6384}{On\+Navigated\+To} (Navigation\+Event\+Args e)
+\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+async void \hyperlink{class_e_l_i_client_1_1_video_call_view_1_1_video_call_view_ab73d29666dec40a1e3095f7d7d4a529b}{Set\+Up\+Streams} (\hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector}{Server\+Connector} server\+Connector)
+\begin{DoxyCompactList}\small\item\em Await a server response that indicates that a client to connect to is found. When the correct message (\char`\"{}\+Start recording\char`\"{}) is assed, the capturing and streaming is started. \end{DoxyCompactList}\item 
 void \hyperlink{class_e_l_i_client_1_1_video_call_view_1_1_video_call_view_a7306aa6f777886bf08c0134b435f7064}{On\+Exit} (object sender, object e)
 \item 
 async void \hyperlink{class_e_l_i_client_1_1_video_call_view_1_1_video_call_view_a9aa4d793f9c9240b8660ff70c44a9d6a}{Set\+Up\+Receiver} ()
@@ -182,12 +189,33 @@ An empty page that can be used on its own or navigated to within a Frame.
 \subsubsection{\texorpdfstring{On\+Exit()}{OnExit()}}
 {\footnotesize\ttfamily void E\+L\+I\+Client.\+Video\+Call\+View.\+Video\+Call\+View.\+On\+Exit (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{object}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
+\mbox{\Hypertarget{class_e_l_i_client_1_1_video_call_view_1_1_video_call_view_a15a433bd1392e3005c84e7d6856f6384}\label{class_e_l_i_client_1_1_video_call_view_1_1_video_call_view_a15a433bd1392e3005c84e7d6856f6384}} 
+\index{E\+L\+I\+Client\+::\+Video\+Call\+View\+::\+Video\+Call\+View@{E\+L\+I\+Client\+::\+Video\+Call\+View\+::\+Video\+Call\+View}!On\+Navigated\+To@{On\+Navigated\+To}}
+\index{On\+Navigated\+To@{On\+Navigated\+To}!E\+L\+I\+Client\+::\+Video\+Call\+View\+::\+Video\+Call\+View@{E\+L\+I\+Client\+::\+Video\+Call\+View\+::\+Video\+Call\+View}}
+\subsubsection{\texorpdfstring{On\+Navigated\+To()}{OnNavigatedTo()}}
+{\footnotesize\ttfamily override void E\+L\+I\+Client.\+Video\+Call\+View.\+Video\+Call\+View.\+On\+Navigated\+To (\begin{DoxyParamCaption}\item[{Navigation\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
 \mbox{\Hypertarget{class_e_l_i_client_1_1_video_call_view_1_1_video_call_view_a9aa4d793f9c9240b8660ff70c44a9d6a}\label{class_e_l_i_client_1_1_video_call_view_1_1_video_call_view_a9aa4d793f9c9240b8660ff70c44a9d6a}} 
 \index{E\+L\+I\+Client\+::\+Video\+Call\+View\+::\+Video\+Call\+View@{E\+L\+I\+Client\+::\+Video\+Call\+View\+::\+Video\+Call\+View}!Set\+Up\+Receiver@{Set\+Up\+Receiver}}
 \index{Set\+Up\+Receiver@{Set\+Up\+Receiver}!E\+L\+I\+Client\+::\+Video\+Call\+View\+::\+Video\+Call\+View@{E\+L\+I\+Client\+::\+Video\+Call\+View\+::\+Video\+Call\+View}}
 \subsubsection{\texorpdfstring{Set\+Up\+Receiver()}{SetUpReceiver()}}
 {\footnotesize\ttfamily async void E\+L\+I\+Client.\+Video\+Call\+View.\+Video\+Call\+View.\+Set\+Up\+Receiver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
+\mbox{\Hypertarget{class_e_l_i_client_1_1_video_call_view_1_1_video_call_view_ab73d29666dec40a1e3095f7d7d4a529b}\label{class_e_l_i_client_1_1_video_call_view_1_1_video_call_view_ab73d29666dec40a1e3095f7d7d4a529b}} 
+\index{E\+L\+I\+Client\+::\+Video\+Call\+View\+::\+Video\+Call\+View@{E\+L\+I\+Client\+::\+Video\+Call\+View\+::\+Video\+Call\+View}!Set\+Up\+Streams@{Set\+Up\+Streams}}
+\index{Set\+Up\+Streams@{Set\+Up\+Streams}!E\+L\+I\+Client\+::\+Video\+Call\+View\+::\+Video\+Call\+View@{E\+L\+I\+Client\+::\+Video\+Call\+View\+::\+Video\+Call\+View}}
+\subsubsection{\texorpdfstring{Set\+Up\+Streams()}{SetUpStreams()}}
+{\footnotesize\ttfamily async void E\+L\+I\+Client.\+Video\+Call\+View.\+Video\+Call\+View.\+Set\+Up\+Streams (\begin{DoxyParamCaption}\item[{\hyperlink{class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector}{Server\+Connector}}]{server\+Connector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Await a server response that indicates that a client to connect to is found. When the correct message (\char`\"{}\+Start recording\char`\"{}) is assed, the capturing and streaming is started. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em server\+Connector} & \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Data Documentation}

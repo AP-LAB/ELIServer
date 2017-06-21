@@ -79,6 +79,8 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad9a29fa265ea9a860f92ed58c11858e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d9e/class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector.html#ad9a29fa265ea9a860f92ed58c11858e6">ServerConnector</a> (String hostname, String port)</td></tr>
 <tr class="separator:ad9a29fa265ea9a860f92ed58c11858e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dcf13bb05d9d410088f319d20a5faaa"><td class="memItemLeft" align="right" valign="top">StreamSocket&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d9e/class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector.html#a9dcf13bb05d9d410088f319d20a5faaa">GetSocket</a> ()</td></tr>
+<tr class="separator:a9dcf13bb05d9d410088f319d20a5faaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c02f184947bf664847cefe578225cf5"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d9e/class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector.html#a6c02f184947bf664847cefe578225cf5">SendMessage</a> (JsonObject json)</td></tr>
 <tr class="separator:a6c02f184947bf664847cefe578225cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51b31eed1d4faf571cc0aa512dc675c1"><td class="memItemLeft" align="right" valign="top">async Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d9e/class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector.html#a51b31eed1d4faf571cc0aa512dc675c1">SendRandomConnectionRequestMessage</a> ()</td></tr>
@@ -86,6 +88,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a524197983d52fb96d7e9105c3730011a"><td class="memItemLeft" align="right" valign="top">async Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d9e/class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector.html#a524197983d52fb96d7e9105c3730011a">SendGetCitiesRequest</a> ()</td></tr>
 <tr class="separator:a524197983d52fb96d7e9105c3730011a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af805dc6dc3d37342b2ae263cf02740e3"><td class="memItemLeft" align="right" valign="top">async Task&lt; JsonObject &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d9e/class_e_l_i_client_1_1_simple_e_l_i_server_communication_1_1_server_connector.html#af805dc6dc3d37342b2ae263cf02740e3">ReceiveMessage</a> ()</td></tr>
+<tr class="memdesc:af805dc6dc3d37342b2ae263cf02740e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive a message response from the server. The encoding of the message should be Utf8 and the byteOrder should be LittleEndian. The message is parsed to a JsonObject using JsonObject.Parse() method.  <a href="#af805dc6dc3d37342b2ae263cf02740e3">More...</a><br /></td></tr>
 <tr class="separator:af805dc6dc3d37342b2ae263cf02740e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
@@ -167,6 +170,31 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a9dcf13bb05d9d410088f319d20a5faaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dcf13bb05d9d410088f319d20a5faaa">&#9670;&nbsp;</a></span>GetSocket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StreamSocket ELIClient.SimpleELIServerCommunication.ServerConnector.GetSocket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af805dc6dc3d37342b2ae263cf02740e3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af805dc6dc3d37342b2ae263cf02740e3">&#9670;&nbsp;</a></span>ReceiveMessage()</h2>
 
@@ -189,6 +217,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Receive a message response from the server. The encoding of the message should be Utf8 and the byteOrder should be LittleEndian. The message is parsed to a JsonObject using JsonObject.Parse() method. </p>
+<dl class="section return"><dt>Returns</dt><dd>The message in JsonObject format.</dd></dl>
 
 </div>
 </div>

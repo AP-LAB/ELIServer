@@ -157,11 +157,11 @@ namespace ELIServer.Messaging
         /// The first 4 bytes should contain the lenght of the message.
         /// The size is in little endian order and the message is encoded in UTF8.
         /// </summary>
-        /// <param name="message">The message to send to the client</param>
+        /// <param name="message">The message to send to the client.</param>
         public void SendMessage(String message)
         {
             // The byte array for the message
-            byte[] messageByteArray = Encoding.UTF8.GetBytes(message); ///< The byte array containing the message.
+            byte[] messageByteArray = Encoding.UTF8.GetBytes(message);
             // The byte array that represents the size of the messageByteArray
             byte[] sizeBytesArray = BitConverter.GetBytes((uint)messageByteArray.Length);
             //The byte array to send
