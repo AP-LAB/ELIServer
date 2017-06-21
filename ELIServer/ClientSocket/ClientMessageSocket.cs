@@ -40,6 +40,10 @@ namespace ELIServer.Messaging
         public ClientMessageSocket(TcpClient client)
         {
             innerClient = client;
+
+            SendMessage("Hello I'm not broken");
+
+
             // Get the initial message.
             GetInitialMessage();
             //Handle all incoming messages from this point.
@@ -176,7 +180,7 @@ namespace ELIServer.Messaging
         /// <summary>
         /// \brief Send a message to the client of this object.
         /// 
-        /// The first 4 bytes should contain the lenght of the message.
+        /// The first 4 bytes will contain the lenght of the message.
         /// The size is in little endian order and the message is encoded in UTF8.
         /// </summary>
         /// <param name="message">The message to send to the client.</param>
