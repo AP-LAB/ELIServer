@@ -50,7 +50,7 @@ namespace ELIServer.Messaging
                 // Deserialize the message.
                 dynamic jsonObject = JsonConvert.DeserializeObject(message);
                 // Get the message_type of the message.
-                String type = jsonObject.message_type.ToString();
+                String type = jsonObject.TYPE.ToString();
                 // Handle the message.
                 // If the message type is unknown, no action will be taken.
                 switch (type)
@@ -227,7 +227,7 @@ namespace ELIServer.Messaging
         private static void LogOut(dynamic jsonObject)
         {
             // Search for the client in the connectedSockets list of the MessageSocketManager class.
-            var client = MessageSocketManager.GetClientMessageSocketById(jsonObject.ClientID);
+            var client = MessageSocketManager.GetClientMessageSocketById(jsonObject.CLIENTID);
             // Remove the client from the connectedSockets list if it is not null.
             if (client != null) MessageSocketManager.RemoveClientFromConnectedSockets(client);
             // Remove the connection from the database.
