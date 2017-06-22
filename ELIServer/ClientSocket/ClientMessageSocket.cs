@@ -40,10 +40,6 @@ namespace ELIServer.Messaging
         public ClientMessageSocket(TcpClient client)
         {
             innerClient = client;
-
-            SendMessage("Hello I'm not broken");
-
-
             // Get the initial message.
             GetInitialMessage();
             //Handle all incoming messages from this point.
@@ -112,7 +108,7 @@ namespace ELIServer.Messaging
                     }
                 }
             }
-            catch(SocketException ex)
+            catch(Exception ex)
             {
                 connected = false;
             }

@@ -71,7 +71,7 @@ namespace ELIServer
         {
             NetworkStream stream1 = client1.GetInnerClient().GetStream();
             NetworkStream stream2 = client2.GetInnerClient().GetStream();
-            new Thread(unused => StreamTo(stream1, stream2)).Start();            
+            new Thread(unused => StreamTo(stream1, stream2)).Start();
             new Thread(unused => StreamTo(stream2, stream1)).Start();
         }
 
