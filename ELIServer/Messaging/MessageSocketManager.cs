@@ -27,7 +27,7 @@ namespace ELIServer
         private TcpListener listener = null; //!< The TcpListener that is used to listen for new connections.
         private int port = 8005; //!< The port to listen to.
         private string hostname = "0.0.0.0"; //!< The hostname to listen to.
-        private bool running = false; //!< A boolean that represents the state of the MessageSocketManager instance.
+        private static bool running = false; //!< A boolean that represents the state of the MessageSocketManager instance.
         private Thread thread; //!< The thread that is used for the StartListening() method.        
 
         /// <summary>
@@ -71,7 +71,9 @@ namespace ELIServer
                     // Update MainWindow.
                     mainWindow.SetNumberOfConnectedClients(connectedSockets.Count());
                 }
-            }            
+            }
+
+            listener.Stop();
         }
 
         /// <summary>
@@ -203,6 +205,12 @@ namespace ELIServer
         {
             return callConnections.Where(x => x.GetClient1().Equals(client) || x.GetClient2().Equals(client)).FirstOrDefault();
         }
+
+        public static void SetRunning(bool _running)
+        {
+            running = _running;
+        }
+
 
     }
 }

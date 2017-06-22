@@ -28,13 +28,21 @@ namespace ELIServer
         public MainWindow()
         {
             InitializeComponent();
+            AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
             messageSocketManager = new MessageSocketManager(this);
         }
 
         private void StopApplication(object sender, CancelEventArgs e)
         {
+            
             System.Environment.Exit(1);
         }
+
+        static void OnProcessExit(object sender, EventArgs e)
+        {
+            MessageSocketManager.SetRunning(false);
+        }
+
 
         public void SetNumberOfConnectedClients(int amount)
         {
