@@ -116,6 +116,11 @@ namespace ELIServer.Messaging
             return connected;
         }
 
+        internal void Close()
+        {
+            innerClient.Close();
+        }
+
         /// <summary>
         /// A getter for the inner TcpClient.
         /// </summary>

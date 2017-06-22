@@ -59,22 +59,38 @@ namespace ELIServer
         /// </summary>
         private void StartListening()
         {
-            while (running)
+            try
             {
-                // Check if new connection is pending.
-                if (listener.Pending())
+                while (running)
                 {
-                    // Get the client.
-                    var client = listener.AcceptTcpClient();
-                    // Create a ClientMessageSocket and store it in the connectedSockets list.
-                    connectedSockets.Add(new ClientMessageSocket(client));
-                    // Update MainWindow.
-                    mainWindow.SetNumberOfConnectedClients(connectedSockets.Count());
+                    // Check if new connection is pending.
+                    if (listener.Pending())
+                    {
+                        // Get the client.
+                        var client = listener.AcceptTcpClient();
+                        // Create a ClientMessageSocket and store it in the connectedSockets list.
+                        connectedSockets.Add(new ClientMessageSocket(client));
+                        // Update MainWindow.
+                        mainWindow.SetNumberOfConnectedClients(connectedSockets.Count());
+                    }
                 }
             }
-
-            listener.Stop();
+            finally
+            {
+                Stop();
+            }
+            
         }
+
+        public void Stop()
+        {
+            listener.Stop();
+            foreach (var client in connectedSockets)
+            {
+                client.Close();
+            }
+        }
+
 
         /// <summary>
         /// Removes a ClientMessageSocket instance from the connectedSockets list.

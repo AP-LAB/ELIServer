@@ -33,16 +33,17 @@ namespace ELIServer
         }
 
         private void StopApplication(object sender, CancelEventArgs e)
-        {
-            
+        {            
             System.Environment.Exit(1);
+            MessageSocketManager.SetRunning(false);
+
+
         }
 
         static void OnProcessExit(object sender, EventArgs e)
         {
             MessageSocketManager.SetRunning(false);
         }
-
 
         public void SetNumberOfConnectedClients(int amount)
         {
