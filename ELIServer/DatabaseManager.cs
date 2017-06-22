@@ -60,7 +60,7 @@ namespace ELIServer
                         FROM GUESTS a
                         WHERE a.USER_NAME = '{0}' AND a.""PASSWORD"" = '{1}';", username, password);
             var command = new FbCommand(sql, connection);
-            var dictionary = GetDictionaryFromFbDataReaderWithOneResult(command.ExecuteReader(), "user");
+            var dictionary = GetDictionaryFromFbDataReaderWithOneResult(command.ExecuteReader(), "USER");
             return dictionary;
         }
 

@@ -176,10 +176,10 @@ namespace ELIServer.Messaging
         private static void LogIn(dynamic jsonObject, ClientMessageSocket client)
         {
             // Extract the data needed.
-            var password = jsonObject.PassWord;
-            var username = jsonObject.UserName;
-            var logInTime = jsonObject.LogInTime; //yyyy-MM-dd HH:mm:ss, ignored for now
-            var tableId = jsonObject.ClientID;
+            String password = jsonObject.PassWord.ToString();
+            String username = jsonObject.UserName.ToString();
+            String logInTime = jsonObject.LogInTime.ToString(); //yyyy-MM-dd HH:mm:ss, ignored for now
+            String tableId = jsonObject.TableId.ToString();
             // Load the requested user from the database in order to check the credentials.
             var dbManager = new DatabaseManager();
             Dictionary<string, string> userDictionary = dbManager.GetUserByUsernameAndPassword(username, password);
