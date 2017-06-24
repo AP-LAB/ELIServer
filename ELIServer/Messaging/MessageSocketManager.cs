@@ -167,6 +167,8 @@ namespace ELIServer
             if (pendingRandomCallConnections.Contains(client))
             {
                 pendingRandomCallConnections.Remove(client);
+                mainWindow.SetNumberOfPendingCalls(pendingRandomCallConnections.Count());
+
             }
         }
 

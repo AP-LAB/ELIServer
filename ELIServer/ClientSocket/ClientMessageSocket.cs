@@ -72,10 +72,10 @@ namespace ELIServer.Messaging
         /// </summary>
         private void HandleIncomingMessagesFromClient()
         {
-            while (innerClient.Connected && IsConnected() && !isCalling)
+            while (innerClient.Connected && IsConnected() )
             {
                 var stream = innerClient.GetStream();
-                if (stream.DataAvailable)
+                if (stream.DataAvailable && !isCalling)
                 {
                     MessageHandler.HandleIncomingJsonMessage(this, GetStringFromNetworkStream(stream));
                 }                
@@ -116,6 +116,9 @@ namespace ELIServer.Messaging
             return connected;
         }
 
+        /// <summary>
+        /// Close the innerClient.
+        /// </summary>
         internal void Close()
         {
             innerClient.Close();
@@ -141,9 +144,7 @@ namespace ELIServer.Messaging
         /// <returns>The string that follows the 4 bytes, thus the message send.</returns>
         private String GetStringFromNetworkStream(NetworkStream stream)
         {
-        
-            ///TODO if the system is big endian, reverse
-            
+                   
             // The first 4 bytes are the size of the string that will follow.
             byte[] sizeRead = new byte[4];
             stream.Read(sizeRead, 0, 4);
@@ -166,7 +167,7 @@ namespace ELIServer.Messaging
         /// </summary>
         /// <param name="array">The array to be reversed.</param>
         /// <returns></returns>
-        private byte[] ReverseByteArrayIfNotLittleEndian(byte[] array)
+        public static byte[] ReverseByteArrayIfNotLittleEndian(byte[] array)
         {
             if (!BitConverter.IsLittleEndian)
             {

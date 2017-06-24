@@ -38,9 +38,6 @@ namespace ELIServer
             client2 = _client2;
             client1.isCalling = true;
             client2.isCalling = true;
-            var dbManager = new DatabaseManager();
-            dbManager.SetVideoCallConnection(client1.clientID, client2.clientID);
-            dbManager.Close();
             SendStartMessages();
             SetThreads();
         }
@@ -53,7 +50,7 @@ namespace ELIServer
             /// Create a dynamic message object.
             dynamic returnMessage = new ExpandoObject();
             /// Add values to the message object.
-            returnMessage.TYPE = "Message";
+            returnMessage.TYPE = "MESSAGE";
             returnMessage.MESSAGE = "Start recording";
             // Serialize and send the message.
             client1.SendMessage(JsonConvert.SerializeObject(returnMessage));
@@ -83,13 +80,13 @@ namespace ELIServer
         /// </summary>
         /// <param name="inStream">The input stream to get data from.</param>
         /// <param name="outStream">The output stream to pass data to.</param>
-        private async void StreamTo(NetworkStream inStream, NetworkStream outStream)
+        private void StreamTo(NetworkStream inStream, NetworkStream outStream)
         {
             while (client1.IsConnected() && client2.IsConnected())
             {
                 while (inStream.DataAvailable)
                 {
-                    await inStream.CopyToAsync(outStream);
+                    inStream.CopyTo(outStream);
                 }
             }
             CloseConnection();
@@ -104,7 +101,6 @@ namespace ELIServer
             client1.isCalling = false;
             client2.isCalling = false;
             MessageSocketManager.RemoveCallConnection(this);
-
         }
 
         /// <summary>

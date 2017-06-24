@@ -36,8 +36,6 @@ namespace ELIServer
         {            
             System.Environment.Exit(1);
             MessageSocketManager.SetRunning(false);
-
-
         }
 
         static void OnProcessExit(object sender, EventArgs e)
